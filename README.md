@@ -2,7 +2,8 @@
 #### These are my various configs, dotFiles, and color themes.
 
 note: this is meant to be cloned to your home directory in ~/gConfig/
-the .vimrc file will check and create a symlink form ~/gConfig/g16.vim to ~/.vim/colors/g16.vim if it doesn't exist.
+
+This is important becaus the .vimrc file will check and create a symlink form ~/gConfig/g16.vim to ~/.vim/colors/g16.vim if it doesn't exist.
 
 
 ---
