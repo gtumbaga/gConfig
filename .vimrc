@@ -156,6 +156,9 @@ let g:indentLine_indentLevel = 20
 let g:indentLine_fileTypeExclude = ["json"]
 autocmd FileType json set conceallevel=0
 
+"fix for markdown files
+let g:vimwiki_global_ext = 0
+
 "color up typescript
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
