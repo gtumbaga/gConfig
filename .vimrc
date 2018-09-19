@@ -1,6 +1,6 @@
 "check for gabes colorscheme file, get it if its missing
 if empty(glob('~/.vim/colors/g16.vim'))
-  silent !curl -fLo ~/.vim/colors/g16.vim --create-dirs https://omga.be/files/g16.vim
+  silent !ln -s ~/gConfig/g16.vim ~/.vim/colors/g16.vim
 endif
 
 "check for plugin manager, and install if it its not there
