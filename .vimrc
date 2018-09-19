@@ -1,3 +1,9 @@
+"check for vim color dir, create if it doesnt exist
+if empty(glob('~/.vim/colors/g16.vim'))
+  silent !mkdir ~/.vim/colors
+  silent !ln -s ~/gConfig/g16.vim ~/.vim/colors/g16.vim
+endif
+  
 "check for gabes colorscheme file, get it if its missing
 if empty(glob('~/.vim/colors/g16.vim'))
   silent !ln -s ~/gConfig/g16.vim ~/.vim/colors/g16.vim
