@@ -1,0 +1,24 @@
+#Easier Directory Listings with color
+export CLICOLOR=1
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+alias ll='ls -laGh'
+
+#Command line speedtest
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+
+#CUSTOM PROMPT
+# get current branch in git repo
+function parse_git_branch() {
+    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+    if [ ! "${BRANCH}" == "" ]
+    then
+        #STAT=`parse_git_dirty`
+        #echo "[${BRANCH}${STAT}]"
+        echo "[${BRANCH}]"
+    else
+        echo ""
+    fi
+}
+
+export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\][\u\[\e[m\]@\[\e[33m\]\h]\[\e[m\] >> "
+
