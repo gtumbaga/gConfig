@@ -136,8 +136,7 @@ map <C-L> 2zl
 " Scroll 2 characters to the left
 map <C-H> 2zh
 "remove the esc key delay
-"set timeoutlen=1000 ttimeoutlen=3
-set timeout timeoutlen=3000 ttimeoutlen=100
+set timeoutlen=1000 ttimeoutlen=300
 
 "set // in visual mode, to search for selected text
 vnoremap // y/\V<C-R>"<CR>
