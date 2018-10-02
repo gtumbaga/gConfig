@@ -228,7 +228,8 @@ let g:syntastic_html_tidy_ignore_errors=[
   \ "replacing obsolete ",
   \ "plain text isn't allowed in <head> elements",
   \ "attribute name \"[",
-  \ "attribute name \"("
+  \ "attribute name \"(",
+  \ "attribute name \"*ng"
   \ ]
 
 
