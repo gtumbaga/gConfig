@@ -158,14 +158,15 @@ let g:indentLine_leadingSpaceEnabled = 0
 let g:indentLine_char = '¦'
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_indentLevel = 20
-"indentline is changing default conceal level, so for .json we disable
-let g:indentLine_fileTypeExclude = ["json", "markdown"]
+"indentline is changing default conceal level, so for we disable for stuff it
+"breaks
+let g:indentLine_fileTypeExclude = ["json", "md", "markdown"]
 
 autocmd FileType json set conceallevel=0
-autocmd FileType md set conceallevel=0
+autocmd FileType markdown set conceallevel=0
 
-
-"color up typescript
+"let vim know about filetpypes so they can get colored up
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 set list
