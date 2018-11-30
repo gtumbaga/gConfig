@@ -159,8 +159,10 @@ let g:indentLine_char = '¦'
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_indentLevel = 20
 "indentline is changing default conceal level, so for .json we disable
-let g:indentLine_fileTypeExclude = ["json"]
+let g:indentLine_fileTypeExclude = ["json", "markdown"]
+
 autocmd FileType json set conceallevel=0
+autocmd FileType md set conceallevel=0
 
 
 "color up typescript
