@@ -3,8 +3,7 @@ export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 #disable quotes around filenames when LS-ing in ubuntu 18
 export QUOTING_STYLE=literal
-alias ls='ls --color=auto'
-alias ll='ls -laGh --color=auto'
+alias ll='ls -laGh'
 
 #Command line speedtest
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
