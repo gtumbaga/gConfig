@@ -5,7 +5,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export QUOTING_STYLE=literal
 
 #force xterm so vim colors work when not in tmux too
-export TERM=xterm-color
+export TERM=xterm-16color
 
 alias ll='ls -laGh'
 
