@@ -3,6 +3,10 @@ export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 #disable quotes around filenames when LS-ing in ubuntu 18
 export QUOTING_STYLE=literal
+
+#force xterm so vim colors work when not in tmux too
+export TERM=xterm-color
+
 alias ll='ls -laGh'
 
 #Command line speedtest
