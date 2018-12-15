@@ -146,7 +146,7 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " All the listchar special stuff to make spech char's show up
 "set listchars+=nbsp:·
-set listchars+=eol:¬
+set listchars+=eol:~
 set listchars+=tab:>-
 " set the line  netrw colors
 hi netrwTreeBar      term=NONE cterm=NONE ctermfg=DarkCyan ctermbg=NONE
@@ -155,7 +155,8 @@ hi netrwDir          term=NONE cterm=NONE ctermfg=Blue ctermbg=NONE
 let g:indentLine_color_term = 6
 let g:indentLine_leadingSpaceEnabled = 0
 "let g:indentLine_char = '|'
-let g:indentLine_char = '¦'
+"let g:indentLine_char = '¦'
+let g:indentLine_char = '|'
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_indentLevel = 20
 "indentline is changing default conceal level, so for we disable for stuff it
