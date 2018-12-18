@@ -61,19 +61,19 @@ function! InsertStatuslineColor(mode)
   if a:mode == 'i'
     hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
     hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    highlight  CursorLine ctermbg=8 ctermfg=NONE cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=Black
+    highlight  CursorLine ctermbg=Black ctermfg=NONE cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=8
   elseif a:mode == 'v'
     "set updatetime=0
     hi StatusLine   term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
     hi StatusLineNC term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
     highlight  CursorLine ctermbg=Yellow ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=Black
+    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=8
   else
     hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=White
     hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=White
     highlight  CursorLine ctermbg=8 ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=Black
+    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=8
     "set updatetime=0
   endif
   return ''

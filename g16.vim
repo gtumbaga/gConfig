@@ -33,7 +33,7 @@ hi Number          ctermfg=Blue
 hi Boolean         ctermfg=Blue
 hi LineNr       cterm=NONE ctermfg=DarkYellow  ctermbg=NONE
 hi CursorLine   ctermbg=8 ctermfg=None cterm=None term=None
-hi CursorLineNr cterm=None ctermfg=White ctermbg=Black
+hi CursorLineNr cterm=None ctermfg=White ctermbg=8
 
 hi MatchParen cterm=NONE ctermfg=white ctermbg=blue
 
