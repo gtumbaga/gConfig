@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-12-18 15:09:11" build="180626">
+		<key name=".Vanilla" modified="2018-12-18 23:18:47" build="180626">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -28,7 +28,7 @@
 			<value name="BackColorIdx" type="hex" data="00"/>
 			<value name="PopTextColorIdx" type="hex" data="10"/>
 			<value name="PopBackColorIdx" type="hex" data="10"/>
-			<value name="SingleInstance" type="hex" data="00"/>
+			<value name="SingleInstance" type="hex" data="01"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="UseInjects" type="hex" data="01"/>
@@ -38,9 +38,9 @@
 			<value name="Update.UseBuilds" type="hex" data="01"/>
 			<value name="FontUseDpi" type="hex" data="01"/>
 			<value name="FontUseUnits" type="hex" data="01"/>
-			<value name="FontSize" type="ulong" data="14"/>
+			<value name="FontSize" type="ulong" data="13"/>
 			<value name="StatusFontHeight" type="long" data="12"/>
-			<value name="TabFontHeight" type="long" data="13"/>
+			<value name="TabFontHeight" type="long" data="11"/>
 			<key name="HotKeys" modified="2018-12-16 22:41:52" build="180626">
 				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="KeyMacroVersion" type="hex" data="02"/>
@@ -238,12 +238,12 @@
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="AutoSaveSizePos" type="hex" data="01"/>
+			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd X" type="long" data="101"/>
-			<value name="ConWnd Y" type="long" data="65"/>
+			<value name="ConWnd X" type="long" data="102"/>
+			<value name="ConWnd Y" type="long" data="157"/>
 			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
 			<value name="ConWnd Width" type="dword" data="00000092"/>
 			<value name="ConWnd Height" type="dword" data="00000026"/>
@@ -340,7 +340,7 @@
 			<value name="bgPluginAllowed" type="hex" data="01"/>
 			<value name="AlphaValue" type="hex" data="FF"/>
 			<value name="AlphaValueSeparate" type="hex" data="00"/>
-			<value name="AlphaValueInactive" type="hex" data="FF"/>
+			<value name="AlphaValueInactive" type="hex" data="BC"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
@@ -516,7 +516,7 @@
 			<value name="TaskBarOverlay" type="hex" data="01"/>
 			<value name="TaskbarProgress" type="hex" data="01"/>
 			<value name="TabCloseMacro" type="string" data=""/>
-			<value name="TabFontFace" type="string" data="Segoe UI"/>
+			<value name="TabFontFace" type="string" data="Roboto Mono Light"/>
 			<value name="TabFontCharSet" type="ulong" data="0"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="long" data="0"/>
@@ -679,14 +679,14 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*cmd.exe /k Title Chocolatey &amp; "%ConEmuBaseDir%\Addons\ChocolateyAbout.cmd"'/>
 				</key>
-				<key name="Task10" modified="2018-12-18 14:57:37" build="180626">
+				<key name="Task10" modified="2018-12-18 21:54:55" build="180626">
 					<value name="Name" type="string" data="{Bash::bash}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/dir %CD% /icon "C:\ProgramFilesStandalone\ConEmuPack.180528\ubuntu.ico"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -cur_console:pm:/mnt'/>
+					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl --distro-guid {6d421f00-abd6-4bbd-81eb-514e8811c801} -C~ -cur_console:pm:/mnt -t bash -l'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-12-16 22:41:52" build="180626">
@@ -719,6 +719,7 @@
 				</key>
 			</key>
 			<value name="CmdLineHistory" type="multi">
+				<line data="{Bash::CygWin bash}"/>
 				<line data="{Shells::cmd}"/>
 				<line data="{Bash::bash}"/>
 			</value>
