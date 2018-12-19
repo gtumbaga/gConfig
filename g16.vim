@@ -19,8 +19,8 @@ hi Title        term=NONE cterm=NONE ctermfg=gray   ctermbg=NONE
 hi Statement    term=NONE cterm=NONE ctermfg=Darkblue  ctermbg=NONE
 hi Special      term=NONE cterm=NONE ctermfg=White ctermbg=NONE
 hi Function      term=NONE cterm=NONE ctermfg=DarkBlue ctermbg=NONE
-hi SpecialKey   term=NONE cterm=NONE ctermfg=8  ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=8  ctermbg=NONE
+hi SpecialKey   term=NONE cterm=NONE ctermfg=DarkGray  ctermbg=NONE
+hi NonText      term=NONE cterm=NONE ctermfg=DarkGray  ctermbg=NONE
 hi extends      term=NONE cterm=NONE ctermfg=darkgray  ctermbg=NONE
 hi Constant     term=NONE cterm=NONE ctermfg=White ctermbg=NONE
 hi String       term=NONE cterm=NONE ctermfg=Blue  ctermbg=NONE
@@ -32,8 +32,8 @@ hi Identifier   term=NONE cterm=NONE ctermfg=Grey ctermbg=NONE
 hi Number          ctermfg=Blue
 hi Boolean         ctermfg=Blue
 hi LineNr       cterm=NONE ctermfg=DarkYellow  ctermbg=NONE
-hi CursorLine   ctermbg=8 ctermfg=None cterm=None term=None
-hi CursorLineNr cterm=None ctermfg=White ctermbg=8
+hi CursorLine   ctermbg=DarkGray ctermfg=None cterm=None term=None
+hi CursorLineNr cterm=None ctermfg=White ctermbg=DarkGray
 
 hi MatchParen cterm=NONE ctermfg=white ctermbg=blue
 
