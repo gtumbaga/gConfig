@@ -61,7 +61,7 @@ function! InsertStatuslineColor(mode)
   if a:mode == 'i'
     hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
     hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    highlight  CursorLine ctermbg=NONE ctermfg=NONE cterm=None term=None
+    highlight  CursorLine ctermbg=DarkGray ctermfg=NONE cterm=None term=None
     highlight  CursorLineNr cterm=None ctermfg=Black ctermbg=Yellow
   elseif a:mode == 'v'
     "set updatetime=0
