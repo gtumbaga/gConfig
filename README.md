@@ -29,5 +29,6 @@ For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for Con
 In my opition, ConEmu is a necessity for me when using WSL (Windows Subsystem Linux).  It ties up a lot of loose ends that the WSL terminal by istelf fails at, like:
  - handing colors correctly
  - using a fallback font for special characters when your chosen monospaced font can't support them
- - provides tabs, can be pasted into via ctrl-v
+ - provides tabs
+ - can be pasted into via ctrl-v (other windows terminal need to paste with right-click.  That sucks, especially when using tmux/vim and don't need the mouse for anything else.
  - probably some more things that I just can't remember right now lol
