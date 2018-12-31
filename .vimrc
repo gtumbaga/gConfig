@@ -18,7 +18,8 @@ endif
 
 "vim plugins we want
 call plug#begin('~/.vim/plugged')
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'gregsexton/MatchTag'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
@@ -31,6 +32,12 @@ call plug#end()
 "disable macvim colorscheme so it will pick up settings form here.
 let macvim_skip_colorscheme=1
 
+let g:indent_guides_enable_on_vim_startup = 1
+set ts=2 sw=2 et
+let g:indent_guides_guide_size = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 
 set encoding=utf-8 "encoding
 "set t_Co=256 "enable more colors, needed this for the color scheme to work

@@ -19,9 +19,9 @@ hi Title        term=NONE cterm=NONE ctermfg=gray   ctermbg=NONE
 hi Statement    term=NONE cterm=NONE ctermfg=Darkblue  ctermbg=NONE
 hi Special      term=NONE cterm=NONE ctermfg=White ctermbg=NONE
 hi Function      term=NONE cterm=NONE ctermfg=DarkBlue ctermbg=NONE
-hi SpecialKey   term=NONE cterm=NONE ctermfg=DarkGray  ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=DarkGray  ctermbg=NONE
-hi extends      term=NONE cterm=NONE ctermfg=darkgray  ctermbg=NONE
+hi SpecialKey   term=NONE cterm=NONE ctermfg=DarkCyan  ctermbg=NONE
+hi NonText      term=NONE cterm=NONE ctermfg=DarkCyan  ctermbg=NONE
+hi extends      term=NONE cterm=NONE ctermfg=darkCyan  ctermbg=NONE
 hi Constant     term=NONE cterm=NONE ctermfg=White ctermbg=NONE
 hi String       term=NONE cterm=NONE ctermfg=Blue  ctermbg=NONE
 hi Comment      term=NONE cterm=NONE ctermfg=DarkCyan ctermbg=NONE
