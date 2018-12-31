@@ -24,7 +24,9 @@ For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for Con
 ![](images/colorSample.png)
 
 At a quick glance, here are the colors used:
+
 | Color Name   |  RGB Value   |
+|-------------:|:-------------|
 | Black        |  25,53,73    |
 | BoldBlack    |  32,62,83    |
 | Red          |  255,157,0   |
