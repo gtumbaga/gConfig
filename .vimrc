@@ -202,7 +202,7 @@ function! ToggleOnScreenMarks()
   set number!
   set relativenumber!
   set list!
-  IndentLinesToggle
+  IndentGuidesToggle
 endfunction
 
 

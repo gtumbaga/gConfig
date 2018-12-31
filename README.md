@@ -23,7 +23,26 @@ For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for Con
 
 ![](images/colorSample.png)
 
+At a quick glance, here are the colors used:
+| Color Name   |  RGB Value   |
+| Black        |  25,53,73    |
+| BoldBlack    |  32,62,83    |
+| Red          |  255,157,0   |
+| BoldRed      |  255,201,114 |
+| Green        |  58,217,0    |
+| BoldGreen    |  165,255,144 |
+| Yellow       |  255,198,0   |
+| BoldYellow   |  255,238,128 |
+| Blue         |  0,136,255   |
+| BoldBlue     |  129,196,255 |
+| Magenta      |  255,98,140  |
+| BoldMagenta  |  251,148,255 |
+| Cyan         |  79,115,145  |
+| BoldCyan     |  152,246,247 |
+| White        |  199,199,199 |
+| BoldWhite    |  255,255,255 |
 
+---
 
 ### Windows 10
 In my opition, ConEmu is a necessity for me when using WSL (Windows Subsystem Linux).  It ties up a lot of loose ends that the WSL terminal by istelf fails at, like:
