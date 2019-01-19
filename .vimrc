@@ -63,6 +63,11 @@ set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 set updatetime=0 "for fast CursorHold
 
+"speedy stuffs, for those large files
+set re=1 "force vim to use a older version of regex engine and it is actually FASTER
+set foldmethod=indent "folding is calculated on indent rather than syntax
+set nofoldenable    " even better, les disable folding
+
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
