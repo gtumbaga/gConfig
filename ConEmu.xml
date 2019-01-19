@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-12-31 13:46:09" build="180626">
+		<key name=".Vanilla" modified="2019-01-18 19:57:23" build="180626">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -74,7 +74,7 @@
 			<value name="ProcessNewConArg" type="hex" data="01"/>
 			<value name="ProcessCmdStart" type="hex" data="00"/>
 			<value name="ProcessCtrlZ" type="hex" data="00"/>
-			<value name="SuppressBells" type="hex" data="01"/>
+			<value name="SuppressBells" type="hex" data="00"/>
 			<value name="ConsoleExceptionHandler" type="hex" data="00"/>
 			<value name="UseClink" type="hex" data="01"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="01"/>
@@ -83,8 +83,8 @@
 			<value name="SaveCmdHistory" type="hex" data="01"/>
 			<value name="CmdLineHistory" type="multi">
 				<line data="{Bash::CygWin bash}"/>
-				<line data="{Shells::cmd}"/>
 				<line data="{Bash::bash}"/>
+				<line data="{Shells::cmd}"/>
 			</value>
 			<value name="SingleInstance" type="hex" data="01"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
@@ -107,7 +107,7 @@
 			<value name="Multi.Iterate" type="hex" data="01"/>
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
-			<value name="KeyboardHooks" type="hex" data="01"/>
+			<value name="KeyboardHooks" type="hex" data="02"/>
 			<value name="FontName" type="string" data="Roboto Mono Light for Powerline"/>
 			<value name="FontName2" type="string" data="Consolas"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
@@ -140,11 +140,11 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="00000521"/>
-			<value name="ConWnd X" type="long" data="102"/>
-			<value name="ConWnd Y" type="long" data="157"/>
+			<value name="ConWnd X" type="long" data="8"/>
+			<value name="ConWnd Y" type="long" data="0"/>
 			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
-			<value name="ConWnd Width" type="dword" data="00000092"/>
-			<value name="ConWnd Height" type="dword" data="00000026"/>
+			<value name="ConWnd Width" type="dword" data="0000005d"/>
+			<value name="ConWnd Height" type="dword" data="00000032"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
@@ -190,7 +190,7 @@
 				<line data="# alias glb=git-log --branches --date-order"/>
 			</value>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
-			<value name="CTS.IntelligentExceptions" type="string" data="far|vim"/>
+			<value name="CTS.IntelligentExceptions" type="string" data="far"/>
 			<value name="CTS.AutoCopy" type="hex" data="01"/>
 			<value name="CTS.ResetOnRelease" type="hex" data="00"/>
 			<value name="CTS.IBeam" type="hex" data="01"/>
@@ -236,10 +236,10 @@
 			<value name="ShellNoZoneCheck" type="hex" data="00"/>
 			<value name="FixAltOnAltTab" type="hex" data="00"/>
 			<value name="UseAltGrayPlus" type="hex" data="01"/>
-			<value name="DisableMouse" type="hex" data="00"/>
+			<value name="DisableMouse" type="hex" data="01"/>
 			<value name="RSelectionFix" type="hex" data="01"/>
 			<value name="MouseSkipActivation" type="hex" data="01"/>
-			<value name="MouseSkipMoving" type="hex" data="01"/>
+			<value name="MouseSkipMoving" type="hex" data="00"/>
 			<value name="MouseDragWindow" type="hex" data="01"/>
 			<value name="FarHourglass" type="hex" data="01"/>
 			<value name="FarHourglassDelay" type="ulong" data="500"/>
