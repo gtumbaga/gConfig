@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:   Gabriel Tumbaga
-" Last Change:  2018 Dec 18
+" Last Change:  2018 Jan 20
 
 " I altered to refer to system colors. that way your color scheme stays
 " consistent throughout.
@@ -11,58 +11,58 @@ if exists("syntax_on")
 endif
 let g:colors_name="g16"
 
-hi Normal       term=NONE cterm=NONE ctermfg=White   ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=darkblue   ctermbg=NONE
-hi Title        term=NONE cterm=NONE ctermfg=gray   ctermbg=NONE
+hi Normal       term=NONE cterm=NONE ctermfg=15   ctermbg=NONE
+hi NonText      term=NONE cterm=NONE ctermfg=4   ctermbg=NONE
+hi Title        term=NONE cterm=NONE ctermfg=7   ctermbg=NONE
  
 
-hi Statement    term=NONE cterm=NONE ctermfg=Darkblue  ctermbg=NONE
-hi Special      term=NONE cterm=NONE ctermfg=White ctermbg=NONE
-hi Function      term=NONE cterm=NONE ctermfg=DarkBlue ctermbg=NONE
-hi SpecialKey   term=NONE cterm=NONE ctermfg=DarkCyan  ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=DarkCyan  ctermbg=NONE
-hi extends      term=NONE cterm=NONE ctermfg=darkCyan  ctermbg=NONE
-hi Constant     term=NONE cterm=NONE ctermfg=White ctermbg=NONE
-hi String       term=NONE cterm=NONE ctermfg=Blue  ctermbg=NONE
-hi Comment      term=NONE cterm=NONE ctermfg=DarkCyan ctermbg=NONE
-hi Conceal      ctermfg=darkgray ctermbg=NONE
-hi Preproc      term=NONE cterm=NONE ctermfg=blue ctermbg=NONE
-hi Type         term=NONE cterm=NONE ctermfg=Gray ctermbg=NONE
-hi Identifier   term=NONE cterm=NONE ctermfg=Grey ctermbg=NONE
-hi Number          ctermfg=Blue
-hi Boolean         ctermfg=Blue
-hi LineNr       cterm=NONE ctermfg=DarkYellow  ctermbg=NONE
-hi CursorLine   ctermbg=DarkGray ctermfg=None cterm=None term=None
-hi CursorLineNr cterm=None ctermfg=White ctermbg=DarkGray
+hi Statement    term=NONE cterm=NONE ctermfg=4  ctermbg=NONE
+hi Special      term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
+hi Function      term=NONE cterm=NONE ctermfg=4 ctermbg=NONE
+hi SpecialKey   term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
+hi NonText      term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
+hi extends      term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
+hi Constant     term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
+hi String       term=NONE cterm=NONE ctermfg=12  ctermbg=NONE
+hi Comment      term=NONE cterm=NONE ctermfg=6 ctermbg=NONE
+hi Conceal      ctermfg=8 ctermbg=NONE
+hi Preproc      term=NONE cterm=NONE ctermfg=12 ctermbg=NONE
+hi Type         term=NONE cterm=NONE ctermfg=7 ctermbg=NONE
+hi Identifier   term=NONE cterm=NONE ctermfg=7 ctermbg=NONE
+hi Number          ctermfg=12
+hi Boolean         ctermfg=12
+hi LineNr       cterm=NONE ctermfg=3  ctermbg=NONE
+hi CursorLine   ctermbg=8 ctermfg=None cterm=None term=None
+hi CursorLineNr cterm=None ctermfg=15 ctermbg=8
 
-hi MatchParen cterm=NONE ctermfg=white ctermbg=blue
+hi MatchParen cterm=NONE ctermfg=15 ctermbg=12
 
-hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=White
-hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=White
-hi TabLine          cterm=NONE      ctermfg=gray         ctermbg=NONE
-hi TabLineFill      cterm=NONE      ctermfg=black        ctermbg=NONE
-hi TabLineSel       cterm=NONE      ctermfg=black         ctermbg=White
+hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15
+hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15
+hi TabLine          cterm=NONE      ctermfg=7         ctermbg=NONE
+hi TabLineFill      cterm=NONE      ctermfg=0        ctermbg=NONE
+hi TabLineSel       cterm=NONE      ctermfg=0         ctermbg=15
 
-hi Visual       term=NONE cterm=NONE ctermfg=DarkGray ctermbg=DarkYellow
+hi Visual       term=NONE cterm=NONE ctermfg=8 ctermbg=3
 
-hi Search       term=NONE cterm=NONE ctermbg=Gray
+hi Search       term=NONE cterm=NONE ctermbg=7
 
-hi VertSplit    term=NONE cterm=NONE ctermfg=Black ctermbg=White
+hi VertSplit    term=NONE cterm=NONE ctermfg=0 ctermbg=15
 
-hi Directory    term=NONE cterm=NONE ctermfg=Green ctermbg=NONE
+hi Directory    term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
 
-hi WarningMsg   term=standout cterm=NONE ctermfg=Red ctermbg=NONE
+hi WarningMsg   term=standout cterm=NONE ctermfg=9 ctermbg=NONE
 
-hi Error        term=NONE cterm=NONE ctermfg=White ctermbg=Red
+hi Error        term=NONE cterm=NONE ctermfg=15 ctermbg=9
 
-hi Cursor       ctermfg=Black ctermbg=Yellow
+hi Cursor       ctermfg=0 ctermbg=11
 
-hi WildMenu     cterm=NONE ctermfg=DarkGray ctermbg=DarkYellow
+hi WildMenu     cterm=NONE ctermfg=8 ctermbg=3
 
-hi Conceal      term=NONE cterm=NONE ctermfg=darkgray ctermbg=NONE
+hi Conceal      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
 
-hi Pmenu        cterm=NONE ctermfg=DarkGray ctermbg=DarkYellow
-hi PmenuSel     cterm=NONE ctermfg=DarkGray ctermbg=DarkRed
+hi Pmenu        cterm=NONE ctermfg=8 ctermbg=3
+hi PmenuSel     cterm=NONE ctermfg=8 ctermbg=1
 
 
 hi! link cssBraces Delimiter
