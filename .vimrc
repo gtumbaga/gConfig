@@ -67,6 +67,9 @@ set updatetime=0 "for fast CursorHold
 set re=1 "force vim to use a older version of regex engine and it is actually FASTER
 set foldmethod=indent "folding is calculated on indent rather than syntax
 set nofoldenable    " even better, les disable folding
+set nocursorline "now we're actually force this disabled for speed
+"let loaded_matchparen = 1 "disabling parenthesis highlighting
+
 
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
@@ -183,7 +186,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 set list
-set cursorline      " highlight current line
+"set cursorline      " highlight current line
 
 set wildmenu      " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]
