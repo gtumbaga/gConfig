@@ -63,7 +63,7 @@ set lazyredraw " to avoid scrolling problems
 set updatetime=0 "for fast CursorHold
 
 "speedy stuffs, for those large files
-"set re=1 "force vim to use a older version of regex engine and it is actually FASTER
+set re=1 "force vim to use a older version of regex engine and it is actually FASTER
 set foldmethod=indent "folding is calculated on indent rather than syntax
 set nofoldenable    " even better, les disable folding
 "set nocursorline "now we're actually force this disabled for speed
@@ -73,21 +73,21 @@ set nofoldenable    " even better, les disable folding
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
-    hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    highlight  CursorLine ctermbg=DarkGray ctermfg=NONE cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=Black ctermbg=Yellow
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11
+    highlight  CursorLine ctermbg=8 ctermfg=NONE cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11
   elseif a:mode == 'v'
     "set updatetime=0
-    hi StatusLine   term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
-    highlight  CursorLine ctermbg=Yellow ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=Black ctermbg=Magenta
+    hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5
+    highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5
   else
-    hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=White
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=White
-    highlight  CursorLine ctermbg=DarkGray ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=DarkGray
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15
+    highlight  CursorLine ctermbg=8 ctermfg=None cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=8
     "set updatetime=0
   endif
   return ''
