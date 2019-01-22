@@ -36,8 +36,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 set ts=2 sw=2 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=8 ctermbg=8
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=8 ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#203e53 ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#203e53 ctermbg=8
 
 set encoding=utf-8 "encoding
 "set t_Co=256 "enable more colors, needed this for the color scheme to work
@@ -74,21 +74,21 @@ set nofoldenable    " even better, les disable folding
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
-    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11
-    highlight  CursorLine ctermbg=8 ctermfg=NONE cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=#ffee80 guibg=#193549
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=#ffee80 guibg=#193549
+    highlight  CursorLine ctermbg=8 ctermfg=NONE cterm=None term=None guibg=#203e53 guifg=NONE
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11 guibg=#ffee80 guifg=#193549
   elseif a:mode == 'v'
     "set updatetime=0
-    hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5
-    highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5
+    hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
+    highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None guibg=#ffee80 guifg=NONE
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5 guibg=#ff628c guifg=#193549
   else
-    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15
-    highlight  CursorLine ctermbg=8 ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=8
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
+    highlight  CursorLine ctermbg=8 ctermfg=None cterm=None term=None guibg=#203e53 guifg=NONE
+    highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=8 guibg=#203e53 guifg=#ffc600
     "set updatetime=0
   endif
   return ''
