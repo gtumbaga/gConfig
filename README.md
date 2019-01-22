@@ -25,24 +25,24 @@ For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for Con
 
 At a quick glance, here are the colors used:
 
-| Color Name   |  RGB Value   |
-|-------------:|:-------------|
-| Black        |  25,53,73    |
-| BoldBlack    |  32,62,83    |
-| Red          |  255,157,0   |
-| BoldRed      |  255,201,114 |
-| Green        |  58,217,0    |
-| BoldGreen    |  165,255,144 |
-| Yellow       |  255,198,0   |
-| BoldYellow   |  255,238,128 |
-| Blue         |  0,136,255   |
-| BoldBlue     |  129,196,255 |
-| Magenta      |  255,98,140  |
-| BoldMagenta  |  251,148,255 |
-| Cyan         |  79,115,145  |
-| BoldCyan     |  152,246,247 |
-| White        |  199,199,199 |
-| BoldWhite    |  255,255,255 |
+| Color Name   |  RGB Value   | HEX Value |
+|-------------:|:-------------|:----------|
+| Black        |  25,53,73    | #193549   |
+| BoldBlack    |  32,62,83    | #203e53   |
+| Red          |  255,157,0   | #ff9d00   |
+| BoldRed      |  255,201,114 | #ffc972   |
+| Green        |  58,217,0    | #3ad900   |
+| BoldGreen    |  165,255,144 | #a5ff90   |
+| Yellow       |  255,198,0   | #ffc600   |
+| BoldYellow   |  255,238,128 | #ffee80   |
+| Blue         |  0,136,255   | #0088ff   |
+| BoldBlue     |  129,196,255 | #81c4ff   |
+| Magenta      |  255,98,140  | #ff628c   |
+| BoldMagenta  |  251,148,255 | #fb94ff   |
+| Cyan         |  79,115,145  | #4f7391   |
+| BoldCyan     |  152,246,247 | #98f6f7   |
+| White        |  199,199,199 | #c7c7c7   |
+| BoldWhite    |  255,255,255 | #ffffff   |
 
 ---
 
