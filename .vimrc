@@ -36,8 +36,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 set ts=2 sw=2 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=darkgrey
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=8 ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=8 ctermbg=8
 
 set encoding=utf-8 "encoding
 "set t_Co=256 "enable more colors, needed this for the color scheme to work
@@ -67,28 +67,28 @@ set updatetime=0 "for fast CursorHold
 set re=1 "force vim to use a older version of regex engine and it is actually FASTER
 set foldmethod=indent "folding is calculated on indent rather than syntax
 set nofoldenable    " even better, les disable folding
-set nocursorline "now we're actually force this disabled for speed
+"set nocursorline "now we're actually force this disabled for speed
 "let loaded_matchparen = 1 "disabling parenthesis highlighting
 
 
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
-    hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=Yellow
-    highlight  CursorLine ctermbg=DarkGray ctermfg=NONE cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=Black ctermbg=Yellow
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11
+    highlight  CursorLine ctermbg=8 ctermfg=NONE cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11
   elseif a:mode == 'v'
     "set updatetime=0
-    hi StatusLine   term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=White ctermbg=Magenta
-    highlight  CursorLine ctermbg=Yellow ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=Black ctermbg=Magenta
+    hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5
+    highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5
   else
-    hi StatusLine   term=NONE cterm=NONE ctermfg=Black ctermbg=White
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=Black ctermbg=White
-    highlight  CursorLine ctermbg=DarkGray ctermfg=None cterm=None term=None
-    highlight  CursorLineNr cterm=None ctermfg=DarkRed ctermbg=DarkGray
+    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15
+    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15
+    highlight  CursorLine ctermbg=8 ctermfg=None cterm=None term=None
+    highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=8
     "set updatetime=0
   endif
   return ''
@@ -164,8 +164,8 @@ let g:user_emmet_leader_key='<C-Z>'
 set listchars+=eol:~
 set listchars+=tab:>-
 " set the line  netrw colors
-hi netrwTreeBar      term=NONE cterm=NONE ctermfg=DarkCyan ctermbg=NONE
-hi netrwDir          term=NONE cterm=NONE ctermfg=Blue ctermbg=NONE
+hi netrwTreeBar      term=NONE cterm=NONE ctermfg=6 ctermbg=NONE
+hi netrwDir          term=NONE cterm=NONE ctermfg=12 ctermbg=NONE
 " indentline settings
 let g:indentLine_color_term = 6
 let g:indentLine_leadingSpaceEnabled = 0
@@ -186,7 +186,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 set list
-"set cursorline      " highlight current line
+set cursorline      " highlight current line
 
 set wildmenu      " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]

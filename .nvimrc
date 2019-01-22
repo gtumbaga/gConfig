@@ -163,8 +163,8 @@ let g:user_emmet_leader_key='<C-Z>'
 set listchars+=eol:~
 set listchars+=tab:>-
 " set the line  netrw colors
-hi netrwTreeBar      term=NONE cterm=NONE ctermfg=DarkCyan ctermbg=NONE
-hi netrwDir          term=NONE cterm=NONE ctermfg=Blue ctermbg=NONE
+hi netrwTreeBar      term=NONE cterm=NONE ctermfg=6 ctermbg=NONE
+hi netrwDir          term=NONE cterm=NONE ctermfg=12 ctermbg=NONE
 " indentline settings
 let g:indentLine_color_term = 6
 let g:indentLine_leadingSpaceEnabled = 0
@@ -185,7 +185,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 set list
-"set cursorline      " highlight current line
+set cursorline      " highlight current line
 
 set wildmenu      " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]
