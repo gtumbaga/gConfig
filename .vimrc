@@ -143,13 +143,13 @@ set statusline+=\    "space
 set scrolloff=8     
 set sidescrolloff=15
 set sidescroll=1
-"ctrl-e and ctrl-y scroll 2 lines insetad of 1
-noremap <C-e> 2<C-e>
-noremap <C-y> 2<C-y>
+"ctrl-e and ctrl-y scroll 3 lines insetad of 1
+noremap <C-e> 3<C-e>
+noremap <C-y> 3<C-y>
 " Scroll 2 characters to the right
-map <C-L> 2zl
+map <C-L> 3zl
 " Scroll 2 characters to the left
-map <C-H> 2zh
+map <C-H> 3zh
 "remove the esc key delay
 set timeoutlen=1000 ttimeoutlen=0
 
