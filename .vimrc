@@ -83,7 +83,7 @@ function! InsertStatuslineColor(mode)
     hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
     hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
     highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None guibg=#ffee80 guifg=NONE
-    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5 guibg=#ff628c guifg=#193549
+    highlight  CursorLineNr cterm=None ctermfg=15 ctermbg=5 guibg=#ff628c guifg=#193549
   else
     hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
     hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
@@ -296,7 +296,7 @@ if exists("+showtabline")
   set stal=2
   set tabline=%!MyTabLine()
   set showtabline=1
-  highlight link TabNum Special
+  highlight TabNum ctermfg=15 ctermbg=NONE
 endif
 
 nmap <leader>sp :call <SID>SynStack()<CR>
