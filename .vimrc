@@ -71,6 +71,18 @@ set nofoldenable    " even better, les disable folding
 "set nocursorline "now we're actually force this disabled for speed
 "let loaded_matchparen = 1 "disabling parenthesis highlighting
 
+"set VIM to use specified tmp directories, so it stops storing tmp files in
+"the working directory!
+"the // at the end ensures that re-creates the directory struture of the file
+"we're using in the tmp dir
+"But first, lets check if the dir exists, and if it doesn't, lets create it.
+if empty(glob('~/zzz_vimtmp'))
+  silent !mkdir ~/zzz_vimtmp
+endif
+set backupdir=~/zzz_vimtmp//
+set directory=/zzz_vimtmp//
+set undodir=/zzz_vimtmp//
+
 
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
