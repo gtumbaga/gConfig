@@ -79,9 +79,9 @@ set nofoldenable    " even better, les disable folding
 if empty(glob('~/zzz_vimtmp'))
   silent !mkdir ~/zzz_vimtmp
 endif
-set backupdir=~/zzz_vimtmp//
-set directory=/zzz_vimtmp//
-set undodir=/zzz_vimtmp//
+set backupdir=$HOME/zzz_vimtmp//
+set directory=$HOME/zzz_vimtmp//
+set undodir=$HOME/zzz_vimtmp//
 
 
 "change status bar color in different modes
