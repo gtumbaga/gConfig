@@ -9,7 +9,14 @@ export TERM=xterm-16color
 export LANG=en_US.UTF-8
 export EDITOR=vim
 
-alias ll='ls -laGh'
+# -F applies classification indicators like slashes after a dir, @ for symlink, etc.
+# -C column
+# --color=auto ensure its using color for the ls
+alias ls='ls --color=auto -FC'
+# -l list format
+# -a all
+# -h human readable file sizes (reads as kb, mb, gb, etc)
+alias ll='ls -lahF'
 
 #Command line speedtest
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
