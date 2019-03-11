@@ -12,7 +12,9 @@ export EDITOR=vim
 # -F applies classification indicators like slashes after a dir, @ for symlink, etc.
 # -C column
 # --color=auto ensure its using color for the ls
-alias ls='ls --color=auto -FC'
+#alias ls='ls --color=auto -FC'
+# mac doesn't support --color=auto, so lets try -G instead
+alias ls='ls --color=auto -GFC'
 # -l list format
 # -a all
 # -h human readable file sizes (reads as kb, mb, gb, etc)
