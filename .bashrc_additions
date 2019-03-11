@@ -14,7 +14,7 @@ export EDITOR=vim
 # --color=auto ensure its using color for the ls
 #alias ls='ls --color=auto -FC'
 # mac doesn't support --color=auto, so lets try -G instead
-alias ls='ls --color=auto -GFC'
+alias ls='ls -GFC'
 # -l list format
 # -a all
 # -h human readable file sizes (reads as kb, mb, gb, etc)
