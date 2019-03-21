@@ -16,7 +16,7 @@ export EDITOR=vim
 # mac doesn't support --color=auto, so lets try -G instead
 alias ls='ls -GFC'
 #check if --color will fail, and ignore it if it does.  this is needed so we don't error out on mac, but still get color on linux
-ls --color=auto &> /dev/null && alias ls='ls --color=auto -FC' ||
+ls --color=auto &> /dev/null && alias ls='ls --color=auto -FC' || alias ls='ls -GFC'
 # -l list format
 # -a all
 # -h human readable file sizes (reads as kb, mb, gb, etc)
