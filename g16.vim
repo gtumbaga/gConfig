@@ -20,7 +20,7 @@ hi Statement    term=NONE cterm=NONE ctermfg=4  ctermbg=NONE
 hi Special      term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
 hi Function      term=NONE cterm=NONE ctermfg=4 ctermbg=NONE
 hi SpecialKey   term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
+hi NonText      term=NONE cterm=NONE ctermfg=3  ctermbg=NONE
 hi extends      term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
 hi Constant     term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
 hi String       term=NONE cterm=NONE ctermfg=12  ctermbg=NONE
