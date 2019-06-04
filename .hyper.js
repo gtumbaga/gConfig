@@ -14,6 +14,8 @@ module.exports = {
     // font family with optional fallbacks
     fontFamily: 'Hack, Consolas, "Lucida Console", monospace',
 
+    uiFontFamily: '"Share Tech Mono", monospace',
+
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
 
@@ -27,7 +29,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(255,198,0,0.8)',
+    cursorColor: 'rgba(255,198,0,1)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -52,7 +54,7 @@ module.exports = {
     borderColor: '#203e53',
 
     // custom CSS to embed in the main window
-    css: 'header nav .tab_active {background-color: #203e53;} header nav.tabs_nav{height: 24px; line-height:24px;}.tabs_list,.tab_text{height: 24px;}.tab_icon{top:5px;}.terms_terms{margin-top: 24px;}',
+    css: 'header nav .tab_active {background-color: #203e53;} header nav.tabs_nav{height: 24px; line-height:24px;}.tabs_list,.tab_text{height: 24px;}.tab_icon{top:5px;}.terms_terms{margin-top: 30px;}',
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -67,7 +69,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '4px',
+    padding: '4px 0px 0px 4px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
