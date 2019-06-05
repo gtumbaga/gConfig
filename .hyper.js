@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Hack, Consolas, "Lucida Console", monospace',
+    fontFamily: ' Hack, Consolas, "Lucida Console", monospace',
 
     uiFontFamily: '"Share Tech Mono", monospace',
 
