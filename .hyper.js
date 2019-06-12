@@ -29,7 +29,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(255,198,0,1)',
+    cursorColor: 'rgba(255,198,0,0.8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
