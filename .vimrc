@@ -58,6 +58,10 @@ set backspace=2 " make backspace work like most other programs, fixes backspace 
 
 set ruler "show cursor position all the time
 
+"for security reasons, disable modelines.
+set modelines=0
+set nomodeline
+
 "speedy stuffs
 set ttyfast " u got a fast terminal
 set ttyscroll=3
@@ -164,7 +168,7 @@ map <C-L> 3zl
 " Scroll 2 characters to the left
 map <C-H> 3zh
 "remove the esc key delay
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=200
 
 "set // in visual mode, to search for selected text
 vnoremap // y/\V<C-R>"<CR>
