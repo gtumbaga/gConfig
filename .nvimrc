@@ -26,6 +26,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
 Plug 'itchyny/vim-gitbranch'
 Plug 'vim-syntastic/syntastic'
+Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 
@@ -57,8 +58,13 @@ set backspace=2 " make backspace work like most other programs, fixes backspace 
 
 set ruler "show cursor position all the time
 
+"for security reasons, disable modelines.
+set modelines=0
+set nomodeline
+
 "speedy stuffs
 set ttyfast " u got a fast terminal
+"set ttyscroll=3   "not supported by nvim
 set lazyredraw " to avoid scrolling problems
 set updatetime=0 "for fast CursorHold
 
@@ -68,6 +74,18 @@ set foldmethod=indent "folding is calculated on indent rather than syntax
 set nofoldenable    " even better, les disable folding
 "set nocursorline "now we're actually force this disabled for speed
 "let loaded_matchparen = 1 "disabling parenthesis highlighting
+
+"set VIM to use specified tmp directories, so it stops storing tmp files in
+"the working directory!
+"the // at the end ensures that re-creates the directory struture of the file
+"we're using in the tmp dir
+"But first, lets check if the dir exists, and if it doesn't, lets create it.
+if empty(glob('~/zzz_vimtmp'))
+  silent !mkdir ~/zzz_vimtmp
+endif
+set backupdir=$HOME/zzz_vimtmp//
+set directory=$HOME/zzz_vimtmp//
+set undodir=$HOME/zzz_vimtmp//
 
 
 "change status bar color in different modes
@@ -82,7 +100,7 @@ function! InsertStatuslineColor(mode)
     hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
     hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
     highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None guibg=#ffee80 guifg=NONE
-    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=5 guibg=#ff628c guifg=#193549
+    highlight  CursorLineNr cterm=None ctermfg=15 ctermbg=5 guibg=#ff628c guifg=#193549
   else
     hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
     hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
@@ -150,7 +168,7 @@ map <C-L> 2zl
 " Scroll 2 characters to the left
 map <C-H> 2zh
 "remove the esc key delay
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=200
 
 "set // in visual mode, to search for selected text
 vnoremap // y/\V<C-R>"<CR>
@@ -295,7 +313,7 @@ if exists("+showtabline")
   set stal=2
   set tabline=%!MyTabLine()
   set showtabline=1
-  highlight link TabNum Special
+  highlight TabNum ctermfg=15 ctermbg=NONE
 endif
 
 nmap <leader>sp :call <SID>SynStack()<CR>
