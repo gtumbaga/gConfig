@@ -40,7 +40,7 @@ Here are the colors used:
 
 | ANSI Color   |  RGB Value   | HEX Value |
 |-------------:|:-------------|:----------|
-| Black        |  25,53,73    | #193549   |
+| Black        |  0,0,0       | #000000   |
 | BoldBlack    |  18,53,103   | #123567   |
 | Red          |  255,157,0   | #ff9d00   |
 | BoldRed      |  255,201,114 | #ffc972   |
