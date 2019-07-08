@@ -31,7 +31,7 @@ Here are the colors used:
 
 | GUI   Color   |  RGB Value   | HEX Value
 |--------------:|:-------------|:----------|
-| Foreground    |  199,199,199 | #c7c7c7   |
+| Foreground    |  204,204,204 | #cccccc   |
 | Background    |  1,36,86     | #012456   |
 | Bold          |  255,255,255 | #ffffff   |
 | Selection     |  255,198,0   | #ffc600   |
