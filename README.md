@@ -17,13 +17,53 @@ source ~/gConfig/.bashrc_additions
 ```
 
 ## Colors
-Please note that the g16.vim color scheme is meant to look with my custom terminal color scheme.
+Please note that the g16.vim color scheme is meant to look good with my custom terminal color scheme.
 I've included an iterm and terminal (mac) file to import the colors to your terminal.
 For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for ConEmu.
 
+### gBaltAltBG
+gBaltAltBG is my current color scheme.  I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
+I also changed back to the utilization of a terminal bg color that is seperate from the 16 specified ANSI colors.
+
+Here are the colors used:
+
+![](images/colorSample-Alt.png)
+
+| GUI   Color   |  RGB Value   | HEX Value
+|--------------:|:-------------|:----------|
+| Foreground    |  199,199,199 | #c7c7c7   |
+| Background    |  1,36,86     | #012456   |
+| Bold          |  255,255,255 | #ffffff   |
+| Selection     |  255,198,0   | #ffc600   |
+| Selected Text |  0,0,0       | #000000   |
+| Cursor        |  255,198,0   | #ffc600   |
+
+| ANSI Color   |  RGB Value   | HEX Value |
+|-------------:|:-------------|:----------|
+| Black        |  25,53,73    | #193549   |
+| BoldBlack    |  18,53,103   | #123567   |
+| Red          |  255,157,0   | #ff9d00   |
+| BoldRed      |  255,201,114 | #ffc972   |
+| Green        |  58,217,0    | #3ad900   |
+| BoldGreen    |  165,255,144 | #a5ff90   |
+| Yellow       |  255,198,0   | #ffc600   |
+| BoldYellow   |  255,238,128 | #ffee80   |
+| Blue         |  27,148,255  | #1b94ff   |
+| BoldBlue     |  144,202,255 | #8ecaff   |
+| Magenta      |  255,98,140  | #ff628c   |
+| BoldMagenta  |  251,148,255 | #fb94ff   |
+| Cyan         |  90,157,165  | #5a9da5   |
+| BoldCyan     |  152,246,247 | #98f6f7   |
+| White        |  204,204,204 | #cccccc   |
+| BoldWhite    |  255,255,255 | #ffffff   |
+
+---
+
+
+### gBalt (my old one)
 ![](images/colorSample.png)
 
-At a quick glance, here are the colors used:
+Here are the colors used:
 
 | Color Name   |  RGB Value   | HEX Value |
 |-------------:|:-------------|:----------|
