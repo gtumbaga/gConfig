@@ -232,7 +232,7 @@ endfunction
 nmap <F3> :call ToggleOnScreenMarks()<CR>
 
 "toggle spell checker, with language set to english
-map <F6> setlocal spell! spelllang=en_us<CR>
+map <F6> :setlocal spell! spelllang=en_us<CR>
 
 " Tree View File Browser Settings
 " " netrw magic
