@@ -45,6 +45,10 @@ hi TabLineSel       cterm=NONE      ctermfg=0         ctermbg=15
 
 hi Visual       term=NONE cterm=NONE ctermfg=8 ctermbg=3
 
+hi SpellBad     term=NONE cterm=NONE ctermfg=0 ctermbg=1
+hi SpellCap     term=NONE cterm=NONE ctermfg=0 ctermbg=12
+hi SpellLocal   term=NONE cterm=UNDERLINE ctermfg=5 ctermbg=NONE
+
 hi Search       term=NONE cterm=NONE ctermbg=7
 
 hi VertSplit    term=NONE cterm=NONE ctermfg=0 ctermbg=15
