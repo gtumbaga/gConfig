@@ -30,6 +30,10 @@ Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 
+"disable NVIM's abaility to change cursor shape.  this is breaking windows terminal
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+set guicursor=
+"
 "disable macvim colorscheme so it will pick up settings form here.
 let macvim_skip_colorscheme=1
 
