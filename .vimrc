@@ -245,10 +245,17 @@ let g:netrw_liststyle=3
 " hide vim swap files
 let g:netrw_list_hide='.*\.swp$'
 "default to open new tab
-"let g:netrw_browse_split = 3
-"let g:netrw_altv = 1
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+"small left side window
+let g:netrw_winsize = 20
+"make sure split is on the side when we start vim
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 
 "ignore certain errors in syntastic, for instance, empty tags
 let g:syntastic_html_tidy_ignore_errors=[
