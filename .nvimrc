@@ -250,8 +250,8 @@ let g:netrw_liststyle=3
 " hide vim swap files
 let g:netrw_list_hide='.*\.swp$'
 "default to open new tab
-let g:netrw_browse_split = 3
-let g:netrw_altv = 1
+"let g:netrw_browse_split = 3
+"let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
