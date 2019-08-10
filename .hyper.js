@@ -21,10 +21,10 @@ module.exports = {
     fontWeightBold: 'normal',
 
     // line height as a relative unit
-    lineHeight: 0.9,
+    lineHeight: 1,
 
     // letter spacing as a relative unit
-    letterSpacing: 0.6,
+    letterSpacing: 1,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(255,198,0,0.75)',
