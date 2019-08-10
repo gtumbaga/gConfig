@@ -60,7 +60,7 @@ module.exports = {
         top: 34px;
         bottom: 0;
         height: 100vh;
-        width: 100px;
+        width: 74px;
         border-right: solid 1px #fff;
       }
       .tabs_list {
@@ -92,7 +92,7 @@ module.exports = {
         text-align: left;
       }
       .terms_terms {
-        margin-left: 100px;
+        margin-left: 76px;
         margin-top: 34px;
       }
     `,
@@ -110,7 +110,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '0px 4px',
+    padding: '4px 4px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
