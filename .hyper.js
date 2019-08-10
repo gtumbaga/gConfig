@@ -1,4 +1,4 @@
-// Future versions of Hyper may add additional config options,
+﻿// Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
@@ -9,27 +9,25 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: ' Hack, Consolas, "Lucida Console", monospace',
-
-    uiFontFamily: '"Share Tech Mono", monospace',
+    fontFamily: '"Hack", "Roboto Mono Light for Powerline", "Roboto Mono Light", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
-    fontWeight: 'normal',
+    fontWeight: 'lighter',
 
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'normal',
 
     // line height as a relative unit
-    lineHeight: 1,
+    lineHeight: 0.9,
 
     // letter spacing as a relative unit
-    letterSpacing: 0,
+    letterSpacing: 0.6,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(255,198,0,0.8)',
+    cursorColor: 'rgba(255,198,0,0.75)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -41,20 +39,66 @@ module.exports = {
     cursorBlink: true,
 
     // color of the text
-    foregroundColor: '#c7c7c7',
+    foregroundColor: '#cccccc',
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#193549',
+    backgroundColor: '#012456',
 
     // terminal selection color
     selectionColor: 'rgba(255,198,0,0.3)',
 
     // border color (window, tabs)
-    borderColor: '#203e53',
+    borderColor: '#cccccc',
 
     // custom CSS to embed in the main window
-    css: 'header nav .tab_active {background-color: #203e53;} header nav.tabs_nav{height: 24px; line-height:24px;}.tabs_list,.tab_text{height: 24px;}.tab_icon{top:5px;}.terms_terms{margin-top: 30px;}',
+    css: `
+      nav.tabs_nav {
+        top: 0;
+        width: calc(100vw - 180px);
+        background: rgba(0,0,0,0.4);
+        margin-left: 50px;
+        box-sizing: border-box;
+        height: 20px;
+        border-right: solid 1px #fff;
+        border-left: solid 1px #fff;
+      }
+      nav ul.tabs_list {
+        max-height: 20px;
+      }
+      nav ul.tabs_list .tab_text {
+        height: 20px;
+        line-height: 20px;
+      }
+      nav ul.tabs_list .tab_text.tab_textActive {
+        background: #012456;
+      }
+      .tab_tab .tab_icon {
+        top: 2px;
+      }
+      .terms_terms {
+        margin-top: 22px;
+      }
+      .header_windowHeader,
+      .header_windowControls
+      {
+        height: 20px;
+      }
+      .header_shape {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 20px;
+      }
+
+      .header_appTitle {
+        display: none;
+      }
+      .header_windowHeader {
+        width: 128px;
+        left: auto;
+        right: 1px;
+      }
+    `,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -69,28 +113,28 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '4px 0px 0px 4px',
+    padding: '0px 4px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#193549',
+      black: '#000000',
       red: '#ff9d00',
       green: '#3ad900',
       yellow: '#ffc600',
-      blue: '#0088ff',
+      blue: '#1b94ff',
       magenta: '#ff628c',
-      cyan: '#4f7391',
-      white: '#c7c7c7',
-      lightBlack: '#203e53',
+      cyan: '#5a9da5',
+      white: '#cccccc',
+      lightBlack: '#123567',
       lightRed: '#ffc972',
       lightGreen: '#a5ff90',
       lightYellow: '#ffee80',
-      lightBlue: '#81c4ff',
+      lightBlue: '#8ecaff',
       lightMagenta: '#fb94ff',
       lightCyan: '#98f6f7',
-      lightWhite: '#ffffff',
+      lightWhite: '#ffffff'
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -105,11 +149,11 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '',
+    shell: 'C:\\Windows\\System32\\wsl.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['--login'],
+    shellArgs: ['~'],
 
     // for environment variables
     env: {},
@@ -125,19 +169,10 @@ module.exports = {
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    quickEdit: false,
-
-    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
-    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
-    // (inside tmux or vim with mouse mode enabled for example).
-    macOptionSelectionMode: 'vertical',
+    // quickEdit: true,
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // Whether to use the WebGL renderer. Set it to false to use canvas-based
-    // rendering (slower, but supports transparent backgrounds)
-    webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
