@@ -53,50 +53,47 @@ module.exports = {
 
     // custom CSS to embed in the main window
     css: `
-      nav.tabs_nav {
-        top: 0;
-        width: calc(100vw - 180px);
-        background: rgba(0,0,0,0.4);
-        margin-left: 50px;
-        box-sizing: border-box;
-        height: 20px;
+      .header_windowHeader {
+        background: rgba(0,0,0,0.3);
+      }
+      .tabs_nav {
+        top: 34px;
+        bottom: 0;
+        height: 100vh;
+        width: 100px;
         border-right: solid 1px #fff;
-        border-left: solid 1px #fff;
       }
-      nav ul.tabs_list {
-        max-height: 20px;
+      .tabs_list {
+        max-height: none;
+        height: 100vh;
+        display: block;
+        list-style-type: decimal;
+        list-style-position: inside;
+        font-size: 12px;
       }
-      nav ul.tabs_list .tab_text {
-        height: 20px;
-        line-height: 20px;
+      .tabs_list .tab_tab {
+        display: list-item;
+        border-bottom: solid 1px #fff;
+        background: rgba(0,0,0,0.3);
+        list-style-type: decimal;
+        padding-left: 4px;
       }
-      nav ul.tabs_list .tab_text.tab_textActive {
-        background: #012456;
+      .tabs_list .tab_tab.tab_active {
+        background: none;
       }
-      .tab_tab .tab_icon {
-        top: 2px;
+      .tab_text {
+        display: block;
+        width: calc(100% - 16px);
+        float: right;
+      }
+      .tab_textInner {
+        left: 0;
+        right: 0;
+        text-align: left;
       }
       .terms_terms {
-        margin-top: 22px;
-      }
-      .header_windowHeader,
-      .header_windowControls
-      {
-        height: 20px;
-      }
-      .header_shape {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        height: 20px;
-      }
-
-      .header_appTitle {
-        display: none;
-      }
-      .header_windowHeader {
-        width: 128px;
-        left: auto;
-        right: 1px;
+        margin-left: 100px;
+        margin-top: 34px;
       }
     `,
 
