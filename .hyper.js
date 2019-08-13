@@ -4,6 +4,9 @@
 
 module.exports = {
   config: {
+    //added by gabe, disable webgl because screen isn't correctly clearing
+    webGLRenderer: false,
+
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
