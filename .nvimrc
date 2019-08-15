@@ -160,8 +160,8 @@ set statusline+=[%P]\   "percent through file
 set statusline+=[%l:%c]   "line:column
 set statusline+=\    "space
 
-"Start scrolling when we're 8 lines away from margins
-set scrolloff=8     
+"Start scrolling when we're 3 lines away from margins
+set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
 "ctrl-e and ctrl-y scroll 2 lines insetad of 1
