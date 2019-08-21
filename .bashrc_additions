@@ -23,7 +23,8 @@ ls --color=auto &> /dev/null && alias ls='ls --color=auto -FC' || alias ls='ls -
 alias ll='ls -lahF'
 
 #Command line speedtest
-alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+#alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+#i removed this, and just saved the speedtest.py in the dir. no need to download it every time i want to use it.
 
 #remind myself to use nvim
 alias vi='echo use nvim or vim!'
