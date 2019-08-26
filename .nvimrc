@@ -27,6 +27,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'itchyny/vim-gitbranch'
 Plug 'vim-syntastic/syntastic'
 Plug 'StanAngeloff/php.vim'
+Plug 'evanleck/vim-svelte'
 call plug#end()
 
 
