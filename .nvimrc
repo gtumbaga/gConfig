@@ -169,9 +169,9 @@ set sidescroll=1
 noremap <C-e> 2<C-e>
 noremap <C-y> 2<C-y>
 " Scroll 2 characters to the right
-map <C-L> 2zl
+map <C-L> 10zl
 " Scroll 2 characters to the left
-map <C-H> 2zh
+map <C-H> 10zh
 "remove the esc key delay
 set timeoutlen=1000 ttimeoutlen=200
 
