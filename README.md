@@ -126,9 +126,14 @@ Here are the colors used:
 ---
 
 ### Windows 10
-In my opition, ConEmu is a necessity for me when using WSL (Windows Subsystem Linux).  It ties up a lot of loose ends that the WSL terminal by istelf fails at, like:
+**UPDATE**
+I now use the new Windows Terminal.  Below is how I used to feel about conEmu, but the new Terminal can do all of the below listed, plus more (including ligature support).  I have also changed pasting to shift-ctrl-v, because ctrl-v is used by linux/vim already
+
+
+---
+In my opinion, ConEmu is a necessity for me when using WSL (Windows Subsystem Linux).  It ties up a lot of loose ends that the WSL terminal by itself fails at, like:
  - handing colors correctly
- - using a fallback font for special characters when your chosen monospaced font can't support them
+ - using a fall back font for special characters when your chosen monospaced font can't support them
  - provides tabs
  - can be pasted into via ctrl-v (other windows terminal need to paste with right-click.  That sucks, especially when using tmux/vim and don't need the mouse for anything else.
  - probably some more things that I just can't remember right now lol
