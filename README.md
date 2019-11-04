@@ -45,8 +45,8 @@ Here are the colors used:
 | BoldBlack    |  92,92,92    | #5c5c5c   |
 | Red          |  255,157,0   | #ff9d00   |
 | BoldRed      |  255,201,114 | #ffc972   |
-| Green        |  58,217,0    | #3ad900   |
-| BoldGreen    |  165,255,144 | #a5ff90   |
+| Green        |  58,217,0    | #a5ff90   |
+| BoldGreen    |  165,255,144 | #c5ffc6   |
 | Yellow       |  255,198,0   | #ffc600   |
 | BoldYellow   |  255,238,128 | #ffee80   |
 | Blue         |  110,187,255 | #6ebbff   |
