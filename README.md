@@ -147,11 +147,14 @@ Previously, these are the fonts I was using before it:
 
 ### Windows 10
 **UPDATE**
+WSLTTY can be found here:
+https://github.com/mintty/wsltty
+
 OK, so I just watched a YT vid here: https://youtu.be/XS4j-VS3Atg
 <br/>
 This guy convinced me to try wsltty, and I'm convinced! 
 Here are some of the reasons I'm now using this as my main
- - Text response is really really really fast in this.  In Windows Terminal (WT), stuff is a little slower, and  you can see almost a scrolling effect when text shows up on the screen.
+ - Text response is insanely fast in this.  In Windows Terminal (WT), stuff is a little slower, and  you can see almost a scrolling effect when text shows up on the screen.
  - shift-ctrl-v / shift-ctrl-c for copy paste works.
  - Pasting into this terminal works correctly.  Pasting into WT causes every line to be double spaced.
  - Handling colors works correctly.  I always like terminals that let you set a background color separate from the ANSI colors.
