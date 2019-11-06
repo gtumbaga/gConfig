@@ -33,7 +33,7 @@ Here are the colors used:
 | GUI   Color   |  RGB Value   | HEX Value
 |--------------:|:-------------|:----------|
 | Foreground    |  187,187,187 | #bbbbbb   |
-| Background    |  81,81,81    | #4c4c4c   |
+| Background    |  76,76,76    | #4c4c4c   |
 | Bold          |  255,255,255 | #ffffff   |
 | Selection     |  255,198,0   | #ffc600   |
 | Selected Text |  0,0,0       | #000000   |
@@ -42,11 +42,11 @@ Here are the colors used:
 | ANSI Color    |  RGB Value   | HEX Value |
 |--------------:|:-------------|:----------|
 | Black         |  0,0,0       | #000000   |
-| BoldBlack     |  92,92,92    | #5a5a5a   |
+| BoldBlack     |  90,90,90    | #5a5a5a   |
 | Red           |  255,157,0   | #ff9d00   |
 | BoldRed       |  255,201,114 | #ffc972   |
-| Green         |  58,217,0    | #a5ff90   |
-| BoldGreen     |  165,255,144 | #c5ffc6   |
+| Green         |  165,255,144 | #a5ff90   |
+| BoldGreen     |  197,255,198 | #c5ffc6   |
 | Yellow        |  255,198,0   | #ffc600   |
 | BoldYellow    |  255,238,128 | #ffee80   |
 | Blue          |  110,187,255 | #6ebbff   |
