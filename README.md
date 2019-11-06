@@ -33,30 +33,30 @@ Here are the colors used:
 | GUI   Color   |  RGB Value   | HEX Value
 |--------------:|:-------------|:----------|
 | Foreground    |  187,187,187 | #bbbbbb   |
-| Background    |  81,81,81    | #515151   |
+| Background    |  81,81,81    | #4c4c4c   |
 | Bold          |  255,255,255 | #ffffff   |
 | Selection     |  255,198,0   | #ffc600   |
 | Selected Text |  0,0,0       | #000000   |
 | Cursor        |  255,198,0   | #ffc600   |
 
-| ANSI Color   |  RGB Value   | HEX Value |
-|-------------:|:-------------|:----------|
-| Black        |  0,0,0       | #000000   |
-| BoldBlack    |  92,92,92    | #5c5c5c   |
-| Red          |  255,157,0   | #ff9d00   |
-| BoldRed      |  255,201,114 | #ffc972   |
-| Green        |  58,217,0    | #a5ff90   |
-| BoldGreen    |  165,255,144 | #c5ffc6   |
-| Yellow       |  255,198,0   | #ffc600   |
-| BoldYellow   |  255,238,128 | #ffee80   |
-| Blue         |  110,187,255 | #6ebbff   |
-| BoldBlue     |  178,219,255 | #b2dbff   |
-| Magenta      |  255,98,140  | #ff628c   |
-| BoldMagenta  |  251,148,255 | #fb94ff   |
-| Cyan         |  90,157,165  | #5a9da5   |
-| BoldCyan     |  152,246,247 | #98f6f7   |
-| White        |  187,187,187 | #bbbbbb   |
-| BoldWhite    |  255,255,255 | #ffffff   |
+| ANSI Color    |  RGB Value   | HEX Value |
+|--------------:|:-------------|:----------|
+| Black         |  0,0,0       | #000000   |
+| BoldBlack     |  92,92,92    | #5a5a5a   |
+| Red           |  255,157,0   | #ff9d00   |
+| BoldRed       |  255,201,114 | #ffc972   |
+| Green         |  58,217,0    | #a5ff90   |
+| BoldGreen     |  165,255,144 | #c5ffc6   |
+| Yellow        |  255,198,0   | #ffc600   |
+| BoldYellow    |  255,238,128 | #ffee80   |
+| Blue          |  110,187,255 | #6ebbff   |
+| BoldBlue      |  178,219,255 | #b2dbff   |
+| Magenta       |  255,98,140  | #ff628c   |
+| BoldMagenta   |  251,148,255 | #fb94ff   |
+| Cyan          |  90,157,165  | #5a9da5   |
+| BoldCyan      |  152,246,247 | #98f6f7   |
+| White         |  187,187,187 | #bbbbbb   |
+| BoldWhite     |  255,255,255 | #ffffff   |
 
 ---
 
