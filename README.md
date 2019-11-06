@@ -163,6 +163,7 @@ Here are some of the reasons I'm now using this as my main
  - This terminal shows it's using only 3.5mb of RAM.  WT showed a useage of 34MB.
  - This terminal has a propper block cursor. It you can see the character through it, WT's filledBlock is completely opaque.  It also remains blinking in TMUX. Other terminals, when I start TMUX, the cursor stops blinking.
  - Scrollbar can be disabled, which is nice when you make use of TMUX anyway.
+ - Does not support ligatures, but I don't really care about that, that much.  Also, that gives me a reason to use my fav non-ligature font again, `Hack` =)
 
 
 **UPDATE**
