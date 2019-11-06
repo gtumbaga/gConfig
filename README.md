@@ -21,11 +21,15 @@ Please note that the g16.vim color scheme is meant to look good with my custom t
 I've included an iterm and terminal (mac) file to import the colors to your terminal.
 For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for ConEmu.
 
-## .minttyrc
-mintty changed it's use of this.  this file should now be copied to your windows user dir, in:
-`/mnt/c/Users/<USER>/AppData/Roaming/wsltty/`
+## wsltty / mintty
+mintty changed its config file.  this file should now be copied to your windows user dir, in:
+```
+/mnt/c/Users/<USER>/AppData/Roaming/wsltty/
+```
 and renamed to just `config`
-where of course `<USER>` is your own user
+where of course `<USER>` is your own user<br/>
+The `gbaltgraybg.mintty` theme file should be copied to `/themes/`, and renamed just `gbaltgraybg` without any extension.<br/>
+Also, I added `/bin/bash -l` to the end of the command in the shortcut to open the terminal, so that it opens correctly in "login mode" so my .bash_profile gets loaded correctly...
 
 
 ### gBaltGrayBG
@@ -68,7 +72,7 @@ Here are the colors used:
 
 ### gBaltAltBG
 gBaltAltBG is my 2nd newest color scheme.  I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
-I also changed back to the utilization of a terminal bg color that is seperate from the 16 specified ANSI colors.
+I also changed back to the utilization of a terminal bg color that is separate from the 16 specified ANSI colors.
 
 Here are the colors used:
 
@@ -160,7 +164,7 @@ Here are some of the reasons I'm now using this as my main
  - Handling colors works correctly.  I always like terminals that let you set a background color separate from the ANSI colors.
  - Character support works correctly.  There is no choice for a fallback font, but one is not needed because stuff renders correctly.
  - Does not support tabs, but I'm using tmux anyway, so thats fine.
- - This terminal shows it's using only 3.5mb of RAM.  WT showed a useage of 34MB.
+ - This terminal shows it's using only 3.5mb of RAM.  WT showed a usage of 34MB.
  - This terminal has a propper block cursor. It you can see the character through it, WT's filledBlock is completely opaque.  It also remains blinking in TMUX. Other terminals, when I start TMUX, the cursor stops blinking.
  - Scrollbar can be disabled, which is nice when you make use of TMUX anyway.
  - Does not support ligatures, but I don't really care about that, that much.  Also, that gives me a reason to use my fav non-ligature font again, `Hack` =)
