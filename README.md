@@ -21,6 +21,12 @@ Please note that the g16.vim color scheme is meant to look good with my custom t
 I've included an iterm and terminal (mac) file to import the colors to your terminal.
 For windows, I've also included a .minttyrc for Cygwin, and a ConEmu.xml for ConEmu.
 
+##.minttyrc
+mintty changed it's use of this.  this file should now be copied to your windows user dir, in:
+`/mnt/c/Users/<USER>/AppData/Roaming/wsltty/`
+and renamed to just `config`
+where of course `<USER>` is your own user
+
 
 ### gBaltGrayBG
 gBaltGrayBG is my newest color scheme.  I changed the background to a gray, but a lighter color as to not combat the contrast of bright white screens when I'm looking at other windows, and updated some of the other colors to give more of a constrast between light and dark alternatives of a givven color, as well as make them easier to see on the gray background.
