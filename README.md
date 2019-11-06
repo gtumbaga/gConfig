@@ -165,6 +165,7 @@ Here are some of the reasons I'm now using this as my main
  - Scrollbar can be disabled, which is nice when you make use of TMUX anyway.
  - Does not support ligatures, but I don't really care about that, that much.  Also, that gives me a reason to use my fav non-ligature font again, `Hack` =)
 
+---
 
 **UPDATE**
 I now use the new Windows Terminal.  Below is how I used to feel about conEmu, but the new Terminal can do all of the below listed, plus more (including ligature support).  I have also changed pasting to shift-ctrl-v, because ctrl-v is used by linux/vim already
