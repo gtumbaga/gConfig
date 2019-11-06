@@ -131,14 +131,44 @@ Here are the colors used:
 
 ---
 
+
+
+### Favorite coding font
+Currently, my coding font of choice is `Hack` and can be found here:
+https://sourcefoundry.org/hack/
+
+Previously, these are the fonts I was using before it:
+- Fira Code
+- Cascadia Code
+- Roboto Mono Light
+- Share Tech Mono
+
+---
+
 ### Windows 10
+**UPDATE**
+OK, so I just watched a YT vid here: https://youtu.be/XS4j-VS3Atg
+<br/>
+This guy convinced me to try wsltty, and I'm convinced! 
+Here are some of the reasons I'm now using this as my main
+ - Text response is really really really fast in this.  In Windows Terminal (WT), stuff is a little slower, and  you can see almost a scrolling effect when text shows up on the screen.
+ - shift-ctrl-v / shift-ctrl-c for copy paste works.
+ - Pasting into this terminal works correctly.  Pasting into WT causes every line to be double spaced.
+ - Handling colors works correctly.  I always like terminals that let you set a background color separate from the ANSI colors.
+ - Character support works correctly.  There is no choice for a fallback font, but one is not needed because stuff renders correctly.
+ - Does not support tabs, but I'm using tmux anyway, so thats fine.
+ - This terminal shows it's using only 3.5mb of RAM.  WT showed a useage of 34MB.
+ - This terminal has a propper block cursor. It you can see the character through it, WT's filledBlock is completely opaque.  It also remains blinking in TMUX. Other terminals, when I start TMUX, the cursor stops blinking.
+ - Scrollbar can be disabled, which is nice when you make use of TMUX anyway.
+
+
 **UPDATE**
 I now use the new Windows Terminal.  Below is how I used to feel about conEmu, but the new Terminal can do all of the below listed, plus more (including ligature support).  I have also changed pasting to shift-ctrl-v, because ctrl-v is used by linux/vim already
 
 
 ---
 In my opinion, ConEmu is a necessity for me when using WSL (Windows Subsystem Linux).  It ties up a lot of loose ends that the WSL terminal by itself fails at, like:
- - handing colors correctly
+ - handling colors correctly
  - using a fall back font for special characters when your chosen monospaced font can't support them
  - provides tabs
  - can be pasted into via ctrl-v (other windows terminal need to paste with right-click.  That sucks, especially when using tmux/vim and don't need the mouse for anything else.
