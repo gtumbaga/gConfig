@@ -1,5 +1,5 @@
 # To use common configuration in %APPDATA%\mintty, simply remove this file
-ThemeFile=gbaltgraybg
+ThemeFile=cm
 
 BoldAsFont=-1
 Font=Hack
