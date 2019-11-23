@@ -32,8 +32,45 @@ The `gbaltgraybg.mintty` theme file should be copied to `/themes/`, and renamed 
 Also, I added `/bin/bash -l` to the end of the command in the shortcut to open the terminal, so that it opens correctly in "login mode" so my .bash_profile gets loaded correctly...
 
 
+### CM
+CM is my newest color scheme. It was enspired off of a web theme that my friend was designing for a client.
+
+Here are the colors used:
+
+![](images/colorSample-CM.png)
+
+| GUI   Color   |  RGB Value   | HEX Value
+|--------------:|:-------------|:----------|
+| Foreground    |  215,197,177 | #d7c5b1   |
+| Background    |  51,51,87    | #333357   |
+| Bold          |  255,255,255 | #ffffff   |
+| Selection     |  255,198,0   | #ffc600   |
+| Selected Text |  0,0,0       | #000000   |
+| Cursor        |  255,198,0   | #ffc600   |
+
+| ANSI Color    |  RGB Value   | HEX Value |
+|--------------:|:-------------|:----------|
+| Black         |  0,0,0       | #000000   |
+| BoldBlack     |  58,63,100   | #3a3f64   |
+| Red           |  180,93,83   | #b45d53   |
+| BoldRed       |  237,168,93  | #eda85d   |
+| Green         |  58,217,0    | #3ad900   |
+| BoldGreen     |  165,255,144 | #a5ff90   |
+| Yellow        |  255,198,0   | #ffc600   |
+| BoldYellow    |  255,238,128 | #ffee80   |
+| Blue          |  55,139,201  | #378bc9   |
+| BoldBlue      |  112,174,220 | #70aedc   |
+| Magenta       |  158,157,201 | #9e9dc9   |
+| BoldMagenta   |  218,206,228 | #dacee4   |
+| Cyan          |  90,157,165  | #5a9da5   |
+| BoldCyan      |  152,246,247 | #98f6f7   |
+| White         |  215,197,177 | #d7c5b1   |
+| BoldWhite     |  255,255,255 | #ffffff   |
+
+---
+
 ### gBaltGrayBG
-gBaltGrayBG is my newest color scheme.  I changed the background to a gray, but a lighter color as to not combat the contrast of bright white screens when I'm looking at other windows, and updated some of the other colors to give more of a constrast between light and dark alternatives of a givven color, as well as make them easier to see on the gray background.
+gBaltGrayBG is my 2nd newest color scheme.  I changed the background to a gray, but a lighter color as to not combat the contrast of bright white screens when I'm looking at other windows, and updated some of the other colors to give more of a constrast between light and dark alternatives of a givven color, as well as make them easier to see on the gray background.
 I also changed back to the utilization of a terminal background color that is separate from the 16 specified ANSI colors.
 
 Here are the colors used:
@@ -71,7 +108,7 @@ Here are the colors used:
 ---
 
 ### gBaltAltBG
-gBaltAltBG is my 2nd newest color scheme.  I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
+gBaltAltBG is my 3rd newest color scheme.  I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
 I also changed back to the utilization of a terminal bg color that is separate from the 16 specified ANSI colors.
 
 Here are the colors used:
