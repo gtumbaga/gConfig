@@ -53,7 +53,7 @@ colorscheme g16 "custom theme
 set number "displays numbers for each line
 set numberwidth=5 "wider number bar
 set relativenumber "makes the numberse relative
-set wrap! "disable word wrap for long lines
+set wrap "enable word wrap for long lines
 filetype plugin indent on
 set tabstop=2 " show existing tab with 2 spaces width
 set softtabstop=2   " number of spaces in tab when editing
