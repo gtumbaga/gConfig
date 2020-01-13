@@ -255,7 +255,6 @@ let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-"small left side window
 
 "ignore certain errors in syntastic, for instance, empty tags
 let g:syntastic_html_tidy_ignore_errors=[

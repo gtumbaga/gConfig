@@ -160,13 +160,13 @@ set statusline+=\    "space
 set scrolloff=3
 set sidescrolloff=15
 set sidescroll=1
-"ctrl-e and ctrl-y scroll 3 lines insetad of 1
-noremap <C-e> 3<C-e>
-noremap <C-y> 3<C-y>
+"ctrl-e and ctrl-y scroll 2 lines insetad of 1
+noremap <C-e> 2<C-e>
+noremap <C-y> 2<C-y>
 " Scroll 2 characters to the right
-map <C-L> 3zl
+map <C-L> 10zl
 " Scroll 2 characters to the left
-map <C-H> 3zh
+map <C-H> 10zh
 "remove the esc key delay
 set timeoutlen=1000 ttimeoutlen=200
 
@@ -233,6 +233,7 @@ nmap <F3> :call ToggleOnScreenMarks()<CR>
 
 "toggle spell checker, with language set to english
 map <F6> :setlocal spell! spelllang=en_us<CR>
+
 
 " Tree View File Browser Settings
 " " netrw magic
