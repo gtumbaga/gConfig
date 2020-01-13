@@ -18,20 +18,22 @@ endif
 
 "vim plugins we want
 call plug#begin('~/.vim/plugged')
-"Plug 'Yggdroot/indentLine'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'gregsexton/MatchTag'
 Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
 Plug 'itchyny/vim-gitbranch'
 Plug 'vim-syntastic/syntastic'
 Plug 'StanAngeloff/php.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 
 "disable macvim colorscheme so it will pick up settings form here.
 let macvim_skip_colorscheme=1
+
 
 let g:indent_guides_enable_on_vim_startup = 1
 set ts=2 sw=2 et
@@ -200,7 +202,7 @@ autocmd FileType markdown set conceallevel=0
 
 "let vim know about filetpypes so they can get colored up
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+"autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 set list
 set cursorline      " highlight current line
