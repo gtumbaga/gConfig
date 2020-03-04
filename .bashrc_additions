@@ -1,6 +1,7 @@
 #Easier Directory Listings with color
 export CLICOLOR=1
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export LSCOLORS="ExGxBxDxCxEgEdabagacad"
+export LS_COLORS="di=94:ln=96:so=91:pi=93:ex=92:bd=94;46:cd=94;103:su=30;41:sg=30;46:tw=30;42:ow=30;103"
 #disable quotes around filenames when LS-ing in ubuntu 18
 export QUOTING_STYLE=literal
 
