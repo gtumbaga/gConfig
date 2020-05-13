@@ -147,6 +147,7 @@ else
   set statusline+=[%{gitbranch#name()}]\ 
 endif
 set statusline+=[%t]   "tail of the filename
+set statusline+=%-10.3n\   "buffer num
 set statusline+=%h    "help file flag
 set statusline+=%m    "modified flag
 set statusline+=%r    "read only flag
@@ -248,7 +249,7 @@ let g:netrw_liststyle=3
 " hide vim swap files
 let g:netrw_list_hide='.*\.swp$'
 "default to open new tab
-let g:netrw_browse_split = 3
+"let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
