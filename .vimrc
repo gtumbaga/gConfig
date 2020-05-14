@@ -225,6 +225,20 @@ set laststatus=2 "force show status bar at the bottom
 au FocusGained,BufEnter * :checktime
 
 
+"toggle pane width between 100 and 75
+let s:panewidthisfull = 1
+function! TogglePaneWidth()
+  if s:panewidthisfull
+    exec 'vertical resize '. string(&columns * 0.75)
+    let s:panewidthisfull = 0
+  else
+    exec 'vertical resize '. string(&columns * 1)
+    let s:panewidthisfull = 1
+  endif
+endfunction
+
+nmap <F4> :call TogglePaneWidth()<CR>
+
 "toggle all the on screen markings (for OS copying)
 function! ToggleOnScreenMarks()
   set number!
