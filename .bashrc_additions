@@ -30,6 +30,9 @@ alias ll='ls -lahF'
 #remind myself to use nvim
 alias vi='echo use nvim or vim!'
 
+#change the MOSH esc seq from ^ to something else
+export MOSH_ESCAPE_KEY="~"
+
 # ABILITY TO CHANGE TAB TITLE, WORKS IN HYPER
 function title() { echo -e "\033]0;${1:?please specify a title}\007" ; }
 
