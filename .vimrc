@@ -226,7 +226,7 @@ au FocusGained,BufEnter * :checktime
 
 
 "toggle pane width between 100 and 75
-let s:panewidthisfull = 1
+let s:panewidthisfull = 0
 function! TogglePaneWidth()
   if s:panewidthisfull
     exec 'vertical resize '. string(&columns * 0.75)
