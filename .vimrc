@@ -140,24 +140,29 @@ function! GetMyModeText()
     return "OTHER"
 endfunction
 
-set statusline=\ [%{GetMyModeText()}]\ 
+set statusline=\ %{GetMyModeText()}\ 
 if empty(glob('~/.vim/plugged/vim-gitbranch/autoload/gitbranch.vim'))
-  set statusline+=[]\ 
+  set statusline+=%1*\ []\ %*\ 
 else
-  set statusline+=[%{gitbranch#name()}]\ 
+  set statusline+=%1*\ [%{gitbranch#name()}]\ %*
 endif
-set statusline+=[%t]   "tail of the filename
-set statusline+=%-10.3n\   "buffer num
+set statusline+=%2*\ [%n\ \-\ %t]\ %*   "buffer num - tail of the filename
+set statusline+=%3*\     "color
 set statusline+=%h    "help file flag
 set statusline+=%m    "modified flag
 set statusline+=%r    "read only flag
 set statusline+=%=    "left/right separator
-set statusline+=%y\     "filetype
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}]\  "file format
-set statusline+=[%P]\   "percent through file
-set statusline+=[%l:%c]   "line:column
-set statusline+=\    "space
+set statusline+=%*    "color
+set statusline+=%2*\ %y\ %*    "filetype
+set statusline+=%1*\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}]\ %* "file format
+set statusline+=%4*\ [%P]\   "percent through file
+set statusline+=[%l:%c]\ %*  "line:column
+
+hi User1 term=NONE cterm=NONE ctermfg=0 ctermbg=04 guifg=#000000 guibg=#378bc9
+hi User2 term=NONE cterm=NONE ctermfg=0 ctermbg=12 guifg=#000000 guibg=#70aedc
+hi User3 term=NONE cterm=NONE ctermfg=07 ctermbg=08 guifg=#d7c5b1 guibg=#3a3f64
+hi User4 term=NONE cterm=NONE ctermfg=07 ctermbg=00 guifg=#d7c5b1 guibg=#000000
 
 "Start scrolling when we're 3 lines away from margins
 set scrolloff=3
@@ -238,6 +243,7 @@ function! TogglePaneWidth()
 endfunction
 
 nmap <F4> :call TogglePaneWidth()<CR>
+nnoremap <F5> :ls<CR>:b<Space>
 
 "toggle all the on screen markings (for OS copying)
 function! ToggleOnScreenMarks()
