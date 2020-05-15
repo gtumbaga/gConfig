@@ -23,7 +23,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'mattn/emmet-vim'
 "Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
-Plug 'itchyny/vim-gitbranch'
+"Plug 'itchyny/vim-gitbranch'
 Plug 'vim-syntastic/syntastic'
 Plug 'StanAngeloff/php.vim'
 Plug 'evanleck/vim-svelte'
@@ -147,12 +147,13 @@ function! GetMyModeText()
 endfunction
 
 set statusline=\ [%{GetMyModeText()}]\ 
-if empty(glob('~/.config/nvim/plugged/vim-gitbranch/autoload/gitbranch.vim'))
-  set statusline+=%1*\ []\ %*\ 
-else
-  set statusline+=%1*\ [%{gitbranch#name()}]\ %*
-endif
-set statusline+=%2*\ [%n\ \-\ %t]\ %*   "buffer num - tail of the filename
+"if empty(glob('~/.config/nvim/plugged/vim-gitbranch/autoload/gitbranch.vim'))
+  "set statusline+=%1*\ []\ %*\ 
+"else
+  "set statusline+=%1*\ [%{gitbranch#name()}]\ %*
+"endif
+set statusline+=%1*\ [%n]\ %*   "buffer num - tail of the filename
+set statusline+=%2*\ [%t]\ %*   "buffer num - tail of the filename
 set statusline+=%3*\     "color
 set statusline+=%h    "help file flag
 set statusline+=%m    "modified flag
