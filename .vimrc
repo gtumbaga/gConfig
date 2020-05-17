@@ -146,14 +146,15 @@ set statusline=\ %{GetMyModeText()}\
 "else
   "set statusline+=%1*\ [%{gitbranch#name()}]\ %*
 "endif
-set statusline+=%1*\ [%n]\ %*   "buffer num - tail of the filename
-set statusline+=%2*\ [%t]\ %*   "buffer num - tail of the filename
-set statusline+=%3*\     "color
+set statusline+=%1*\ [%t]\ %*   "filename w/o path
+set statusline+=%2*\     "color
 set statusline+=%h    "help file flag
 set statusline+=%m    "modified flag
 set statusline+=%r    "read only flag
+set statusline+=\ %*    "end color
+set statusline+=%3*\     "color
 set statusline+=%=    "left/right separator
-set statusline+=%*    "color
+set statusline+=%*    "end color
 set statusline+=%2*\ %y\ %*    "filetype
 set statusline+=%1*\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}]\ %* "file format
@@ -270,7 +271,7 @@ let g:netrw_liststyle=3
 " hide vim swap files
 let g:netrw_list_hide='.*\.swp$'
 "default to open new tab
-"let g:netrw_browse_split = 3
+let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
@@ -307,14 +308,15 @@ if exists("+showtabline")
       let buflist = tabpagebuflist(i)
       let winnr = tabpagewinnr(i)
       let s .= '%' . i . 'T'
-      let s .= (i == t ? '%1*' : '%2*')
+      "let s .= (i == t ? '%1*' : '%2*')
+      "let s .= '%#TabNum#'
+      let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
       let s .= ' '
       let wn = tabpagewinnr(i,'$')
 
-      let s .= '%#TabNum#'
       let s .= i
-      " let s .= '%*'
-      let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+      "let s .= '%*'
+      "let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
       let bufnr = buflist[winnr - 1]
       let file = bufname(bufnr)
       let buftype = getbufvar(bufnr, 'buftype')
@@ -326,11 +328,12 @@ if exists("+showtabline")
         let file = fnamemodify(file, ':p:t')
       endif
       if file == ''
-        let file = '[No Name]'
+        let file = '(No Name)'
       endif
       let s .= ' ' . file . ' '
       let i = i + 1
     endwhile
+
     let s .= '%T%#TabLineFill#%='
     let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
     return s
