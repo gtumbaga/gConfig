@@ -58,5 +58,5 @@ function parse_git_branch() {
     fi
 }
 #the prompt, formatted
-export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\][\u\[\e[m\]@\[\e[33m\]\h]\[\e[m\] --> "
+export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\]<<\u\[\e[m\]@\[\e[33m\]\h>>\[\e[m\] --> "
 
