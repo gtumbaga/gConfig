@@ -197,7 +197,7 @@ let g:user_emmet_leader_key='<C-Z>'
 "set listchars+=nbsp:·
 "set listchars+=eol:~
 set showbreak=↪\ 
-set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:>,precedes:<
 "set listchars+=tab:>-
 " set the line  netrw colors
 hi netrwTreeBar      term=NONE cterm=NONE ctermfg=6 ctermbg=NONE
