@@ -16,18 +16,43 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 
+"the extensions I want for coc
+let g:coc_global_extensions = [
+  \ 'coc-ultisnips',
+  \ 'coc-highlight',
+  \ 'coc-yaml',
+  \ 'coc-tsserver',
+  \ 'coc-sql',
+  \ 'coc-sh',
+  \ 'coc-rome',
+  \ 'coc-phpls',
+  \ 'coc-markdownlint',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-angular'
+  \ ]
+
 "vim plugins we want
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'gregsexton/MatchTag'
 Plug 'mattn/emmet-vim'
-"Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'itchyny/vim-gitbranch'
-Plug 'vim-syntastic/syntastic'
 Plug 'StanAngeloff/php.vim'
 Plug 'evanleck/vim-svelte'
 Plug 'leafgarland/typescript-vim'
+"
+" ======= Syntax Highlighting
+Plug 'sheerun/vim-polyglot'
+"Plug 'vim-syntastic/syntastic'
+
+"Asynchronous Lint Engine
+Plug 'dense-analysis/ale'
+
+"Code Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
