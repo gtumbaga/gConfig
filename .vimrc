@@ -24,7 +24,6 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-sql',
   \ 'coc-sh',
-  \ 'coc-rome',
   \ 'coc-phpls',
   \ 'coc-markdownlint',
   \ 'coc-json',
