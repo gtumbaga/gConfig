@@ -47,6 +47,8 @@ Plug 'leafgarland/typescript-vim'
 
 " ======= Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 "Plug 'vim-syntastic/syntastic'
 
 "Asynchronous Lint Engine
