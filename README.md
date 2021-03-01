@@ -32,8 +32,47 @@ The `gbaltgraybg.mintty` theme file should be copied to `/themes/`, and renamed 
 Also, I added `/bin/bash -l` to the end of the command in the shortcut to open the terminal, so that it opens correctly in "login mode" so my .bash_profile gets loaded correctly...
 
 
+
+### stripe
+Stripe is my newest color scheme. It was enspired from the stripe api cli code examples on their site,
+combined with some of the colors from my previous CM theme.
+
+Here are the colors used:
+
+![](images/colorSample-stripe.png)
+
+| GUI   Color   |  RGB Value   | HEX Value
+|--------------:|:-------------|:----------|
+| Foreground    |  161,166,189 | #A1A6BD   |
+| Background    |  33,45,99    | #212D63   |
+| Bold          |  255,255,255 | #FFFFFF   |
+| Selection     |  255,198,0   | #FFC600   |
+| Selected Text |  0,0,0       | #000000   |
+| Cursor        |  255,198,0   | #FFC600   |
+
+| ANSI Color    |  RGB Value   | HEX Value |
+|--------------:|:-------------|:----------|
+| Black         |  0,0,0       | #000000   |
+| BoldBlack     |  28,39,85    | #1C2755   |
+| Red           |  255,97,89   | #FF6159   |
+| BoldRed       |  229,153,62  | #E5993E   |
+| Green         |  46,156,120  | #2E9C78   |
+| BoldGreen     |  51,194,127  | #33C27F   |
+| Yellow        |  255,198,0   | #FFC600   |
+| BoldYellow    |  255,238,128 | #FFEE80   |
+| Blue          |  60,131,182  | #3C83B6   |
+| BoldBlue      |  77,183,232  | #4DB7E8   |
+| Magenta       |  158,157,201 | #9E9DC9   |
+| BoldMagenta   |  218,206,228 | #DACEE4   |
+| Cyan          |  90,157,165  | #5A9DA5   |
+| BoldCyan      |  152,246,247 | #98F6F7   |
+| White         |  161,166,189 | #A1A6BD   |
+| BoldWhite     |  255,255,255 | #FFFFFF   |
+
+---
+
 ### CM
-CM is my newest color scheme. It was enspired off of a web theme that my friend was designing for a client.
+CM is my 2nd newest color scheme. It was enspired off of a web theme that my friend was designing for a client.
 
 Here are the colors used:
 
@@ -70,7 +109,7 @@ Here are the colors used:
 ---
 
 ### gBaltGrayBG
-gBaltGrayBG is my 2nd newest color scheme.  I changed the background to a gray, but a lighter color as to not combat the contrast of bright white screens when I'm looking at other windows, and updated some of the other colors to give more of a constrast between light and dark alternatives of a givven color, as well as make them easier to see on the gray background.
+I changed the background to a gray, but a lighter color as to not combat the contrast of bright white screens when I'm looking at other windows, and updated some of the other colors to give more of a constrast between light and dark alternatives of a givven color, as well as make them easier to see on the gray background.
 I also changed back to the utilization of a terminal background color that is separate from the 16 specified ANSI colors.
 
 Here are the colors used:
@@ -108,7 +147,7 @@ Here are the colors used:
 ---
 
 ### gBaltAltBG
-gBaltAltBG is my 3rd newest color scheme.  I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
+I changed the background blue, and slightly updated some of the other colors to make them easier to see on the new bg blue.
 I also changed back to the utilization of a terminal bg color that is separate from the 16 specified ANSI colors.
 
 Here are the colors used:
@@ -175,10 +214,11 @@ Here are the colors used:
 
 
 ### Favorite coding font
-Currently, my coding font of choice is `Hack` and can be found here:
-https://sourcefoundry.org/hack/
+Currently, my coding font of choice is bitmap font, `Terminus`, and can be found here:
+http://terminus-font.sourceforge.net/
 
 Previously, these are the fonts I was using before it:
+- Hack
 - Fira Code
 - Cascadia Code
 - Roboto Mono Light
