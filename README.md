@@ -215,7 +215,12 @@ Here are the colors used:
 
 ### Favorite coding font
 Currently, my coding font of choice is bitmap font, `Terminus`, and can be found here:
-http://terminus-font.sourceforge.net/
+
+  For Windows:
+  http://terminus-font.sourceforge.net/
+
+  For Linux (tested on Ubuntu 20)
+  https://packages.debian.org/sid/all/fonts-terminus-otb/download
 
 Previously, these are the fonts I was using before it:
 - Hack
