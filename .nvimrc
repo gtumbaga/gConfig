@@ -75,7 +75,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#203e53 ctermbg=8
 set encoding=utf-8 "encoding
 "set t_Co=256 "enable more colors, needed this for the color scheme to work
 syntax on "enable syntax colors
-colorscheme g16 "custom theme
+colorscheme gRetroWave16 "custom theme
 "colorscheme cobalt16 "custom theme
 set number "displays numbers for each line
 set numberwidth=5 "wider number bar
