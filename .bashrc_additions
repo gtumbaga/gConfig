@@ -40,7 +40,8 @@ function title() { echo -e "\033]0;${1:?please specify a title}\007" ; }
 # I personally still like bash.
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-
+#git visual tree view similar to source tree
+alias treeview='git log --graph --pretty="%C(red)%h %C(white)-%C(yellow)%d %C(white)%s %C(green)(%cr) %C(bold blue)<%an>"'
 
 
 
