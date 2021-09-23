@@ -259,7 +259,7 @@ set autoindent
 set smartindent
 imap <C-Return> <CR><CR><C-o>k<Tab>
 "set paste "sets the paste mode, which keeps tab formatting when pasting from other code
-set pastetoggle=<F2> "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
+set pastetoggle=<A-2> "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
 
 set laststatus=2 "force show status bar at the bottom
 
@@ -279,8 +279,8 @@ function! TogglePaneWidth()
   endif
 endfunction
 
-nmap <F4> :call TogglePaneWidth()<CR>
-nnoremap <F5> :ls<CR>:b<Space>
+nmap <A-4> :call TogglePaneWidth()<CR>
+nnoremap <A-5> :ls<CR>:b<Space>
 
 "toggle all the on screen markings (for OS copying)
 function! ToggleOnScreenMarks()
@@ -290,10 +290,10 @@ function! ToggleOnScreenMarks()
   IndentGuidesToggle
 endfunction
 
-nmap <F3> :call ToggleOnScreenMarks()<CR>
+nmap <A-3> :call ToggleOnScreenMarks()<CR>
 
 "toggle spell checker, with language set to english
-map <F6> :setlocal spell! spelllang=en_us<CR>
+map <A-6> :setlocal spell! spelllang=en_us<CR>
 
 
 " Tree View File Browser Settings
