@@ -16,6 +16,17 @@ Add this to our .bashrc or .bash_profile file:
 source ~/gConfig/.bashrc_additions
 ```
 
+## Visual Studio Code
+I have backed up my custom VCS Settings here, in a folder named vsc.
+They should be symlinked to the location where VSC keeps these files, here:
+#### MacOS
+`~/Library/Application Support/Code/User/settings.json`
+`~/Library/Application Support/Code/User/keybindings.json`
+#### Windows
+`not sure yet`
+#### Linux
+`not sure yet`
+
 ## Colors
 Please note that the g16.vim color scheme is meant to look good with my custom terminal color scheme.
 I've included an iterm and terminal (mac) file to import the colors to your terminal.

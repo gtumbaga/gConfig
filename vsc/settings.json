@@ -1,0 +1,72 @@
+{
+    "workbench.colorTheme": "Outrun Night",
+    "vim.smartRelativeLine": true,
+    "editor.fontFamily": "'Fira Code', monospace",
+    // "editor.fontFamily": "'Cascadia Code', monospace",
+    "editor.fontSize": 13,
+    "editor.fontWeight": "400",
+    "workbench.fontAliasing": "auto",
+    "vim.normalModeKeyBindings": [
+        {
+            "before":["<C-l>"],
+            "after": [ "<shift-right>" ]
+        },
+        {
+            "before":["<C-h>"],
+            "after": [ "<shift-left>" ]
+        },
+    ],
+    "vim.enableNeovim": true,
+    "window.nativeTabs": true,
+    "window.nativeFullScreen": false,
+    "workbench.colorCustomizations": {
+        "terminal.background": "#161130",
+        "terminal.foreground": "#64FFFF",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiBrightBlack": "#0C0726",
+        "terminal.ansiBrightBlue": "#3CA6E0",
+        "terminal.ansiBrightCyan": "#19CED2",
+        "terminal.ansiBrightGreen": "#FAB0FF",
+        "terminal.ansiBrightMagenta": "#9F82E3",
+        "terminal.ansiBrightRed": "#FD1D53",
+        "terminal.ansiBrightWhite": "#FFFFFF",
+        "terminal.ansiBrightYellow": "#FD9F52",
+        "terminal.ansiBlue": "#147EB8",
+        "terminal.ansiCyan": "#246E83",
+        "terminal.ansiGreen": "#D288F5",
+        "terminal.ansiMagenta": "#775ABB",
+        "terminal.ansiRed": "#EB3DAC",
+        "terminal.ansiWhite": "#64FFFF",
+        "terminal.ansiYellow": "#F9C80E",
+        "editor.lineHighlightBackground": "#0C0726",
+        "statusBar.background": "#775ABB",
+        "statusBar.noFolderBackground": "#775ABB",
+        "statusBar.debuggingBackground": "#775ABB",
+        "statusBar.foreground": "#FFFFFF",
+        "statusBar.debuggingForeground": "#FFFFFF"
+    },
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "'Fira Code', monospace",
+    "terminal.integrated.fontWeight": "400",
+    "workbench.startupEditor": "none",
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.inheritEnv": true,
+    "editor.wordWrap": "on",
+
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#775ABB", "#FFFFFF"],
+    "vim.statusBarColors.insert": "#F9C80E",
+    "vim.statusBarColors.visual": "#EB3DAC",
+    "vim.statusBarColors.visualline": "#EB3DAC",
+    "vim.statusBarColors.visualblock": "#EB3DAC",
+    "vim.statusBarColors.replace": "#D288F5",
+    "vim.statusBarColors.commandlineinprogress": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.searchinprogressmode": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.easymotionmode": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.surroundinputmode": ["#000000", "#FFFFFF"],
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "window.restoreWindows": "none"
+
+
+}
