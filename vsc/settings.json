@@ -1,11 +1,13 @@
 {
     "workbench.colorTheme": "Outrun Night",
     "vim.smartRelativeLine": true,
-    "editor.fontFamily": "'Fira Code', monospace",
+    // "editor.fontFamily": "'Fira Code', monospace",
+    "editor.fontFamily": "'Terminus (TTF)', monospace",
+    "editor.fontSize": 16,
     // "editor.fontFamily": "'Cascadia Code', monospace",
-    "editor.fontSize": 13,
+    // "editor.fontSize": 13,
     "editor.fontWeight": "400",
-    "workbench.fontAliasing": "auto",
+    "workbench.fontAliasing": "none",
     "vim.normalModeKeyBindings": [
         {
             "before":["<C-l>"],
@@ -14,7 +16,7 @@
         {
             "before":["<C-h>"],
             "after": [ "<shift-left>" ]
-        },
+        }
     ],
     "vim.enableNeovim": true,
     "window.nativeTabs": true,
@@ -45,8 +47,8 @@
         "statusBar.foreground": "#FFFFFF",
         "statusBar.debuggingForeground": "#FFFFFF"
     },
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.fontFamily": "'Fira Code', monospace",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
     "terminal.integrated.fontWeight": "400",
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
@@ -66,7 +68,23 @@
     "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.surroundinputmode": ["#000000", "#FFFFFF"],
     "vim.neovimPath": "/usr/local/bin/nvim",
-    "window.restoreWindows": "none"
+    // "window.restoreWindows": "none",
+    "customizeUI.fontSizeMap": {
+        "13px": "16px",
+        "12px": "16px",
+        "11px": "16px",
+        "window-title": "16px", // Window title font when using custom titlebar
+        "tab-title": "16px",    // Used for editor tab titles
+        "menu": "16px"         // Used for menu items (windows only)
+    },
+    "customizeUI.font.regular": "Terminus (TTF)",
+    "customizeUI.stylesheet": {
+        "h3.title": "font-size: 16px !important;",
+        ".part.bottom a.action-label": "font-size: 16px !important;",
+        ".monaco-icon-label:after": "font-weight: 400; font-size: 100%;"
+    }
+
+    
 
 
 }
