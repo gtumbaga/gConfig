@@ -47,13 +47,17 @@
         "statusBar.foreground": "#FFFFFF",
         "statusBar.debuggingForeground": "#FFFFFF"
     },
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
+    // "terminal.integrated.fontSize": 15,
+    // "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
+    // "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "'Hack', monospace",
     "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.fontWeightBold": "400",
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
     "terminal.integrated.inheritEnv": true,
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "off",
 
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": ["#775ABB", "#FFFFFF"],
@@ -81,7 +85,8 @@
     "customizeUI.stylesheet": {
         "h3.title": "font-size: 16px !important;",
         ".part.bottom a.action-label": "font-size: 16px !important;",
-        ".monaco-icon-label:after": "font-weight: 400; font-size: 100%;"
+        ".monaco-icon-label:after": "font-weight: 400; font-size: 100%;",
+        ".mtki": "font-style: normal !important;"
     }
 
     
