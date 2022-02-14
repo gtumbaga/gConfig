@@ -56,6 +56,10 @@ Plug 'dense-analysis/ale'
 
 "Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"JS Auto Import
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 call plug#end()
 
 
