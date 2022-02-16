@@ -32,8 +32,8 @@ hi Identifier   term=NONE cterm=NONE ctermfg=7 ctermbg=NONE
 hi Number          ctermfg=2
 hi Boolean         ctermfg=2
 hi LineNr       cterm=NONE ctermfg=4  ctermbg=NONE
-hi CursorLine   ctermbg=8 ctermfg=None cterm=None term=None
-hi CursorLineNr cterm=None ctermfg=15 ctermbg=8
+hi CursorLine   ctermbg=0 ctermfg=None cterm=None term=None
+hi CursorLineNr cterm=None ctermfg=15 ctermbg=0
 
 hi MatchParen cterm=NONE ctermfg=15 ctermbg=5
 
