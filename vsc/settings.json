@@ -2,12 +2,10 @@
     "workbench.colorTheme": "Outrun Night",
     "vim.smartRelativeLine": true,
     // "editor.fontFamily": "'Fira Code', monospace",
-    "editor.fontFamily": "'Terminus (TTF)', monospace",
-    "editor.fontSize": 16,
-    // "editor.fontFamily": "'Cascadia Code', monospace",
-    // "editor.fontSize": 13,
-    "editor.fontWeight": "400",
-    "workbench.fontAliasing": "none",
+    //"editor.fontFamily": "'Terminus (TTF)', monospace",
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Cascadia Code', monospace",
+    "editor.fontWeight": "100",
     "vim.normalModeKeyBindings": [
         {
             "before":["<C-l>"],
@@ -51,8 +49,8 @@
     // "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
     // "terminal.integrated.fontWeight": "400",
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "'Hack', monospace",
-    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
+    "terminal.integrated.fontWeight": "100",
     "terminal.integrated.fontWeightBold": "400",
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
@@ -71,23 +69,8 @@
     "vim.statusBarColors.easymotionmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.surroundinputmode": ["#000000", "#FFFFFF"],
-    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.neovimPath": "/opt/homebrew/bin/nvim",
     // "window.restoreWindows": "none",
-    "customizeUI.fontSizeMap": {
-        "13px": "16px",
-        "12px": "16px",
-        "11px": "16px",
-        "window-title": "16px", // Window title font when using custom titlebar
-        "tab-title": "16px",    // Used for editor tab titles
-        "menu": "16px"         // Used for menu items (windows only)
-    },
-    "customizeUI.font.regular": "Terminus (TTF)",
-    "customizeUI.stylesheet": {
-        "h3.title": "font-size: 16px !important;",
-        ".part.bottom a.action-label": "font-size: 16px !important;",
-        ".monaco-icon-label:after": "font-weight: 400; font-size: 100%;",
-        ".mtki": "font-style: normal !important;"
-    }
 
     
 

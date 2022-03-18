@@ -42,6 +42,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #git visual tree view similar to source tree
 alias treeview='git log --graph --pretty="%C(red)%h %C(white)-%C(yellow)%d %C(white)%s %C(green)(%cr) %C(bold blue)<%an>"'
+alias dc-build='docker-compose build --no-cache && yes | docker image prune'
+alias dc-up='docker-compose up --force-recreate'
 
 
 
