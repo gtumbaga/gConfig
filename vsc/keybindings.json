@@ -7,7 +7,13 @@
     {
         "key": "ctrl+w j",
         "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+w j",
+        // "command": "workbench.action.terminal.toggleTerminal",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+w h",
@@ -16,7 +22,13 @@
     },
     {
         "key": "ctrl+w k",
-        "command": "workbench.action.focusFirstEditorGroup"
+        "command": "workbench.action.togglePanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+w k",
+        "command": "workbench.action.closePanel",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+w l",

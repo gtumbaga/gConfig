@@ -3,7 +3,7 @@
     "vim.smartRelativeLine": true,
     // "editor.fontFamily": "'Fira Code', monospace",
     //"editor.fontFamily": "'Terminus (TTF)', monospace",
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
     "editor.fontFamily": "'Cascadia Code', monospace",
     "editor.fontWeight": "100",
     "vim.normalModeKeyBindings": [
@@ -45,6 +45,8 @@
         "statusBar.foreground": "#FFFFFF",
         "statusBar.debuggingForeground": "#FFFFFF"
     },
+    "emmet.triggerExpansionOnTab": true,
+    "files.associations": {".env.*" : "env"},
     // "terminal.integrated.fontSize": 15,
     // "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
     // "terminal.integrated.fontWeight": "400",
@@ -55,7 +57,7 @@
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
     "terminal.integrated.inheritEnv": true,
-    "editor.wordWrap": "off",
+    "editor.wordWrap": "on",
 
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": ["#775ABB", "#FFFFFF"],
@@ -70,6 +72,8 @@
     "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.surroundinputmode": ["#000000", "#FFFFFF"],
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    "editor.minimap.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
     // "window.restoreWindows": "none",
 
     
