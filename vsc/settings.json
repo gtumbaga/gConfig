@@ -47,6 +47,7 @@
     },
     "emmet.triggerExpansionOnTab": true,
     "files.associations": {".env.*" : "env"},
+    "files.trimTrailingWhitespace": true,
     // "terminal.integrated.fontSize": 15,
     // "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
     // "terminal.integrated.fontWeight": "400",
@@ -76,7 +77,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     // "window.restoreWindows": "none",
 
-    
+
 
 
 }

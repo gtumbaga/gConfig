@@ -37,5 +37,10 @@
     {
         "key": "ctrl+w w",
         "command": "workbench.action.quickSwitchWindow"
+    },
+    {
+        "key": "\\ c space",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus"
     }
 ]
