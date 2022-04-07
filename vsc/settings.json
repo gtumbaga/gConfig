@@ -6,6 +6,7 @@
     "editor.fontSize": 14,
     "editor.fontFamily": "'Cascadia Code', monospace",
     "editor.fontWeight": "100",
+    "editor.renderWhitespace": "all",
     "vim.normalModeKeyBindings": [
         {
             "before":["<C-l>"],
@@ -19,6 +20,8 @@
     "vim.enableNeovim": true,
     "window.nativeTabs": true,
     "window.nativeFullScreen": false,
+    // similar to VIM's scrolloff, to pad top/bottom of screen
+    "editor.cursorSurroundingLines": 2,
     "workbench.colorCustomizations": {
         "terminal.background": "#161130",
         "terminal.foreground": "#64FFFF",
