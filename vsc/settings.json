@@ -20,6 +20,7 @@
     "vim.enableNeovim": true,
     "window.nativeTabs": true,
     "window.nativeFullScreen": false,
+    "workbench.editor.showTabs": true,
     // similar to VIM's scrolloff, to pad top/bottom of screen
     "editor.cursorSurroundingLines": 2,
     "workbench.colorCustomizations": {

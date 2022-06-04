@@ -42,5 +42,13 @@
         "key": "\\ c space",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "\\ \\",
+        "command": "type",
+        "args": {
+            "text": "\\"
+        },
+        "when": "editorTextFocus"
     }
 ]
