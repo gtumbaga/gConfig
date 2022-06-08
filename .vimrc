@@ -58,6 +58,11 @@ Plug 'dense-analysis/ale'
 
 "Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" fuzzy file search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
@@ -292,6 +297,17 @@ nmap <F3> :call ToggleOnScreenMarks()<CR>
 
 "toggle spell checker, with language set to english
 map <F6> :setlocal spell! spelllang=en_us<CR>
+
+" map ctrl-p to :GFiles, for fuzzy search (with gitignore filter)
+nnoremap <C-p> :GFiles<Cr>
+
+" set fzf to be at the bottom, preview on top, and hide the file preview, by default
+" Preview window on the upper side of the window with 40% height,
+" hidden by default, ctrl-/ to toggle
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
+
+" change fzf so pressing enter defaults to open file in new tab
+let g:fzf_action = {'enter': 'tab split'}
 
 
 " Tree View File Browser Settings
