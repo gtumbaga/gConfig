@@ -275,8 +275,10 @@ set pastetoggle=<F2> "toggles between paste mode on and off. this is needed beca
 set laststatus=2 "force show status bar at the bottom
 
 "checktime will check if the file has been edited and prompt for a reload
-au FocusGained,BufEnter * :checktime
-
+"au FocusGained,BufEnter * :checktime
+" this is to silence an error that was showing when going to :, and then
+" ctrl-f to search
+autocmd! FocusGained,BufEnter * if mode() != 'c' | checktime | endif
 
 "toggle pane width between 100 and 75
 let s:panewidthisfull = 0
