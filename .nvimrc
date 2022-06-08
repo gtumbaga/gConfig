@@ -1,3 +1,6 @@
+"needed for something? i think to tell it an rc exists or something
+set nocompatible
+
 "check for vim color dir, create if it doesnt exist
 if empty(glob('~/.config/nvim/colors/g16.vim'))
   silent !mkdir ~/.config/nvim/colors
@@ -46,8 +49,9 @@ Plug 'evanleck/vim-svelte'
 
 " ======= Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'peitalin/vim-jsx-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 "Plug 'vim-syntastic/syntastic'
 
 "Asynchronous Lint Engine
