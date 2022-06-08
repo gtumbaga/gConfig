@@ -111,6 +111,7 @@ set ttyfast " u got a fast terminal
 "set ttyscroll=3   "not supported by nvim
 set lazyredraw " to avoid scrolling problems
 set updatetime=0 "for fast CursorHold
+set redrawtime=10000 "fix highlighting from breaking if file takes long to load
 
 "speedy stuffs, for those large files
 set re=1 "force vim to use a older version of regex engine and it is actually FASTER
@@ -255,7 +256,7 @@ autocmd FileType markdown set conceallevel=0
 
 "let vim know about filetpypes so they can get colored up
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.ts set filetype=typescript
+"autocmd BufNewFile,BufRead *.ts set filetype=typescript
 
 set list
 set cursorline      " highlight current line
