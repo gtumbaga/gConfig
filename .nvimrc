@@ -52,7 +52,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-"Plug 'vim-syntastic/syntastic'
 
 "Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
@@ -336,26 +335,6 @@ let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-
-"ignore certain errors in syntastic, for instance, empty tags
-let g:syntastic_html_tidy_ignore_errors=[
-  \ " proprietary attribute ",
-  \ "trimming empty \<",
-  \ "inserting implicit ",
-  \ "unescaped \&",
-  \ "lacks \"action",
-  \ "lacks value",
-  \ "lacks \"src",
-  \ "is not recognized!",
-  \ "discarding unexpected",
-  \ "replacing obsolete ",
-  \ "plain text isn't allowed in <head> elements",
-  \ "attribute name \"[",
-  \ "attribute name \"(",
-  \ "attribute name \"*ng",
-  \ "attribute name \"#"
-  \ ]
-
 
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
