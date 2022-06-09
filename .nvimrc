@@ -269,7 +269,7 @@ set autoindent
 set smartindent
 imap <C-Return> <CR><CR><C-o>k<Tab>
 "set paste "sets the paste mode, which keeps tab formatting when pasting from other code
-set pastetoggle=<F2> "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
+set pastetoggle=<leader>2 "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
 
 set laststatus=2 "force show status bar at the bottom
 
@@ -302,10 +302,10 @@ function! ToggleOnScreenMarks()
   IndentGuidesToggle
 endfunction
 
-nmap <F3> :call ToggleOnScreenMarks()<CR>
+nmap <leader>3 :call ToggleOnScreenMarks()<CR>
 
 "toggle spell checker, with language set to english
-map <F6> :setlocal spell! spelllang=en_us<CR>
+map <leader>6 :setlocal spell! spelllang=en_us<CR>
 
 " map ctrl-p to :GFiles, for fuzzy search (with gitignore filter)
 nnoremap <C-p> :GFiles<Cr>
