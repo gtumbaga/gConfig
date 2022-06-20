@@ -224,7 +224,22 @@ map <C-H> 10zh
 set timeoutlen=1000 ttimeoutlen=200
 
 "set // in visual mode, to search for selected text
-vnoremap // y/\V<C-R>"<CR>
+"vnoremap // y/\V<C-R>"<CR>
+" a more advanced search, that extends the normal (*) key and (#) key,
+" but for highlighted text
+" Search for selected text, forwards (*) or backwards (#).
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+
+
 
 "change the emmet ctrl-z so ctrl-y can be used for scrolling without lag
 let g:user_emmet_leader_key='<C-Z>'
