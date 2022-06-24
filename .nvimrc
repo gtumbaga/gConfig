@@ -34,7 +34,8 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-css',
-  \ 'coc-angular'
+  \ 'coc-angular',
+  \ 'coc-prettier'
   \ ]
 
 "vim plugins we want
@@ -350,6 +351,11 @@ let g:netrw_browse_split = 3
 let g:netrw_altv = 1
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+" set leader f to format with prettier
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 
 " Rename tabs to show tab number.
 " (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
