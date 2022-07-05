@@ -76,7 +76,7 @@ let macvim_skip_colorscheme=1
 
 
 let g:indent_guides_enable_on_vim_startup = 1
-set ts=2 sw=2 et
+set ts=4 sw=4 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#203e53 ctermbg=0
@@ -92,10 +92,10 @@ set numberwidth=5 "wider number bar
 set relativenumber "makes the numberse relative
 set wrap "enable word wrap for long lines
 filetype plugin indent on
-set tabstop=2 " show existing tab with 2 spaces width
-set softtabstop=2   " number of spaces in tab when editing
-set shiftwidth=2 " when indenting with '>', use 2 spaces width
-set expandtab " On pressing tab, insert 2 spaces
+set tabstop=4 " show existing tab with 4 spaces width
+set softtabstop=4   " number of spaces in tab when editing
+set shiftwidth=4 " when indenting with '>', use 4 spaces width
+set expandtab " On pressing tab, insert 4 spaces
 set backspace=2 " make backspace work like most other programs, fixes backspace not working where insert started...
 
 set hidden " sets it so :q will close a window, but keep buffer open
