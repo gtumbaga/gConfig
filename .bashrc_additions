@@ -32,7 +32,7 @@ alias vi='echo use nvim or vim!'
 
 #use grep to find files containing string, in current dir
 gfind() {
-    grep --exclude-dir=.git --exclude-dir=.next --exclude-dir=node_modules --exclude-dir=./public/ -rnw "." -e "$1"
+    grep --exclude-dir=.git --exclude-dir=.next --exclude-dir=node_modules --exclude-dir=./public/ -rnwi "." -e "$1"
 }
 #change the MOSH esc seq from ^ to something else
 export MOSH_ESCAPE_KEY="~"
