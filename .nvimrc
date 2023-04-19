@@ -70,6 +70,12 @@ call plug#end()
 "disable NVIM's abaility to change cursor shape.  this is breaking windows terminal
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
+
+"set searches to ignore case by default
+set ignorecase #All your searches will be case insensitive
+set smartcase #Your search will be case sensitive if it contains an uppercase letter
+
+
 "
 "disable macvim colorscheme so it will pick up settings form here.
 let macvim_skip_colorscheme=1
