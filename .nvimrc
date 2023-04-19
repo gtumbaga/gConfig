@@ -71,9 +71,10 @@ call plug#end()
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
 
-"set searches to ignore case by default
-set ignorecase #All your searches will be case insensitive
-set smartcase #Your search will be case sensitive if it contains an uppercase letter
+"All your searches will be case insensitive
+set ignorecase
+"Your search will be case sensitive if it contains an uppercase letter
+set smartcase
 
 
 "
