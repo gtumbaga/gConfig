@@ -14,6 +14,8 @@ let g:colors_name="g16"
 hi Normal       term=NONE cterm=NONE ctermfg=15   ctermbg=NONE
 hi NonText      term=NONE cterm=NONE ctermfg=1   ctermbg=NONE
 hi Title        term=NONE cterm=NONE ctermfg=7   ctermbg=NONE
+
+hi SignColumn   term=NONE cterm=NONE ctermfg=9  ctermbg=NONE guifg=9  guibg=NONE
  
 
 hi Statement    term=NONE cterm=NONE ctermfg=1  ctermbg=NONE
@@ -67,7 +69,6 @@ hi Conceal      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
 
 hi Pmenu        cterm=NONE ctermfg=8 ctermbg=3
 hi PmenuSel     cterm=NONE ctermfg=8 ctermbg=1
-
 
 hi! link cssBraces Delimiter
 hi! link cssClassName Statement
