@@ -49,7 +49,8 @@ alias treeview='git log --graph --pretty="%C(red)%h %C(white)-%C(yellow)%d %C(wh
 alias dc-build='docker-compose build --no-cache && yes | docker image prune'
 alias dc-up='docker-compose up --force-recreate'
 
-
+#set tab autocomplete to ingore case
+bind 'set completion-ignore-case on'
 
 #CUSTOM PROMPT
 # get current branch in git repo
