@@ -53,6 +53,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'wuelnerdotexe/vim-astro'
 
 "Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
