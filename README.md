@@ -43,6 +43,44 @@ The `gbaltgraybg.mintty` theme file should be copied to `/themes/`, and renamed 
 Also, I added `/bin/bash -l` to the end of the command in the shortcut to open the terminal, so that it opens correctly in "login mode" so my .bash_profile gets loaded correctly...
 
 
+
+### gRetroWave16-final-v2
+gRetroWave16, with non black black, and brighter bg.
+it feels better having a larger contrast between the bg color, and the
+black i use as highlights in nvim.
+
+Here are the colors used:
+
+![](images/colorSample-gRetroWave16-final-v2.png)
+
+| GUI   Color   |  RGB Value   | HEX Value
+|--------------:|:-------------|:----------|
+| Foreground    |  100,255,255 | #64FFFF   |
+| Background    |  13,16,48    | #241541   |
+| Bold          |  255,255,255 | #FFFFFF   |
+| Selection     |  249,200,14  | #F9C80E   |
+| Selected Text |  0,0,0       | #000000   |
+| Cursor        |  45,226,230  | #2DE2E6   |
+
+| ANSI Color    |  RGB Value   | HEX Value |
+|--------------:|:-------------|:----------|
+| Black         |  0,0,0       | #170A2F   |
+| BoldBlack     |  6,9,41      | #515151   |
+| Red           |  235,61,172  | #EB3DAC   |
+| BoldRed       |  253,29,83   | #FD1D53   |
+| Green         |  210,136,245 | #D288F5   |
+| BoldGreen     |  250,176,255 | #FAB0FF   |
+| Yellow        |  249,200,14  | #F9C80E   |
+| BoldYellow    |  253,159,82  | #FD9F52   |
+| Blue          |  20,126,184  | #147EB8   |
+| BoldBlue      |  60,166,224  | #3CA6E0   |
+| Magenta       |  119,90,187  | #775ABB   |
+| BoldMagenta   |  159,130,227 | #9F82E3   |
+| Cyan          |  36,110,131  | #246E83   |
+| BoldCyan      |  25,206,210  | #19CED2   |
+| White         |  100,255,255 | #64FFFF   |
+| BoldWhite     |  255,255,255 | #FFFFFF   |
+
 ### gRetroWave16
 gRetroWave16 is my newest color scheme. It was inspired using
 retrowave/synthwave wallpapers, that also match my MKB keycap set =).
