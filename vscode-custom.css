@@ -1,0 +1,18 @@
+/* copy all this to a single line to "customvscodeuicss.css" in
+settings.json */
+body {
+    counter-reset: tab;
+}
+
+.tabs-container .tab {
+    counter-increment: tab;
+}
+
+.tabs-container .tab:before {
+    display: inline-block;
+    content: counter(tab)':';
+    font-size: 11px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+}
