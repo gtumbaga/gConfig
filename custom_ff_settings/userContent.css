@@ -1,0 +1,26 @@
+@-moz-document domain(vscode.dev) {
+    body {
+        counter-reset: tab;
+    }
+
+    .tabs-container .tab {
+        counter-increment: tab;
+    }
+
+    .tabs-container .tab:before {
+        display: inline-block;
+        content: counter(tab)'';
+        font-size: 12px;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        color: #000;
+        text-align: center;
+        line-height: 14px;
+        margin-top: 10px;
+        margin-left: -5px;
+        margin-right: 0;
+        font-family: 'Arial Black';
+    }
+
+}

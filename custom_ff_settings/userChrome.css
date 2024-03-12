@@ -1,0 +1,22 @@
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+/*#nav-bar, #urlbar-container, #searchbar { visibility: collapse !important; }*/
+/* "Auto-hide" address bar unless focused (e.g. Ctrl-L) or tab bar is hovered. */
+:root {
+    --address-bar-height: 40px;
+    --browser-offset: calc(-1 * (var(--address-bar-height) + 1px));
+}
+#navigator-toolbox-background {
+    position: absolute !important;;
+    width: 100vw;
+}
+#navigator-toolbox-background ~ #browser {
+    margin-top: var(--browser-offset) !important;
+}
+#navigator-toolbox-background:hover, #navigator-toolbox-background:focus-within {
+    z-index: 9001 !important;
+}
+
