@@ -50,5 +50,31 @@
             "text": "\\"
         },
         "when": "editorTextFocus"
-    }
+    },
+    {
+        "key": "ctrl+h",
+        "when": "editorTextFocus",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+            "scrollLeft",
+            "scrollLeft",
+            "scrollLeft",
+            ]
+        }
+    },
+    {
+        "key": "ctrl+l",
+        "when": "editorTextFocus",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+            "scrollRight",
+            "scrollRight",
+            "scrollRight",
+            ]
+        }
+    },
 ]
