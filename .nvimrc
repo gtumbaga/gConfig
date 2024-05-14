@@ -221,6 +221,9 @@ hi User2 term=NONE cterm=NONE ctermfg=0 ctermbg=12 guifg=#000000 guibg=#70aedc
 hi User3 term=NONE cterm=NONE ctermfg=07 ctermbg=08 guifg=#d7c5b1 guibg=#3a3f64
 hi User4 term=NONE cterm=NONE ctermfg=00 ctermbg=15 guifg=#000000 guibg=#FFFFFF
 
+" lets change the color of unused variables (COC setting)
+highlight CocUnusedHighlight ctermfg=08 ctermbg=NONE guibg=NONE
+
 "Start scrolling when we're 3 lines away from margins
 set scrolloff=3
 set sidescrolloff=15
