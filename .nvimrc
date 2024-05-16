@@ -430,3 +430,23 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" custom function to enable my gsync ability in nvim
+" this relies on a bash function i wrote
+function! GSyncEnable()
+    " ensure that it can see my gsync functions
+    let $BASH_ENV = "~/.bash_profile"
+
+    "have it do a sync when ever i save the file
+    :augroup gsync
+    :    autocmd BufWritePost * !gsyncpush
+    :augroup END
+endfunction
+
+function! GSyncDisable()
+    " ensure that it can see my gsync functions
+    let $BASH_ENV = "~/.bash_profile"
+
+    "have it do a sync when ever i save the file
+    au! gsync
+endfunction
+
