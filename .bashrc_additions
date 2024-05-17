@@ -65,7 +65,12 @@ gsyncinit() {
         # -a - archive (preserve attrributes?)
         # -z - compress (zip?)
         # -P - (same as --partial --progress), keep partial files / show progress
-        rsync -cazP "$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/" ./
+        rsync -cazP \
+            --exclude '.gsync' \
+            --exclude '.git/' \
+            --exclude '.next/' \
+            --exclude '.vscode/' \
+            "$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/" ./
     else
         echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
     fi
