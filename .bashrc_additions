@@ -128,6 +128,45 @@ gsyncpush() {
     #fi
 }
 
+
+# this will reset the sync dir, by earasing all the files (except for the .gsync file)
+gsyncRESET() {
+    # if my .gsync file exists, lets load it
+    if  [ -f ./.gsync ]; then
+        export $(grep -v '^#' .gsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ $currentdir = $SYNC_REMOTE_DIR ]; then
+        fullpath="$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/"
+
+        echo "About to erase all the files in '$currentdir'!"
+        read -r -p "Are you sure? [y/N] " response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+        then
+            # this uses find to list all the files in dir, and deletes them all except .gsync file
+            find . ! -name .gsync -delete
+        else
+            echo "operation cancelled. have a nice day..."
+        fi
+    else
+        echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
+    fi
+
+}
+
 #change the MOSH esc seq from ^ to something else
 export MOSH_ESCAPE_KEY="~"
 
