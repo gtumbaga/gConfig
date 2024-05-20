@@ -440,6 +440,8 @@ function! GSyncEnable()
     :augroup gsync
     :    autocmd BufWritePost * !gsyncpush
     :augroup END
+
+    echo "GSync has been enabled!"
 endfunction
 
 function! GSyncDisable()
@@ -448,5 +450,7 @@ function! GSyncDisable()
 
     "have it do a sync when ever i save the file
     au! gsync
+
+    echo "GSync has been disabled..."
 endfunction
 
