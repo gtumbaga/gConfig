@@ -68,6 +68,13 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
+" Set the ALE (Asynchronous Lint Engine to use ESLint before Prettier
+"let g:ale_fixers = ['eslint', 'prettier']
+let g:ale_fixers = {
+\   '*': ['eslint', 'prettier'],
+\}
+
+
 "disable NVIM's abaility to change cursor shape.  this is breaking windows terminal
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 set guicursor=
