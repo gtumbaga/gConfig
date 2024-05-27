@@ -355,7 +355,10 @@ let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 " change fzf so pressing enter defaults to open file in new tab
 let g:fzf_action = {'enter': 'tab split'}
 
-
+" change 'gf' that opens file under cursor, to open
+" in a new tab by default behavior
+" (overrides having to press ctrl-w before gf)
+nnoremap gf <C-w>gf
 
 " Tree View File Browser Settings
 " " netrw magic
