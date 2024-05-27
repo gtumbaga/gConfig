@@ -57,24 +57,91 @@ gsyncinit() {
 
     # check that our current dir matches the remote
     if [ $currentdir = $SYNC_REMOTE_DIR ]; then
-        fullpath="$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/"
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+
+        line="==============================================================="
+        echo "$line"
         echo "about to pull from: $fullpath"
+        echo "$line"
         echo " "
 
-        # -c - use checksum instead of size/time
-        # -a - archive (preserve attrributes?)
-        # -z - compress (zip?)
-        # -P - (same as --partial --progress), keep partial files / show progress
-        rsync -cazP \
-            --exclude '.gsync' \
-            --exclude '.next/' \
-            --exclude '.vscode/' \
-            "$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/" ./
+        echo "$line"
+        echo "tar compressing remote dir $SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR"
+        echo "$line"
+        ssh $SYNC_REMOTE_HOST "cd $SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR; tar -czf ../tmp-$SYNC_REMOTE_DIR.tgz ."
+
+        echo "$line"
+        echo "copying remote tar locally"
+        echo "$line"
+        scp $SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/tmp-$SYNC_REMOTE_DIR.tgz ../
+
+        echo "$line"
+        echo "extracting local tar"
+        echo "$line"
+        tar -xzf ../tmp-$SYNC_REMOTE_DIR.tgz
+
+        echo "$line"
+        echo "removing remote tar"
+        echo "$line"
+        ssh $SYNC_REMOTE_HOST "rm $SYNC_REMOTE_PATH/tmp-$SYNC_REMOTE_DIR.tgz"
+
+        echo "$line"
+        echo "removing local tar"
+        echo "$line"
+        rm ../tmp-$SYNC_REMOTE_DIR.tgz
+
     else
         echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
     fi
 
 }
+
+# this will pull the changes from the server back to here.
+gsyncfetch() {
+    # if my .gsync file exists, lets load it
+    if  [ -f ./.gsync ]; then
+        export $(grep -v '^#' .gsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ $currentdir = $SYNC_REMOTE_DIR ]; then
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+
+        echo "about to pull from: $fullpath"
+        echo " "
+
+
+                # -c - use checksum instead of size/time
+                # -a - archive (preserve attrributes?)
+                # -z - compress (zip?)
+                # -P - (same as --partial --progress), keep partial files / show progress
+                rsync -cazP \
+                    --exclude '.gsync' \
+                    --exclude '.next/' \
+                    --exclude '.vscode/' \
+                    $fullpath ./
+
+    else
+        echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
+    fi
+
+}
+
 # this will sync my saved changes back to the server (where docker will detect the changes)
 gsyncpush() {
     # if my .gsync file exists, lets load it
@@ -87,6 +154,9 @@ gsyncpush() {
     currentdir=${PWD##*/}
 
     # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
     if [ -z "$SYNC_REMOTE_DIR" ]; then
         return 1
     fi
@@ -96,7 +166,7 @@ gsyncpush() {
 
     # check that our current dir matches the remote
     if [ $currentdir = $SYNC_REMOTE_DIR ]; then
-        fullpath="$SYNC_REMOTE_PATH$SYNC_REMOTE_DIR/"
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
         echo "about to sync to: $fullpath"
         echo " "
 

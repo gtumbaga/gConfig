@@ -440,6 +440,11 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" this will simply display the file path of the current file
+function! GPath()
+    echo resolve(expand('%f'))
+endfunction
+
 " custom function to enable my gsync ability in nvim
 " this relies on a bash function i wrote
 function! GSyncEnable()
