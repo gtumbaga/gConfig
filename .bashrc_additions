@@ -167,6 +167,7 @@ gsyncpush() {
     # check that our current dir matches the remote
     if [ $currentdir = $SYNC_REMOTE_DIR ]; then
         fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+        clear
         echo "about to sync to: $fullpath"
         echo " "
 
@@ -180,12 +181,21 @@ gsyncpush() {
             --exclude 'node_modules/' \
             --exclude '.next/' \
             --exclude 'tmp/' \
-            --exclude 'public/' \
             --exclude '.git/' \
             --exclude '.vscode/' \
             --exclude 'vendor/' \
             --exclude 'storage/' \
             ./ $fullpath
+
+        if [ $? -eq 0 ]; then
+            echo " "
+            echo "rsync completed successfully!"
+        else
+            echo " "
+            echo "rsync failed, retry?!"
+            read -p "Press enter to retry"
+            gsyncpush
+        fi
     else
         echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
     fi
@@ -247,6 +257,20 @@ gsynccreatedotfile() {
     echo "SYNC_REMOTE_HOST=gabedev3" > ./.gsync
     echo "SYNC_REMOTE_PATH=~/dev" >> ./.gsync
     echo "SYNC_REMOTE_DIR=some-dir-name" >> ./.gsync
+}
+
+gsynclisten() {
+    if  [ -f ./.gsync ]; then
+        # Monitor the ./app directory for changes
+        clear
+        echo "monitoring $PWD for changes..."
+        fswatch -o ./ | while read; do
+            gsyncpush
+        done
+    else
+        echo "no .gsync file found, exiting..."
+        return 1;
+    fi
 }
 
 #change the MOSH esc seq from ^ to something else
