@@ -284,7 +284,11 @@ function parse_git_branch() {
 #export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\]<<\u\[\e[m\]@\[\e[33m\]\h>>\[\e[m\] --> "
 # not sure why, but i had to add the extra color escape at the end of the prompt,
 # because it was messing up on the new bash 5.2.15(1)-release that i was using on my m1pro mac
-export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\]<<\u\[\e[m\]@\[\e[33m\]\h>>\[\e[m\] --> \[\e[m\]"
+# my old colored one
+# export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]\n\[\e[33m\]<<\u\[\e[m\]@\[\e[33m\]\h>>\[\e[m\] --> \[\e[m\]"
+
+# the new escaped one from chatgpt
+export PS1="\n\[\e[35m\][\w]\[\e[m\] \[\e[36m\]\$(parse_git_branch)\[\e[m\]\n\[\e[33m\]<<\u\[\e[m\]@\[\e[33m\]\h>>\[\e[m\] --> \[\e[m\]"
 #export PS1="\n[\w] \`parse_git_branch\`\n<<\u@\h>> --> "
 #
 #
