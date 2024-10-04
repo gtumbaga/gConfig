@@ -46,8 +46,10 @@ gsyncpush() {
             ./ $fullpath
 
         if [ $? -eq 0 ]; then
+            echo " "
             echo "rsync completed successfully!"
         else
+            echo " "
             echo "rsync failed, retrying!"
             gsyncpush
         fi
@@ -60,6 +62,7 @@ gsyncpush() {
 
 if  [ -f ./.gsync ]; then
     # Monitor the ./app directory for changes
+    echo "monitoring $PWD for changes..."
     fswatch -o ./ | while read; do
         gsyncpush
     done
