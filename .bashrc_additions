@@ -192,8 +192,7 @@ gsyncpush() {
             echo "rsync completed successfully!"
         else
             echo " "
-            echo "rsync failed, retry?!"
-            read -p "Press enter to retry"
+            echo "rsync failed, retrying..."
             gsyncpush
         fi
     else
