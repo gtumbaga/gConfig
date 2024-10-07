@@ -189,7 +189,7 @@ gsyncpush() {
 
         if [ $? -eq 0 ]; then
             echo " "
-            echo "rsync completed successfully!"
+            echo "rsync completed successfully! at $(date)"
         else
             echo " "
             echo "rsync failed, retrying..."
