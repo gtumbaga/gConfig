@@ -1,6 +1,74 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+\\",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+            "editor.cpp.disableenabled",
+            "editor.action.enableCppGlobally",
+            ]
+        }
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.cancelOperation",
+        "when": "cancellableOperation"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "inlineChat.close",
+        "when": "inlineChatHasProvider && inlineChatVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "inlineChat.close",
+        "when": "inlineChatHasProvider && inlineChatVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.inlineEdit.reject",
+        "when": "inlineEditVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.cancelGPT4WithCmdDelete",
+        "when": "hadGPT4InlineCompletionRunning"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.inlineSuggest.hide",
+    },
+    {
+        "key": "ctrl+[",
+        "command": "closeFindWidget",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "extension.vim_ctrl+[",
+        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+[",
+        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                // commands to run in sequence
+            "editor.cpp.disableenabled",
+            "editor.action.enableCppGlobally",
+            "extension.vim_ctrl+["
+            ]
+        }
+    },
+    {
         "key": "ctrl+w w",
         "command": "workbench.action.quickSwitchWindow"
     },

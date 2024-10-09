@@ -189,7 +189,7 @@ gsyncpush() {
 
         if [ $? -eq 0 ]; then
             echo " "
-            echo "rsync completed successfully! at $(date)"
+            echo "rsync success at $(date '+%Y.%m.%d %H:%M:%S')"
         else
             echo " "
             echo "rsync failed, retrying..."
@@ -262,7 +262,8 @@ gsynclisten() {
     if  [ -f ./.gsync ]; then
         # Monitor the ./app directory for changes
         clear
-        echo "monitoring $PWD for changes..."
+        echo "[$PWD]"
+        echo "monitoring for changes..."
         fswatch -o ./ | while read; do
             gsyncpush
         done
