@@ -27,6 +27,11 @@ They should be symlinked to the location where VSC keeps these files, here:
 #### Linux
 `not sure yet`
 
+## Cursor
+Cursor editor is now my current editor, and is a fork of VSC. it uses the above
+json files, but I also saved a `Gabe.code-profile` that can be imported into
+the Cursor editor.
+
 ## Colors
 Please note that the g16.vim color scheme is meant to look good with my custom terminal color scheme.
 I've included an iterm and terminal (mac) file to import the colors to your terminal.

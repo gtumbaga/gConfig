@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Outrun Night",
+    "remote.autoForwardPorts": false,
     "vim.smartRelativeLine": true,
     // "editor.fontFamily": "'Fira Code', monospace",
     //"editor.fontFamily": "'Terminus (TTF)', monospace",
@@ -20,14 +20,53 @@
     "vim.enableNeovim": true,
     "window.nativeTabs": true,
     "window.nativeFullScreen": false,
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     // similar to VIM's scrolloff, to pad top/bottom of screen
     "editor.cursorSurroundingLines": 2,
+    "editor.tokenColorCustomizations": {
+        "comments": "#246E83",
+        "keywords": "#EB3DAC",
+        "functions": "#EB3DAC",
+        "variables": "#FFFFFF",
+        "strings": "#D288F5",
+        "numbers": "#D288F5",
+        "textMateRules": [
+            {
+                "scope": [
+                    "meta.object-literal.key",
+                ],
+                "settings": {
+                    "foreground": "#64FFFF"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.string",
+                    "string.quoted",
+                    "string.template",
+                    "keyword",
+                    "keyword.control.import"
+                ],
+                "settings": {
+                    "foreground": "#775ABB"
+                }
+            },
+            {
+                "scope": [
+                    "constant.numeric"
+                ],
+                "settings": {
+                    "foreground": "#D288F5"
+                }
+            }
+        ]
+    },
     "workbench.colorCustomizations": {
-        "terminal.background": "#161130",
+        "terminal.background": "#241541",
         "terminal.foreground": "#64FFFF",
-        "terminal.ansiBlack": "#000000",
-        "terminal.ansiBrightBlack": "#0C0726",
+        "terminal.selectionBackground": "#F9C80E",
+        "terminal.ansiBlack": "#170A2F",
+        "terminal.ansiBrightBlack": "#515151",
         "terminal.ansiBrightBlue": "#3CA6E0",
         "terminal.ansiBrightCyan": "#19CED2",
         "terminal.ansiBrightGreen": "#FAB0FF",
@@ -42,12 +81,29 @@
         "terminal.ansiRed": "#EB3DAC",
         "terminal.ansiWhite": "#64FFFF",
         "terminal.ansiYellow": "#F9C80E",
-        "editor.lineHighlightBackground": "#0C0726",
+        "editor.lineHighlightBackground": "#170A2F",
         "statusBar.background": "#775ABB",
         "statusBar.noFolderBackground": "#775ABB",
         "statusBar.debuggingBackground": "#775ABB",
         "statusBar.foreground": "#FFFFFF",
-        "statusBar.debuggingForeground": "#FFFFFF"
+        "statusBar.debuggingForeground": "#FFFFFF",
+        "sideBar.background": "#170A2F",
+        "editor.background": "#241541",
+        "editor.foreground": "#64FFFF",
+        "editor.wordHighlightBackground": "#ffffff1a",
+        "titleBar.activeBackground": "#170A2F",
+        "titleBar.inactiveBackground": "#241541",
+        "activityBar.background": "#170A2F",
+        "editorGroupHeader.tabsBackground": "#170A2F",
+        "tab.inactiveBackground": "#241541",
+        "tab.inactiveForeground": "#FFFFFF",
+        "tab.inactiveModifiedBorder": "#FFFFFF",
+        "tab.activeBorderTop": "#FFFFFF",
+        "tab.activeBorder": "#000000",
+        "tab.activeBackground": "#775ABB",
+        "tab.activeForeground": "#FFFFFF",
+        "scrollbarSlider.background": "#170A2F",
+        "editorLineNumber.foreground": "#775ABB"
     },
     "emmet.triggerExpansionOnTab": true,
     "files.associations": {".env.*" : "env"},
@@ -62,11 +118,14 @@
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
     "terminal.integrated.inheritEnv": true,
-    "editor.wordWrap": "on",
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.localEchoEnabled": "off",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.wordWrap": "off",
 
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": ["#775ABB", "#FFFFFF"],
-    "vim.statusBarColors.insert": "#F9C80E",
+    "vim.statusBarColors.insert": ["#F9C80E", "#000000"],
     "vim.statusBarColors.visual": "#EB3DAC",
     "vim.statusBarColors.visualline": "#EB3DAC",
     "vim.statusBarColors.visualblock": "#EB3DAC",
@@ -75,13 +134,29 @@
     "vim.statusBarColors.searchinprogressmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.easymotionmode": ["#000000", "#FFFFFF"],
     "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
-    "vim.statusBarColors.surroundinputmode": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.surroundinputmode": [
+        "#000000",
+        "#FFFFFF"
+    ],
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
     "editor.minimap.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Tokyo Hack",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.detectIndentation": false,
+    "workbench.editor.enablePreview": false,
+    "editor.stickyScroll.enabled": false,
     // "window.restoreWindows": "none",
 
+    "remote.extensionKind": {
+        "kencocaceo.customvscodeuicss": [ "ui" ],
+    },
 
-
-
+    // lets inject custom css to add numbers to the tab
+    "customvscodeuicss.css": "body { counter-reset: tab; } .tabs-container .tab { counter-increment: tab; } .tabs-container .tab .monaco-icon-label:before{ padding-right: 3px; } .tabs-container .tab:before { display: inline-block; content: counter(tab)''; font-size: 12px; min-width: 14px; height: 14px; background: #fff; color: #000; text-align: center; line-height: 14px; margin-top: 10px; margin-left: -5px; font-family: Impact; box-shadow: 1px 1px 1px #000; padding: 0 3px; box-sizing: border-box; }",
+    "update.mode": "manual",
+    "window.titleBarStyle": "native"
 }
