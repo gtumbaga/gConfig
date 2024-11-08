@@ -1,27 +1,40 @@
 {
     "remote.autoForwardPorts": false,
     "vim.smartRelativeLine": true,
-    // "editor.fontFamily": "'Fira Code', monospace",
-    //"editor.fontFamily": "'Terminus (TTF)', monospace",
-    "editor.fontSize": 14,
-    "editor.fontFamily": "'Cascadia Code', monospace",
+    "php.validate.executablePath": "/opt/homebrew/opt/php@8.1/bin/php",
+    "editor.fontLigatures": "'ss01', 'ss02'",
+    "tmp": "==> !== $$$ Il1 0Oo ~-",
+    // "editor.fontSize": 14,
+    // "editor.fontFamily": "'Cascadia Code', monospace",
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Monaspace Krypton', monospace",
+    // "editor.fontSize": 16,
+    // "editor.fontFamily": "'Share Tech Mono', 'Cascadia Code', monospace",
+    "editor.lineHeight": 1.5,
     "editor.fontWeight": "100",
     "editor.renderWhitespace": "all",
     "vim.normalModeKeyBindings": [
         {
-            "before":["<C-l>"],
-            "after": [ "<shift-right>" ]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<shift-right>"
+            ]
         },
         {
-            "before":["<C-h>"],
-            "after": [ "<shift-left>" ]
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<shift-left>"
+            ]
         }
     ],
     "vim.enableNeovim": true,
     "window.nativeTabs": true,
     "window.nativeFullScreen": false,
     "workbench.editor.showTabs": "multiple",
-    // similar to VIM's scrolloff, to pad top/bottom of screen
     "editor.cursorSurroundingLines": 2,
     "editor.tokenColorCustomizations": {
         "comments": "#246E83",
@@ -33,7 +46,17 @@
         "textMateRules": [
             {
                 "scope": [
-                    "meta.object-literal.key",
+                    "comment",
+                    "comment.line",
+                    "comment.block"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "meta.object-literal.key"
                 ],
                 "settings": {
                     "foreground": "#64FFFF"
@@ -106,13 +129,17 @@
         "editorLineNumber.foreground": "#775ABB"
     },
     "emmet.triggerExpansionOnTab": true,
-    "files.associations": {".env.*" : "env"},
+    "files.associations": {
+        ".env.*": "env"
+    },
     "files.trimTrailingWhitespace": true,
-    // "terminal.integrated.fontSize": 15,
-    // "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
-    // "terminal.integrated.fontWeight": "400",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
+    // "terminal.integrated.fontSize": 14,
+    // "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
+    // "terminal.integrated.fontSize": 16,
+    // "terminal.integrated.fontFamily": "'Share Tech Mono', 'Cascadia Code', monospace",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "'Cascadia Mono', monospace",
+    "terminal.integrated.lineHeight": 1,
     "terminal.integrated.fontWeight": "100",
     "terminal.integrated.fontWeightBold": "400",
     "workbench.startupEditor": "none",
@@ -122,18 +149,35 @@
     "terminal.integrated.localEchoEnabled": "off",
     "terminal.external.osxExec": "iTerm.app",
     "editor.wordWrap": "off",
-
     "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": ["#775ABB", "#FFFFFF"],
-    "vim.statusBarColors.insert": ["#F9C80E", "#000000"],
+    "vim.statusBarColors.normal": [
+        "#775ABB",
+        "#FFFFFF"
+    ],
+    "vim.statusBarColors.insert": [
+        "#F9C80E",
+        "#000000"
+    ],
     "vim.statusBarColors.visual": "#EB3DAC",
     "vim.statusBarColors.visualline": "#EB3DAC",
     "vim.statusBarColors.visualblock": "#EB3DAC",
     "vim.statusBarColors.replace": "#D288F5",
-    "vim.statusBarColors.commandlineinprogress": ["#000000", "#FFFFFF"],
-    "vim.statusBarColors.searchinprogressmode": ["#000000", "#FFFFFF"],
-    "vim.statusBarColors.easymotionmode": ["#000000", "#FFFFFF"],
-    "vim.statusBarColors.easymotioninputmode": ["#000000", "#FFFFFF"],
+    "vim.statusBarColors.commandlineinprogress": [
+        "#000000",
+        "#FFFFFF"
+    ],
+    "vim.statusBarColors.searchinprogressmode": [
+        "#000000",
+        "#FFFFFF"
+    ],
+    "vim.statusBarColors.easymotionmode": [
+        "#000000",
+        "#FFFFFF"
+    ],
+    "vim.statusBarColors.easymotioninputmode": [
+        "#000000",
+        "#FFFFFF"
+    ],
     "vim.statusBarColors.surroundinputmode": [
         "#000000",
         "#FFFFFF"
@@ -149,14 +193,17 @@
     "editor.detectIndentation": false,
     "workbench.editor.enablePreview": false,
     "editor.stickyScroll.enabled": false,
-    // "window.restoreWindows": "none",
-
-    "remote.extensionKind": {
-        "kencocaceo.customvscodeuicss": [ "ui" ],
-    },
-
-    // lets inject custom css to add numbers to the tab
+    // "remote.extensionKind": {
+    //     "kencocaceo.customvscodeuicss": [
+    //         "ui"
+    //     ]
+    // },
+    // dont forget to run shift-command-p 'customvscodeuicss: Reload Configuration'
+    // click yes
+    // note, this currently makes it compain my installation is corrupt
     "customvscodeuicss.css": "body { counter-reset: tab; } .tabs-container .tab { counter-increment: tab; } .tabs-container .tab .monaco-icon-label:before{ padding-right: 3px; } .tabs-container .tab:before { display: inline-block; content: counter(tab)''; font-size: 12px; min-width: 14px; height: 14px; background: #fff; color: #000; text-align: center; line-height: 14px; margin-top: 10px; margin-left: -5px; font-family: Impact; box-shadow: 1px 1px 1px #000; padding: 0 3px; box-sizing: border-box; }",
     "update.mode": "manual",
-    "window.titleBarStyle": "native"
+    "window.titleBarStyle": "native",
+    "window.customTitleBarVisibility": "never",
+    "cursor.cpp.disabledLanguages": []
 }
