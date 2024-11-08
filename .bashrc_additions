@@ -260,6 +260,8 @@ gsynccreatedotfile() {
 
 gsynclisten() {
     if  [ -f ./.gsync ]; then
+        # disable word wrap
+        tput rmam
         # Monitor the ./app directory for changes
         clear
         echo "[$PWD]"
