@@ -100,7 +100,12 @@
     },
     {
         "key": "ctrl+w l",
-        "command": "workbench.action.focusFirstEditorGroup"
+        "command": "workbench.action.focusFirstEditorGroup",
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+w w",
@@ -145,4 +150,26 @@
             ]
         }
     },
+    { //change default cursor ctrl+k to alt+k (Windows only)
+        "key": "alt+k",
+        "command": "aipopup.action.modal.generate",
+        "when": "textInputFocus && isWindows"
+    },
+    { //change default cursor ctrl+l to alt+l
+        "key": "alt+l",
+        "command": "aichat.newchataction",
+        "when": "textInputFocus && isWindows"
+    },
+    { //change default cursor ctrl+k to alt+k (in terminal)
+        "key": "alt+k",
+        "command": "cursorai.action.generateInTerminal",
+        "when": "terminalFocus && isWindows"
+    },
+    { // this unbinds ctrl+k in windows, don't need to unbind ctrl+l
+      // it already belongs to vim bindings
+        "key": "ctrl+k",
+        "command": "!cursorai.action.generateInTerminal",
+        "when": "isWindows"
+    }
+
 ]
