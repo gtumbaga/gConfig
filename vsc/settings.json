@@ -208,5 +208,7 @@
     "update.mode": "manual",
     "window.titleBarStyle": "native",
     "window.customTitleBarVisibility": "never",
-    "cursor.cpp.disabledLanguages": []
+    "cursor.cpp.disabledLanguages": [],
+    "window.title": "${rootName}${separator}${dirty}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+    "window.menuBarVisibility": "toggle"
 }

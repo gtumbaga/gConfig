@@ -153,12 +153,12 @@
     { //change default cursor ctrl+k to alt+k (Windows only)
         "key": "alt+k",
         "command": "aipopup.action.modal.generate",
-        "when": "textInputFocus && isWindows"
+        "when": "!terminalFocus && isWindows"
     },
     { //change default cursor ctrl+l to alt+l
         "key": "alt+l",
         "command": "aichat.newchataction",
-        "when": "textInputFocus && isWindows"
+        "when": "!terminalFocus && isWindows"
     },
     { //change default cursor ctrl+k to alt+k (in terminal)
         "key": "alt+k",
@@ -176,16 +176,26 @@
         "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen && isWindows"
     },
-    // done in settings.json instead
-    // {
-    //     "key": "ctrl+p",
-    //     "command": "workbench.action.quickOpen",
-    //     "when": "editorTextFocus || explorerViewletVisible || !terminalFocus"
-    // },
-    // {
-    //     "key": "ctrl+p",
-    //     "command": "-workbench.action.quickOpen",
-    //     "when": "terminalFocus"
-    // }
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+        {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    }
+
 
 ]
