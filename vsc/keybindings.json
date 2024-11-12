@@ -170,6 +170,22 @@
         "key": "ctrl+k",
         "command": "!cursorai.action.generateInTerminal",
         "when": "isWindows"
-    }
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen && isWindows"
+    },
+    // done in settings.json instead
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "workbench.action.quickOpen",
+    //     "when": "editorTextFocus || explorerViewletVisible || !terminalFocus"
+    // },
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "-workbench.action.quickOpen",
+    //     "when": "terminalFocus"
+    // }
 
 ]
