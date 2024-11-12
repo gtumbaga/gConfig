@@ -8,10 +8,8 @@
     // "editor.fontFamily": "'Cascadia Code', monospace",
     "editor.fontSize": 15,
     "editor.fontFamily": "'Monaspace Krypton', monospace",
-    // "editor.fontSize": 16,
-    // "editor.fontFamily": "'Share Tech Mono', 'Cascadia Code', monospace",
-    "editor.lineHeight": 1.5,
-    "editor.fontWeight": "100",
+    "editor.lineHeight": 1.4,
+    "editor.fontWeight": "200",
     "editor.renderWhitespace": "all",
     "vim.normalModeKeyBindings": [
         {
@@ -137,17 +135,22 @@
     // "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
     // "terminal.integrated.fontSize": 16,
     // "terminal.integrated.fontFamily": "'Share Tech Mono', 'Cascadia Code', monospace",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontFamily": "'Cascadia Mono', monospace",
-    "terminal.integrated.lineHeight": 1,
-    "terminal.integrated.fontWeight": "100",
-    "terminal.integrated.fontWeightBold": "400",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
+    // "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.fontWeight": "300",
+    "terminal.integrated.fontWeightBold": "600",
     "workbench.startupEditor": "none",
     "terminal.integrated.tabs.location": "left",
     "terminal.integrated.inheritEnv": true,
     "terminal.integrated.gpuAcceleration": "off",
     "terminal.integrated.localEchoEnabled": "off",
     "terminal.external.osxExec": "iTerm.app",
+    // in windows, ctrl+e and ctrl+p kept opening the file search.
+    // this ensures that they can be used in terminal instead
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.quickOpen"
+    ],
     "editor.wordWrap": "off",
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": [

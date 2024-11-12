@@ -167,7 +167,7 @@ gsyncpush() {
     # check that our current dir matches the remote
     if [ $currentdir = $SYNC_REMOTE_DIR ]; then
         fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
-        clear
+        #clear
         echo "about to sync to: $fullpath"
         echo " "
 
@@ -193,6 +193,7 @@ gsyncpush() {
         else
             echo " "
             echo "rsync failed, retrying..."
+            sleep 1
             gsyncpush
         fi
     else
@@ -266,9 +267,29 @@ gsynclisten() {
         clear
         echo "[$PWD]"
         echo "monitoring for changes..."
-        fswatch -o ./ | while read; do
+        fswatch -o --exclude ".git" ./ | while read; do
             gsyncpush
+            sleep 1
         done
+    else
+        echo "no .gsync file found, exiting..."
+        return 1;
+    fi
+}
+
+gsynclistenwsl() {
+    if  [ -f ./.gsync ]; then
+        # disable word wrap
+        tput rmam
+        # Monitor the ./app directory for changes
+        clear
+        echo "[$PWD]"
+        echo "monitoring for changes..."
+        inotifywait --recursive -m -e modify,create,delete --exclude ".git" ./ | while read; do
+        gsyncpush
+        sleep 1
+    done
+
     else
         echo "no .gsync file found, exiting..."
         return 1;
