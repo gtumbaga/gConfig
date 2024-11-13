@@ -172,6 +172,11 @@
         "when": "isWindows"
     },
     {
+        "key": "ctrl+l",
+        "command": "!aichat.newchataction",
+        "when": "terminalFocus && isWindows"
+    },
+    {
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen && isWindows"
@@ -183,7 +188,7 @@
     },
     {
         "key": "ctrl+p",
-        "command": "-workbench.action.quickOpen",
+        "command": "!workbench.action.quickOpen",
         "when": "terminalFocus"
     },
     {
@@ -191,10 +196,20 @@
         "command": "workbench.action.quickOpenNavigateNext",
         "when": "inQuickOpen"
     },
-        {
+    {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpenNavigatePrevious",
         "when": "inQuickOpen"
+    }
+    ,{
+        "key": "ctrl+f",
+        "command": "!workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "!workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
     }
 
 

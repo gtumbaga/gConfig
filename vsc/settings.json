@@ -149,7 +149,8 @@
     // in windows, ctrl+e and ctrl+p kept opening the file search.
     // this ensures that they can be used in terminal instead
     "terminal.integrated.commandsToSkipShell": [
-        "-workbench.action.quickOpen"
+        "-workbench.action.quickOpen",
+        "-workbench.action.terminal.focusFindWidget"
     ],
     "editor.wordWrap": "off",
     "vim.statusBarColorControl": true,
