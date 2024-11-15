@@ -210,6 +210,18 @@
         "key": "ctrl+f",
         "command": "!workbench.action.terminal.focusFindWidget",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-editor.action.clipboardPasteAction"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-editor.action.clipboardCutAction"
     }
 
 
