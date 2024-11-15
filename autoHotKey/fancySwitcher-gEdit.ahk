@@ -208,6 +208,7 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 #z::Send ^z
 #y::Send ^y
 #t::Send ^t
+#f::Send ^f
 #q::Send !{F4}
 
 ^[::Send {Escape}
