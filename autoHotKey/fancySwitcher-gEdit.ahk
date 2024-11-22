@@ -176,8 +176,8 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 ^4::switchDesktopByNumber(4)
 ^5::switchDesktopByNumber(5)
 
-^LButton::Send ^#{Left}
-^RButton::Send ^#{Right}
+;^LButton::Send ^#{Left}
+;^RButton::Send ^#{Right}
 
 #If !WinActive("ahk_exe Cursor.exe") && !WinActive("ahk_exe WindowsTerminal.exe")
 ^a::Send {Home}
@@ -186,9 +186,6 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 #If !WinActive("ahk_exe Cursor.exe") && !WinActive("ahk_exe WindowsTerminal.exe")
 ^e::Send {End}
 #IfWinActive
-
-
-#a::Send {Home}{ShiftDown}{End}{ShiftUp}
 
 #If !WinActive("ahk_exe Cursor.exe") && !WinActive("ahk_exe WindowsTerminal.exe")
 ^b::Send {Left}
@@ -202,6 +199,8 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 ^k::Send {ShiftDown}{End}{ShiftUp}{Delete}
 #IfWinActive
 
+;make windows like macos
+#a::Send {CtrlDown}{Home}{CtrlUp}{CtrlDown}{ShiftDown}{End}{ShiftUp}{CtrlUp}
 #c::Send ^{Insert}
 #v::Send {ShiftDown}{Insert}{ShiftUp}
 #x::Send {ShiftDown}{Delete}{ShiftUp}
@@ -211,5 +210,6 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 #f::Send ^f
 #w::Send ^w
 #q::Send !{F4}
+#r::Send ^r
 
 ^[::Send {Escape}

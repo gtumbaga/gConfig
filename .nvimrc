@@ -7,7 +7,7 @@ if empty(glob('~/.config/nvim/colors/g16.vim'))
   silent !ln -s ~/gConfig/g16.vim ~/.config/nvim/colors/g16.vim
   silent !ln -s ~/gConfig/gRetroWave16.vim ~/.config/nvim/colors/gRetroWave16.vim
 endif
-  
+
 "check for gabes colorscheme file, get it if its missing
 if empty(glob('~/.config/nvim/colors/g16.vim'))
   silent !ln -s ~/gConfig/g16.vim ~/.config/nvim/colors/g16.vim
@@ -64,9 +64,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " fuzzy file search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" Github Copilot
-Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -175,7 +172,7 @@ function! InsertStatuslineColor(mode)
     "set updatetime=0
   endif
   return ''
-endfunction 
+endfunction
 au InsertEnter * call InsertStatuslineColor('i')
 au InsertLeave * call InsertStatuslineColor('n')
 au CursorHold * call InsertStatuslineColor('n')
@@ -205,7 +202,7 @@ function! GetMyModeText()
 endfunction
 
 "if empty(glob('~/.config/nvim/plugged/vim-gitbranch/autoload/gitbranch.vim'))
-  "set statusline+=%1*\ []\ %*\ 
+  "set statusline+=%1*\ []\ %*\
 "else
   "set statusline+=%1*\ [%{gitbranch#name()}]\ %*
 "endif
@@ -213,14 +210,14 @@ set statusline=
 set statusline+=%1*\ %y\ %*    "filetype
 set statusline+=%2*\ [%t]\ %*   "filename w/o path
 
-set statusline+=\ 
+set statusline+=\
 set statusline+=%h    "help file flag
 set statusline+=%m    "modified flag
 set statusline+=%r    "read only flag
 
 set statusline+=%=    "left/right separator
 
-set statusline+=\ [%{GetMyModeText()}]\ 
+set statusline+=\ [%{GetMyModeText()}]\
 set statusline+=%2*\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}]\ %* "file format
 set statusline+=%1*\ [%P]\   "percent through file
@@ -272,7 +269,7 @@ let g:user_emmet_leader_key='<C-Z>'
 " All the listchar special stuff to make spech char's show up
 "set listchars+=nbsp:·
 "set listchars+=eol:~
-set showbreak=↪\ 
+set showbreak=↪\
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:>,precedes:<
 "set listchars+=tab:>-
 " set the line  netrw colors
