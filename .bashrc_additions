@@ -296,6 +296,152 @@ gsynclistenwsl() {
     fi
 }
 
+
+
+# START OF MY DJ SYNC FUNCTIONS
+# this will sync music from this mac to the dj mac
+djsync_push() {
+    # if my .djsync file exists, lets load it
+    if  [ -f ./.djsync ]; then
+        export $(grep -v '^#' .djsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ -n "$SYNC_REMOTE_DIR" ]; then
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+        #clear
+        echo "about to sync to: $fullpath"
+        echo " "
+
+        # -c - use checksum instead of size/time
+        # -a - archive (preserve attrributes?)
+        # -z - compress (zip?)
+        # -P - (same as --partial --progress), keep partial files / show progress
+        rsync -cazP \
+            --exclude '.djsync' \
+            --exclude '.DS_Store' \
+            ./ $fullpath
+
+        if [ $? -eq 0 ]; then
+            echo " "
+            echo "rsync success at $(date '+%Y.%m.%d %H:%M:%S')"
+        else
+            echo " "
+            echo "rsync failed, retrying..."
+            sleep 1
+            djsync_push
+        fi
+    else
+        echo "no .djsync file found, exiting...";
+    fi
+}
+
+djsync_external_hd_push() {
+    # if my .djsync file exists, lets load it
+    if  [ -f ./.djsync ]; then
+        export $(grep -v '^#' .djsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ -n "$SYNC_REMOTE_DIR" ]; then
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+        #clear
+        echo "about to sync to: $fullpath"
+        echo " "
+
+        # -c - use checksum instead of size/time
+        # -a - archive (preserve attrributes?)
+        # -z - compress (zip?)
+        # -P - (same as --partial --progress), keep partial files / show progress
+        rsync -cazP \
+            --exclude '.djsync' \
+            --exclude '.DS_Store' \
+            ./ /Volumes/DJ\ SOLOQUES/DJ_sync/
+
+        if [ $? -eq 0 ]; then
+            echo " "
+            echo "rsync success at $(date '+%Y.%m.%d %H:%M:%S')"
+        fi
+    else
+        echo "no .djsync file found, exiting...";
+    fi
+}
+
+# this will pull the changes from the dj mac back to here.
+djsync_fetch() {
+    # if my .djsync file exists, lets load it
+    if  [ -f ./.djsync ]; then
+        export $(grep -v '^#' .djsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ -n "$SYNC_REMOTE_DIR" ]; then
+        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+
+        echo "about to pull from: $fullpath"
+        echo " "
+
+
+                # -c - use checksum instead of size/time
+                # -a - archive (preserve attrributes?)
+                # -z - compress (zip?)
+                # -P - (same as --partial --progress), keep partial files / show progress
+                rsync -cazP \
+                    --exclude '.djsync' \
+                    --exclude '.DS_Store' \
+                    $fullpath ./
+
+    else
+        echo "$currentdir and $SYNC_REMOTE_DIR dont match...";
+    fi
+
+}
+
 #change the MOSH esc seq from ^ to something else
 export MOSH_ESCAPE_KEY="~"
 # mosh was complaining about this, so i added it
