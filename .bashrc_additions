@@ -374,7 +374,7 @@ djsync_external_hd_push() {
 
     # check that our current dir matches the remote
     if [ -n "$SYNC_REMOTE_DIR" ]; then
-        fullpath="$SYNC_REMOTE_HOST:$SYNC_REMOTE_PATH/$SYNC_REMOTE_DIR/"
+        fullpath="/Volumes/WD_BLACK/DJ_serato/"
         #clear
         echo "about to sync to: $fullpath"
         echo " "
@@ -386,7 +386,31 @@ djsync_external_hd_push() {
         rsync -cazP \
             --exclude '.djsync' \
             --exclude '.DS_Store' \
-            ./ /Volumes/DJ\ SOLOQUES/DJ_sync/
+            ./ $fullpath
+
+        if [ $? -eq 0 ]; then
+            echo " "
+            echo "rsync success at $(date '+%Y.%m.%d %H:%M:%S')"
+        fi
+    else
+        echo "no .djsync file found, exiting...";
+    fi
+}
+
+djsync_smb_push() {
+    # if my .djsync file exists, lets load it
+    if  [ -f ./.djsync ]; then
+        echo "about to sync to: /Volumes/DJ/"
+        echo " "
+
+        # -c - use checksum instead of size/time
+        # -a - archive (preserve attrributes?)
+        # -z - compress (zip?)
+        # -P - (same as --partial --progress), keep partial files / show progress
+        rsync -cazP \
+            --exclude '.djsync' \
+            --exclude '.DS_Store' \
+            ./ /Volumes/DJ/
 
         if [ $? -eq 0 ]; then
             echo " "

@@ -222,6 +222,10 @@
     {
         "key": "ctrl+x",
         "command": "-editor.action.clipboardCutAction"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
     }
 
 
