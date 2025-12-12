@@ -45,15 +45,16 @@ Plug 'gregsexton/MatchTag'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'itchyny/vim-gitbranch'
-Plug 'StanAngeloff/php.vim'
+"Plug 'StanAngeloff/php.vim'
 Plug 'evanleck/vim-svelte'
 
 " ======= Syntax Highlighting
-Plug 'sheerun/vim-polyglot'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'wuelnerdotexe/vim-astro'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'wuelnerdotexe/vim-astro'
 
 "Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
@@ -65,6 +66,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" AI
+Plug 'github/copilot.vim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
+" copilotchat needs this:
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 
 
@@ -74,10 +80,52 @@ let g:ale_fixers = {
 \   '*': ['eslint', 'prettier'],
 \}
 
+" use lua to force treesitter highlight
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  -- Enable treesitter syntax highlighting, since we disabled nvim's
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+
+  -- A list of parser names, or "all" (the listed parsers MUST always be installed)
+  ensure_installed = {
+      "c",
+      "lua",
+      "vimdoc",
+      "query",
+      "markdown",
+      "markdown_inline",
+      "javascript",
+      "html",
+      "tsx",
+      "css",
+      "ruby",
+      "bash",
+      "yaml",
+      "xml",
+      "json",
+      "json5",
+      "vim",
+      "typescript",
+      "ruby",
+      "python",
+      "php",
+  },
+
+  -- remap keys
+  mappings = {
+    accept_diff = "<leader>y", -- ctrl-y is for scrolling, so remap to this
+  },
+}
+EOF
+
+
 
 "disable NVIM's abaility to change cursor shape.  this is breaking windows terminal
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
-set guicursor=
+"let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+"set guicursor=
 
 "All your searches will be case insensitive
 set ignorecase
@@ -89,18 +137,19 @@ set smartcase
 "disable macvim colorscheme so it will pick up settings form here.
 let macvim_skip_colorscheme=1
 
-
 let g:indent_guides_enable_on_vim_startup = 1
 set ts=4 sw=4 et
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#203e53 ctermbg=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#203e53 ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#170A2F ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#170A2F ctermbg=0
 
 set encoding=utf-8 "encoding
 "set t_Co=256 "enable more colors, needed this for the color scheme to work
-syntax on "enable syntax colors
-colorscheme gRetroWave16 "custom theme
+syntax off "enable syntax colors / turned off, since treesitter is coloring now
+set termguicolors
+colorscheme gNvim011
+"colorscheme gRetroWave16 "custom theme
 "colorscheme cobalt16 "custom theme
 set number "displays numbers for each line
 set numberwidth=5 "wider number bar
@@ -150,26 +199,60 @@ set undodir=$HOME/zzz_vimtmp//
 
 "change status bar color in different modes
 function! InsertStatuslineColor(mode)
+    " =====================
+    " ANSI palette
+    " =====================
+    let s:black        = "#170A2F"
+    let s:boldblack    = "#515151"
+    let s:red          = "#EB3DAC"
+    let s:boldred      = "#FD1D53"
+    let s:green        = "#D288F5"
+    let s:boldgreen    = "#FAB0FF"
+    let s:yellow       = "#F9C80E"
+    let s:boldyellow   = "#FD9F52"
+    let s:blue         = "#147EB8"
+    let s:boldblue     = "#3CA6E0"
+    let s:magenta      = "#775ABB"
+    let s:boldmagenta  = "#9F82E3"
+    let s:cyan         = "#246E83"
+    let s:boldcyan     = "#19CED2"
+    let s:white        = "#CCCCCC"
+    let s:boldwhite    = "#FFFFFF"
+
+
   if a:mode == 'i'
     set cursorline
-    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=#ffee80 guibg=#193549
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=#ffee80 guibg=#193549
-    highlight  CursorLine ctermbg=0 ctermfg=NONE cterm=None term=None guibg=#000000 guifg=NONE
-    highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11 guibg=#ffee80 guifg=#193549
+    "hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=s:black guibg=s:magenta
+    "hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=11 guifg=s:black guibg=s:magenta
+    "highlight  CursorLine ctermbg=0 ctermfg=NONE cterm=None term=None guibg=s:black guifg=NONE
+    "highlight  CursorLineNr cterm=None ctermfg=0 ctermbg=11 guibg=s:black guifg=s:magenta
+
+    execute 'hi StatusLine guifg=' . s:black . ' guibg=' . s:white
+    execute 'hi StatusLineNC guifg=' . s:black . ' guibg=' . s:white
+    execute 'hi CursorLine guifg=' . 'NONE' . ' guibg=' . s:black
+    execute 'hi CursorLineNr guifg=' . s:black . ' guibg=' . s:white
   elseif a:mode == 'v'
     "set updatetime=0
     set cursorline
-    hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=#ff628c guibg=#ffffff
-    highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None guibg=#ffee80 guifg=NONE
-    highlight  CursorLineNr cterm=None ctermfg=15 ctermbg=5 guibg=#ff628c guifg=#193549
+    "hi StatusLine   term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=s:boldwhite guibg=s:boldgreen
+    "hi StatusLineNC term=NONE cterm=NONE ctermfg=15 ctermbg=5 guifg=s:boldwhite guibg=s:boldgreen
+    "highlight  CursorLine ctermbg=11 ctermfg=None cterm=None term=None guibg=s:boldmagena guifg=NONE
+    "highlight  CursorLineNr cterm=None ctermfg=15 ctermbg=5 guibg=s:boldwhite guifg=s:boldgreen
+    execute 'hi StatusLine guifg=' . s:boldwhite . ' guibg=' . s:red
+    execute 'hi StatusLineNC guifg=' . s:boldwhite . ' guibg=' . s:red
+    execute 'hi CursorLine guifg=' . 'NONE' . ' guibg=' . s:boldmagenta
+    execute 'hi CursorLineNr guifg=' . s:boldwhite . ' guibg=' . s:red
   else
     set cursorline
-    hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
-    hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=#ffffff guibg=#193549
-    highlight  CursorLine ctermbg=0 ctermfg=None cterm=None term=None guibg=#000000 guifg=NONE
-    highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=0 guibg=#000000 guifg=#ffc600
+    "hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=s:black guibg=s:boldwhite
+    "hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15 guifg=s:black guibg=s:boldwhite
+    "highlight  CursorLine ctermbg=0 ctermfg=None cterm=None term=None guibg=s:boldblack guifg=NONE
+    "highlight  CursorLineNr cterm=None ctermfg=1 ctermbg=0 guibg=s:black guifg=s:boldblack
     "set updatetime=0
+    execute 'hi StatusLine guifg=' . s:black . ' guibg=' . s:boldwhite
+    execute 'hi StatusLineNC guifg=' . s:black . ' guibg=' . s:boldwhite
+    execute 'hi CursorLine guifg=' . 'NONE' . ' guibg=' . s:black
+    execute 'hi CursorLineNr guifg=' . s:red . ' guibg=' . s:black
   endif
   return ''
 endfunction
@@ -306,7 +389,8 @@ set autoindent
 set smartindent
 imap <C-Return> <CR><CR><C-o>k<Tab>
 "set paste "sets the paste mode, which keeps tab formatting when pasting from other code
-set pastetoggle=<leader>2 "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
+" removed as of nvim 0.10
+"set pastetoggle=<leader>2 "toggles between paste mode on and off. this is needed because tab key was inserting ^I when paste mode on
 
 set laststatus=2 "force show status bar at the bottom
 

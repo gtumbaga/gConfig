@@ -400,7 +400,7 @@ djsync_external_hd_push() {
 djsync_smb_push() {
     # if my .djsync file exists, lets load it
     if  [ -f ./.djsync ]; then
-        echo "about to sync to: /Volumes/DJ/"
+        echo "about to sync to: /Volumes/Users/djgtr/DJ_serato/"
         echo " "
 
         # -c - use checksum instead of size/time
@@ -410,7 +410,7 @@ djsync_smb_push() {
         rsync -cazP \
             --exclude '.djsync' \
             --exclude '.DS_Store' \
-            ./ /Volumes/DJ/
+            ./ /Volumes/Users/djgtr/DJ_serato/
 
         if [ $? -eq 0 ]; then
             echo " "

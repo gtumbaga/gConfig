@@ -1,9 +1,9 @@
-" Vim color file
-" Maintainer:   Gabriel Tumbaga
-" Last Change:  2021 05 07
+" =========================================================
+" g16.vim - Neovim 0.11 compatible colorscheme
+" Maintainer: Gabriel Tumbaga
+" Converted to modern guifg/guibg using custom ANSI palette
+" =========================================================
 
-" I altered to refer to system colors. that way your color scheme stays
-" consistent throughout.
 set background=dark
 hi clear
 if exists("syntax_on")
@@ -11,65 +11,88 @@ if exists("syntax_on")
 endif
 let g:colors_name="g16"
 
-hi Normal       term=NONE cterm=NONE ctermfg=15   ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=1   ctermbg=NONE
-hi Title        term=NONE cterm=NONE ctermfg=7   ctermbg=NONE
+" =====================
+" ANSI palette
+" =====================
+let s:black        = "#170A2F"
+let s:boldblack    = "#515151"
+let s:red          = "#EB3DAC"
+let s:boldred      = "#FD1D53"
+let s:green        = "#D288F5"
+let s:boldgreen    = "#FAB0FF"
+let s:yellow       = "#F9C80E"
+let s:boldyellow   = "#FD9F52"
+let s:blue         = "#147EB8"
+let s:boldblue     = "#3CA6E0"
+let s:magenta      = "#775ABB"
+let s:boldmagenta  = "#9F82E3"
+let s:cyan         = "#246E83"
+let s:boldcyan     = "#19CED2"
+let s:white        = "#64FFFF"
+let s:boldwhite    = "#FFFFFF"
 
-hi SignColumn   term=NONE cterm=NONE ctermfg=9  ctermbg=NONE guifg=9  guibg=NONE
- 
+" =====================
+" Core highlights
+" =====================
+hi Normal       guifg=s:white      guibg=s:black
+hi NonText      guifg=s:red        guibg=NONE
+hi Title        guifg=s:white      guibg=NONE
+hi SignColumn   guifg=s:boldred    guibg=NONE
 
-hi Statement    term=NONE cterm=NONE ctermfg=1  ctermbg=NONE
-hi Special      term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
-hi Function      term=NONE cterm=NONE ctermfg=1 ctermbg=NONE
-hi SpecialKey   term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
-hi NonText      term=NONE cterm=NONE ctermfg=3  ctermbg=NONE
-hi extends      term=NONE cterm=NONE ctermfg=6  ctermbg=NONE
-hi Constant     term=NONE cterm=NONE ctermfg=15 ctermbg=NONE
-hi String       term=NONE cterm=NONE ctermfg=5  ctermbg=NONE
-hi Comment      term=NONE cterm=NONE ctermfg=6 ctermbg=NONE
-hi Conceal      ctermfg=8 ctermbg=NONE
-hi Preproc      term=NONE cterm=NONE ctermfg=5 ctermbg=NONE
-hi Type         term=NONE cterm=NONE ctermfg=7 ctermbg=NONE
-hi Identifier   term=NONE cterm=NONE ctermfg=7 ctermbg=NONE
-hi Number          ctermfg=2
-hi Boolean         ctermfg=2
-hi LineNr       cterm=NONE ctermfg=4  ctermbg=NONE
-hi CursorLine   ctermbg=0 ctermfg=None cterm=None term=None
-hi CursorLineNr cterm=None ctermfg=15 ctermbg=0
+hi Statement    guifg=s:red        guibg=NONE
+hi Special      guifg=s:white      guibg=NONE
+hi Function     guifg=s:red        guibg=NONE
+hi SpecialKey   guifg=s.cyan       guibg=NONE
+hi extends      guifg=s.cyan       guibg=NONE
+hi Constant     guifg=s.white      guibg=NONE
+hi String       guifg=s.magenta    guibg=NONE
+hi Comment      guifg=s.cyan       gui=italic
+hi Conceal      guifg=s.boldblack  guibg=NONE
+hi Preproc      guifg=s.magenta    guibg=NONE
+hi Type         guifg=s.white      guibg=NONE
+hi Identifier   guifg=s.white      guibg=NONE
+hi Number       guifg=s.green
+hi Boolean      guifg=s.green
+hi LineNr       guifg=s.blue       guibg=NONE
+hi CursorLine   guibg=s.black
+hi CursorLineNr guifg=s.white      guibg=s.black
 
-hi MatchParen cterm=NONE ctermfg=15 ctermbg=5
+hi MatchParen   guifg=s.white      guibg=s.magenta
 
-hi StatusLine   term=NONE cterm=NONE ctermfg=0 ctermbg=15
-hi StatusLineNC term=NONE cterm=NONE ctermfg=0 ctermbg=15
-hi TabLine          cterm=NONE      ctermfg=7         ctermbg=NONE
-hi TabLineFill      cterm=NONE      ctermfg=0        ctermbg=NONE
-hi TabLineSel       cterm=NONE      ctermfg=0         ctermbg=15
+hi StatusLine   guifg=s.black      guibg=s.white
+hi StatusLineNC guifg=s.black      guibg=s.white
+hi TabLine      guifg=s.white      guibg=NONE
+hi TabLineFill  guifg=s.black      guibg=NONE
+hi TabLineSel   guifg=s.black      guibg=s.white
 
-hi Visual       term=NONE cterm=NONE ctermfg=8 ctermbg=3
+hi Visual       guifg=s.boldblack  guibg=s.yellow
 
-hi SpellBad     term=NONE cterm=NONE ctermfg=0 ctermbg=1
-hi SpellCap     term=NONE cterm=NONE ctermfg=0 ctermbg=12
-hi SpellLocal   term=NONE cterm=UNDERLINE ctermfg=5 ctermbg=NONE
+hi SpellBad     guifg=s.black      guibg=s.red
+hi SpellCap     guifg=s:black      guibg=s.boldblue
+hi SpellLocal   guifg=s.magenta    guibg=NONE gui=underline
 
-hi Search       term=NONE cterm=NONE ctermbg=7
+hi Search       guibg=s.white
 
-hi VertSplit    term=NONE cterm=NONE ctermfg=0 ctermbg=15
+hi VertSplit    guifg=s.black      guibg=s.white
 
-hi Directory    term=NONE cterm=NONE ctermfg=10 ctermbg=NONE
+hi Directory    guifg=s.green      guibg=NONE
 
-hi WarningMsg   term=standout cterm=NONE ctermfg=9 ctermbg=NONE
+hi WarningMsg   guifg=s.boldred    guibg=NONE gui=standout
 
-hi Error        term=NONE cterm=NONE ctermfg=15 ctermbg=9
+hi Error        guifg=s.white      guibg=s.red
 
-hi Cursor       ctermfg=0 ctermbg=11
+hi Cursor       guifg=s.black      guibg=s.yellow
 
-hi WildMenu     cterm=NONE ctermfg=8 ctermbg=3
+hi WildMenu     guifg=s.boldblack  guibg=s.yellow
 
-hi Conceal      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
+hi Pmenu        guifg=s.boldblack  guibg=s.yellow
+hi PmenuSel     guifg=s.boldblack  guibg=s.red
 
-hi Pmenu        cterm=NONE ctermfg=8 ctermbg=3
-hi PmenuSel     cterm=NONE ctermfg=8 ctermbg=1
+hi Conceal      guifg=s.boldblack  guibg=NONE
 
+" =====================
+" Plugin / syntax links
+" =====================
 hi! link cssBraces Delimiter
 hi! link cssClassName Statement
 hi! link cssClassNameDot Normal
@@ -78,7 +101,7 @@ hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg htmlTagName
 hi! link htmlEndTag htmlTag
-hi! link htmlTag  Statement
+hi! link htmlTag Statement
 hi! link htmlTagName Special
 hi! link jsonQuote Normal
 hi! link phpVarSelector Statement
@@ -142,3 +165,24 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
+
+" =====================
+" Terminal colors (optional)
+" =====================
+let g:terminal_color_0  = s:black
+let g:terminal_color_1  = s:red
+let g:terminal_color_2  = s:green
+let g:terminal_color_3  = s:yellow
+let g:terminal_color_4  = s:blue
+let g:terminal_color_5  = s:magenta
+let g:terminal_color_6  = s:cyan
+let g:terminal_color_7  = s:white
+let g:terminal_color_8  = s:boldblack
+let g:terminal_color_9  = s:boldred
+let g:terminal_color_10 = s:boldgreen
+let g:terminal_color_11 = s:boldyellow
+let g:terminal_color_12 = s:boldblue
+let g:terminal_color_13 = s:boldmagenta
+let g:terminal_color_14 = s:boldcyan
+let g:terminal_color_15 = s:boldwhite
+
