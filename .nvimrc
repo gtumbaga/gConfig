@@ -113,14 +113,24 @@ require'nvim-treesitter.configs'.setup {
       "python",
       "php",
   },
-
-  -- remap keys
-  mappings = {
-    accept_diff = "<leader>y", -- ctrl-y is for scrolling, so remap to this
-  },
 }
 EOF
 
+
+lua << EOF
+    require'CopilotChat'.setup {
+        -- remap keys
+        mappings = {
+            accept_diff = {
+                normal = "<leader>ay",
+                insert = "<C-S-y>",
+            },
+        },
+        window = {
+            side = "right",
+        },
+    }
+EOF
 
 
 "disable NVIM's abaility to change cursor shape.  this is breaking windows terminal
@@ -466,6 +476,8 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 " coc dropdown autocomplete via tab
 inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
+" coc display dropdown menu
+inoremap <silent><expr> <C-j> coc#refresh()
 
 
 " Rename tabs to show tab number.
