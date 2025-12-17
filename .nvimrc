@@ -464,9 +464,15 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 " hide vim swap files
 let g:netrw_list_hide='.*\.swp$'
+
+"with the use of fuzzy search, i don't need to keep a netrw tab always open,
+"so i'm gonna remove open a new tab behavior
+"note to self: i can use ':tabe .' to open netrw in a new tab when needed
 "default to open new tab
-let g:netrw_browse_split = 3
-let g:netrw_altv = 1
+"let g:netrw_browse_split = 3
+"let g:netrw_altv = 1
+
+
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
