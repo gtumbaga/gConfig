@@ -6,12 +6,14 @@ if empty(glob('~/.config/nvim/colors/g16.vim'))
   silent !mkdir ~/.config/nvim/colors
   silent !ln -s ~/gConfig/g16.vim ~/.config/nvim/colors/g16.vim
   silent !ln -s ~/gConfig/gRetroWave16.vim ~/.config/nvim/colors/gRetroWave16.vim
+  silent !ln -s ~/gConfig/gNvim011.vim ~/.config/nvim/colors/gNvim011.vim
 endif
 
 "check for gabes colorscheme file, get it if its missing
 if empty(glob('~/.config/nvim/colors/g16.vim'))
   silent !ln -s ~/gConfig/g16.vim ~/.config/nvim/colors/g16.vim
   silent !ln -s ~/gConfig/gRetroWave16.vim ~/.config/nvim/colors/gRetroWave16.vim
+  silent !ln -s ~/gConfig/gNvim011.vim ~/.config/nvim/colors/gNvim011.vim
 endif
 
 "check for plugin manager, and install if it its not there
