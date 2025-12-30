@@ -9,6 +9,8 @@ export QUOTING_STYLE=literal
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 export EDITOR=vim
+#force truecolor through mosh
+export COLORTERM=truecolor
 
 # -F applies classification indicators like slashes after a dir, @ for symlink, etc.
 # -C column

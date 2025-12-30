@@ -82,7 +82,7 @@ let g:ale_fixers = {
 
 " use lua to force treesitter highlight
 lua << EOF
-require'nvim-treesitter.configs'.setup {
+require'nvim-treesitter'. setup {
   -- Enable treesitter syntax highlighting, since we disabled nvim's
   highlight = {
     enable = true,
@@ -101,7 +101,6 @@ require'nvim-treesitter.configs'.setup {
       "html",
       "tsx",
       "css",
-      "ruby",
       "bash",
       "yaml",
       "xml",
@@ -113,6 +112,7 @@ require'nvim-treesitter.configs'.setup {
       "python",
       "php",
   },
+  auto_install = true
 }
 EOF
 
@@ -165,7 +165,9 @@ set number "displays numbers for each line
 set numberwidth=5 "wider number bar
 set relativenumber "makes the numberse relative
 set wrap "enable word wrap for long lines
+
 filetype plugin indent on
+
 set tabstop=4 " show existing tab with 4 spaces width
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4 " when indenting with '>', use 4 spaces width
@@ -386,6 +388,14 @@ autocmd FileType markdown set conceallevel=0
 "let vim know about filetpypes so they can get colored up
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 "autocmd BufNewFile,BufRead *.ts set filetype=typescript
+" Auto-detect JSX/TSX files
+augroup filetypedetect
+  au! BufRead,BufNewFile *.jsx setfiletype javascriptreact
+  au! BufRead,BufNewFile *.tsx setfiletype typescriptreact
+augroup END
+
+" Workaround: manually start treesitter on file open
+autocmd BufRead,BufNewFile * lua vim.treesitter.start()
 
 set list
 set cursorline      " highlight current line
@@ -471,7 +481,6 @@ let g:netrw_list_hide='.*\.swp$'
 "default to open new tab
 "let g:netrw_browse_split = 3
 "let g:netrw_altv = 1
-
 
 "ensure numbers show in netrw tree listing
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
