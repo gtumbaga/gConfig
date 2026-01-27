@@ -1,0 +1,73 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w k": "editor::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w k": "workspace::CloseAllDocks",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-w w": "workspace::ActivateNextWindow",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w shift-w": "workspace::ActivatePreviousWindow",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-w j": "terminal_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "vim::HalfPageLeft",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-l": "vim::HalfPageRight",
+    },
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-h": null,
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "\\ c space": "editor::ToggleComments",
+    },
+  },
+]
