@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "off",
   "scrollbar": {
     "show": "always",
   },
@@ -19,7 +20,7 @@
           "paths": ["/home/ubuntu/dev/api-sanctum"],
         },
         {
-          "paths": ["/home/ubuntu/dev/app-nestment/./"],
+          "paths": ["/home/ubuntu/dev/app-nestment"],
         },
         {
           "paths": ["/home/ubuntu/dev/notes"],
@@ -52,6 +53,7 @@
   "buffer_font_weight": 400.0,
   "buffer_font_family": "Share Tech Mono",
   "terminal": {
+    "keep_selection_on_copy": false,
     "font_family": "Cascadia Mono",
     "font_size": 16,
     "line_height": {
@@ -85,7 +87,7 @@
 
   "experimental.theme_overrides": {
     "terminal.background": "#241541",
-    "terminal.dim_foreground": "#64ffff",
+    "terminal.foreground": "#64ffff",
     "terminal.ansi.background": "#241541",
     "terminal.ansi.black": "#170a2f",
     "terminal.ansi.bright_black": "#515151",
@@ -103,7 +105,13 @@
     "terminal.ansi.bright_cyan": "#19ced2",
     "terminal.ansi.white": "#64ffff",
     "terminal.ansi.bright_white": "#ffffff",
-    "players": [{ "selection": "#f9c80e" }],
+    "players": [
+      {
+        "selection": "#f9c80e",
+        "cursor": "#fd9f52",
+        // "background": "#241541",
+      },
+    ],
     "syntax": {
       "comment": {
         "color": "#515151",
