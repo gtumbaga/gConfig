@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
   "format_on_save": "off",
   "scrollbar": {
     "show": "always",
@@ -33,8 +36,8 @@
     "file_icons": true,
   },
   "title_bar": {
+    "show_branch_status_icon": true,
     "show_menus": false,
-    "show_branch_icon": true,
   },
   "icon_theme": "Catppuccin Frappé",
   "ui_font_weight": 300.0,
@@ -62,7 +65,8 @@
     "font_weight": 300,
   },
   "agent": {
-    "play_sound_when_agent_done": true,
+    "dock": "right",
+    "play_sound_when_agent_done": "always",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4",
