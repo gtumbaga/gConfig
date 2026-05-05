@@ -10,6 +10,15 @@
   "project_panel": {
     "dock": "left"
   },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "format_on_save": "off",
   "scrollbar": {
     "show": "always",
@@ -20,16 +29,42 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/ubuntu/dev/api-sanctum"],
+          "paths": [
+            "/home/ubuntu/dev/api-sanctum"
+          ]
         },
         {
-          "paths": ["/home/ubuntu/dev/app-nestment"],
+          "paths": [
+            "/home/ubuntu/dev/app-nestment"
+          ]
         },
         {
-          "paths": ["/home/ubuntu/dev/notes"],
+          "paths": [
+            "/home/ubuntu/dev/gc-eks"
+          ]
         },
-      ],
-    },
+        {
+          "paths": [
+            "/home/ubuntu/dev/gcloud"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ubuntu/dev/notes"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ubuntu/dev/webflow"
+          ]
+        },
+        {
+          "paths": [
+            "/home/ubuntu/openwebui"
+          ]
+        }
+      ]
+    }
   ],
   "use_system_window_tabs": true,
   "tabs": {
@@ -67,6 +102,7 @@
   "agent": {
     "dock": "right",
     "play_sound_when_agent_done": "always",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4",
@@ -75,6 +111,7 @@
     "model_parameters": [],
   },
   "vim": {
+    "use_system_clipboard": "never",
     "use_smartcase_find": true,
     "toggle_relative_line_numbers": true,
   },
@@ -86,7 +123,6 @@
     "mode": "dark",
     "light": "Gruvbox Light",
     "dark": "Synthwave Alpha",
-    // "dark": "Gruvbox Dark Hard",
   },
 
   "experimental.theme_overrides": {
@@ -113,7 +149,6 @@
       {
         "selection": "#f9c80e",
         "cursor": "#fd9f52",
-        // "background": "#241541",
       },
     ],
     "syntax": {

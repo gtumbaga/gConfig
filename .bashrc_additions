@@ -376,7 +376,7 @@ djsync_external_hd_push() {
 
     # check that our current dir matches the remote
     if [ -n "$SYNC_REMOTE_DIR" ]; then
-        fullpath="/Volumes/WD_BLACK/DJ_serato/"
+        fullpath="/Volumes/gTraxx/DJ_serato/"
         #clear
         echo "about to sync to: $fullpath"
         echo " "
