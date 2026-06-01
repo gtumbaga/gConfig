@@ -88,8 +88,8 @@
     "metrics": false,
   },
   "buffer_line_height": "standard",
-  "buffer_font_weight": 400.0,
-  "buffer_font_family": "Share Tech Mono",
+  "buffer_font_weight": 200.0,
+  "buffer_font_family": "Cascadia Mono",
   "terminal": {
     "keep_selection_on_copy": false,
     "font_family": "Cascadia Mono",
@@ -97,15 +97,17 @@
     "line_height": {
       "custom": 1.2,
     },
-    "font_weight": 300,
+    "font_weight": 200,
   },
   "agent": {
     "dock": "right",
     "play_sound_when_agent_done": "always",
     "default_profile": "ask",
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4.6",
     },
     "favorite_models": [],
     "model_parameters": [],
@@ -118,7 +120,7 @@
   "relative_line_numbers": "disabled",
   "vim_mode": true,
   "ui_font_size": 16.0,
-  "buffer_font_size": 18.0,
+  "buffer_font_size": 16.0,
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light",
