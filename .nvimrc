@@ -83,12 +83,17 @@ let g:ale_fixers = {
 \}
 
 " use lua to force treesitter highlight
+" 'disable' is used to prevent treesitter from highlighting buffers that are not supported
 lua << EOF
 require'nvim-treesitter'. setup {
   -- Enable treesitter syntax highlighting, since we disabled nvim's
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
+    disable = function(lang, buf)
+      local ok, _ = pcall(vim.treesitter.get_parser, buf, lang)
+      return not ok
+    end,
   },
 
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
@@ -118,6 +123,18 @@ require'nvim-treesitter'. setup {
 }
 EOF
 
+" Patch vim.treesitter.start to silently ignore unsupported filetypes (e.g. plain text).
+" Neovim's built-in runtime calls this directly in newer versions, bypassing
+" nvim-treesitter's disable function.
+lua << EOF
+local orig_ts_start = vim.treesitter.start
+vim.treesitter.start = function(bufnr, lang)
+  local ok, err = pcall(orig_ts_start, bufnr, lang)
+  if not ok and err and not err:find("Parser could not be created") then
+    vim.notify(err, vim.log.levels.ERROR)
+  end
+end
+EOF
 
 lua << EOF
     require'CopilotChat'.setup {
@@ -581,4 +598,3 @@ function! GSyncDisable()
 
     echo "GSync has been disabled..."
 endfunction
-
