@@ -300,6 +300,29 @@ gsynclistenwsl() {
 
 
 
+#yt-dlp shortcut function for myself
+gaquire_bestaudio() {
+    echo "";
+    echo "";
+    if [ -n "$1" ]; then
+        yt-dlp -f "bestaudio" -ciw -o "%(title)s.%(ext)s" --download-archive archive.txt -- $1
+    else
+        echo 'useage: '
+        echo 'gaquire_bestaudio "<yt_id>"'
+    fi
+}
+gaquire_mp3() {
+    echo "";
+    echo "";
+    if [ -n "$1" ]; then
+        #yt-dlp -f "bestaudio" -ciw -o "%(title)s.%(ext)s" --download-archive archive.txt -- $1
+        yt-dlp -f "bestaudio/best" -ciw -o "%(title)s [%(id)s].%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3 --download-archive archive.txt -- $1
+    else
+        echo 'useage: '
+        echo 'gaquire_mp3 "<yt_id>"'
+    fi
+}
+
 # START OF MY DJ SYNC FUNCTIONS
 # this will sync music from this mac to the dj mac
 djsync_push() {
