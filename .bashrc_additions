@@ -301,7 +301,7 @@ gsynclistenwsl() {
 
 
 #yt-dlp shortcut function for myself
-gaquire_bestaudio() {
+gacquire_bestaudio() {
     echo "";
     echo "";
     if [ -n "$1" ]; then
@@ -311,7 +311,7 @@ gaquire_bestaudio() {
         echo 'gaquire_bestaudio "<yt_id>"'
     fi
 }
-gaquire_mp3() {
+gacquire_mp3() {
     echo "";
     echo "";
     if [ -n "$1" ]; then
