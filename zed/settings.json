@@ -65,6 +65,11 @@
         },
         {
           "paths": [
+            "/home/ubuntu/dev/umd-nestment"
+          ]
+        },
+        {
+          "paths": [
             "/home/ubuntu/dev/webflow"
           ]
         },
