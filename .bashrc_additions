@@ -423,6 +423,54 @@ djsync_external_hd_push() {
     fi
 }
 
+# this will sync the music from the external hd to this mac
+djsync_external_hd_fetch() {
+    # if my .djsync file exists, lets load it
+    if  [ -f ./.djsync ]; then
+        export $(grep -v '^#' .djsync | xargs)
+    else
+        return 1;
+    fi
+
+    currentdir=${PWD##*/}
+
+    # check that its set
+    if [ -z "$SYNC_REMOTE_HOST" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_DIR" ]; then
+        return 1
+    fi
+    if [ -z "$SYNC_REMOTE_PATH" ]; then
+        return 1
+    fi
+
+    # check that our current dir matches the remote
+    if [ -n "$SYNC_REMOTE_DIR" ]; then
+        fullpath="/Volumes/gTraxx/DJ_serato/"
+        #clear
+        echo "about to sync pull from: $fullpath"
+        echo " "
+
+        # -v - verbose, show me the files as they are being copied
+        # -c - use checksum instead of size/time
+        # -a - archive (preserve attrributes?)
+        # -z - compress (zip?)
+        # -P - (same as --partial --progress), keep partial files / show progress
+        rsync -vazP \
+            --exclude '.djsync' \
+            --exclude '.DS_Store' \
+            $fullpath ./
+
+        if [ $? -eq 0 ]; then
+            echo " "
+            echo "rsync success at $(date '+%Y.%m.%d %H:%M:%S')"
+        fi
+    else
+        echo "no .djsync file found, exiting...";
+    fi
+}
+
 djsync_smb_push() {
     # if my .djsync file exists, lets load it
     if  [ -f ./.djsync ]; then
