@@ -316,7 +316,7 @@ gacquire_mp3() {
     echo "";
     if [ -n "$1" ]; then
         #yt-dlp -f "bestaudio" -ciw -o "%(title)s.%(ext)s" --download-archive archive.txt -- $1
-        yt-dlp -f "bestaudio/best" -ciw -o "%(title)s [%(id)s].%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3 --download-archive archive.txt -- $1
+        yt-dlp -f "bestaudio/best" -ciw -o "%(title)s [%(id)s].%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3 --postprocessor-args "ffmpeg:-b:a 192k" --download-archive archive.txt -- $1
     else
         echo 'useage: '
         echo 'gaquire_mp3 "<yt_id>"'
