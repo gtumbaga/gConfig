@@ -404,11 +404,12 @@ djsync_external_hd_push() {
         echo "about to sync to: $fullpath"
         echo " "
 
+        # -v - verbose, show me the files as they are being copied
         # -c - use checksum instead of size/time
         # -a - archive (preserve attrributes?)
         # -z - compress (zip?)
         # -P - (same as --partial --progress), keep partial files / show progress
-        rsync -cazP \
+        rsync -vazP \
             --exclude '.djsync' \
             --exclude '.DS_Store' \
             ./ $fullpath
