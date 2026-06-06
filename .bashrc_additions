@@ -357,7 +357,7 @@ djsync_push() {
         # -a - archive (preserve attrributes?)
         # -z - compress (zip?)
         # -P - (same as --partial --progress), keep partial files / show progress
-        rsync -cazP \
+        rsync -azP \
             --exclude '.djsync' \
             --exclude '.DS_Store' \
             ./ $fullpath
@@ -481,7 +481,7 @@ djsync_smb_push() {
         # -a - archive (preserve attrributes?)
         # -z - compress (zip?)
         # -P - (same as --partial --progress), keep partial files / show progress
-        rsync -cazP \
+        rsync -azP \
             --exclude '.djsync' \
             --exclude '.DS_Store' \
             ./ /Volumes/Users/djgtr/DJ_serato/
@@ -529,7 +529,7 @@ djsync_fetch() {
                 # -a - archive (preserve attrributes?)
                 # -z - compress (zip?)
                 # -P - (same as --partial --progress), keep partial files / show progress
-                rsync -cazP \
+                rsync -azP \
                     --exclude '.djsync' \
                     --exclude '.DS_Store' \
                     $fullpath ./
