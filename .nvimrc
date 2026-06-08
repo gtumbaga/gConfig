@@ -48,7 +48,8 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'itchyny/vim-gitbranch'
 "Plug 'StanAngeloff/php.vim'
-Plug 'evanleck/vim-svelte'
+"Plug 'evanleck/vim-svelte'
+Plug 'evanleck/vim-svelte', { 'branch': 'main' }
 
 " ======= Syntax Highlighting
 "Plug 'sheerun/vim-polyglot'
@@ -69,8 +70,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " AI
-Plug 'github/copilot.vim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
+"Plug 'github/copilot.vim'
+"Plug 'CopilotC-Nvim/CopilotChat.nvim'
+Plug 'github/copilot.vim', { 'branch': 'release' }
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
 " copilotchat needs this:
 Plug 'nvim-lua/plenary.nvim'
 call plug#end()
