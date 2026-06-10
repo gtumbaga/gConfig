@@ -306,6 +306,8 @@ gacquire_bestaudio() {
     echo "";
     if [ -n "$1" ]; then
         yt-dlp -f "bestaudio" -ciw -o "%(title)s.%(ext)s" --download-archive archive.txt -- $1
+        curl -o "$1.jpg" "https://img.youtube.com/vi/$1/maxresdefault.jpg"
+        magick "$1.jpg" -gravity Center -extent 1:1 "$1-cropped.jpg"
     else
         echo 'useage: '
         echo 'gaquire_bestaudio "<yt_id>"'
@@ -317,6 +319,8 @@ gacquire_mp3() {
     if [ -n "$1" ]; then
         #yt-dlp -f "bestaudio" -ciw -o "%(title)s.%(ext)s" --download-archive archive.txt -- $1
         yt-dlp -f "bestaudio/best" -ciw -o "%(title)s [%(id)s].%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3 --postprocessor-args "ffmpeg:-b:a 192k" --download-archive archive.txt -- $1
+    curl -o "$1.jpg" "https://img.youtube.com/vi/$1/maxresdefault.jpg"
+    magick "$1.jpg" -gravity Center -extent 1:1 "$1-cropped.jpg"
     else
         echo 'useage: '
         echo 'gaquire_mp3 "<yt_id>"'
