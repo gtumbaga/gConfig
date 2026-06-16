@@ -15,8 +15,14 @@
       ]
     }
   },
-  "unnecessary_code_fade": 0.1,
+  "unnecessary_code_fade": 0.7,
   "semantic_tokens": "combined",
+  "diagnostics": {
+     "inline": {
+       "enabled": true,
+       "max_severity": "warning"
+     }
+   },
   "project_panel": {
     "dock": "left"
   },
@@ -32,6 +38,7 @@
   "format_on_save": "off",
   "scrollbar": {
     "show": "always",
+    "diagnostics": "all"
   },
   "ssh_connections": [
     {
@@ -84,6 +91,7 @@
   "use_system_window_tabs": true,
   "tabs": {
     "file_icons": true,
+    // "show_diagnostics": "all"
   },
   "title_bar": {
     "show_branch_status_icon": true,
