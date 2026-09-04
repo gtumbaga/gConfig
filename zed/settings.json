@@ -58,6 +58,11 @@
         },
         {
           "paths": [
+            "/home/ubuntu/dev/app2"
+          ]
+        },
+        {
+          "paths": [
             "/home/ubuntu/dev/gc-eks"
           ]
         },
@@ -84,6 +89,22 @@
         {
           "paths": [
             "/home/ubuntu/openwebui"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "gabedev",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/gtumbaga/dev/api-sanctum"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gtumbaga/dev/app-nestment"
           ]
         }
       ]
@@ -115,6 +136,7 @@
   "buffer_font_weight": 200.0,
   "buffer_font_family": "Cascadia Mono",
   "terminal": {
+    "shell": "system",
     "bell": "system",
     "keep_selection_on_copy": false,
     "font_family": "Cascadia Mono",
@@ -129,10 +151,10 @@
     "play_sound_when_agent_done": "always",
     "default_profile": "write",
     "default_model": {
-      "effort": "max",
+      "effort": "high",
       "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-5",
     },
     "favorite_models": [],
     "model_parameters": [],
