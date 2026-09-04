@@ -417,7 +417,11 @@ augroup filetypedetect
 augroup END
 
 " Workaround: manually start treesitter on file open
-autocmd BufRead,BufNewFile * lua vim.treesitter.start()
+" per gemini, this was causing an error
+" autocmd BufRead,BufNewFile * lua vim.treesitter.start()
+" a safe workaround to ignore invalid or empty file types:
+" autocmd BufRead,BufNewFile * lua if vim.bo.filetype ~= '' then pcall(vim.treesitter.start) end
+" TURN THIS BACK ON IF TREESITTER ISN't WORKING on file open or whatever
 
 set list
 set cursorline      " highlight current line
