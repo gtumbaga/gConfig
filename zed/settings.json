@@ -7,6 +7,33 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "language_models": {
+    // "llama.cpp": {
+    //   "api_url": "http://localhost:11434"
+    // },
+    "lmstudio": {
+      "api_url": "http://localhost:1234/api/v0",
+      // "available_models": [
+      //   {
+      //     "name": "lmstudio-community/qwen2.5-coder-7b-instruct",
+      //     "display_name": "Qwen 2.5 with tools",
+      //     "max_tokens": 32768,
+      //     "supports_tool_calls": true,
+      //     "supports_images": false
+      //   }
+      // ]
+    },
+  },
+  // Add this block to route inline autocompletes to DeepSeek
+  "edit_predictions": {
+    "provider": "open_ai_compatible_api",
+    "ollama": {
+      "api_url": "http://localhost:1234/v1",
+      "model": "lmstudio-community/qwen2.5-coder-7b-instruct",
+      "prompt_format": "infer",
+      "max_output_tokens": 512
+    }
+  },
   "cli_default_open_behavior": "new_window",
   "languages": {
     "PHP": {
@@ -106,6 +133,26 @@
           "paths": [
             "/home/gtumbaga/dev/app-nestment"
           ]
+        },
+        {
+          "paths": [
+            "/home/gtumbaga/dev/nestment-dashboard"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gtumbaga/dev/openwebui"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gtumbaga/dev/personal/Bubble-Sweeper"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gtumbaga/dev/webflow"
+          ]
         }
       ]
     }
@@ -147,14 +194,20 @@
     "font_weight": 200,
   },
   "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
     "dock": "right",
     "play_sound_when_agent_done": "always",
     "default_profile": "write",
     "default_model": {
-      "effort": "high",
-      "enable_thinking": true,
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-5",
+      "enable_thinking": false,
+      "provider": "lmstudio",
+      "model": "qwen2.5-7b-instruct",
     },
     "favorite_models": [],
     "model_parameters": [],
