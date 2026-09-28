@@ -1,15 +1,7 @@
 {
-    "remote.autoForwardPorts": false,
-    "vim.smartRelativeLine": true,
-    "php.validate.executablePath": "/opt/homebrew/opt/php@8.1/bin/php",
-    // "editor.fontLigatures": "'ss01', 'ss02'",
-    "editor.fontLigatures": "",
-    "tmp": "==> !== $$$ Il1 0Oo ~-",
-    // "editor.fontSize": 14,
-    // "editor.fontFamily": "'Cascadia Code', monospace",
-    "editor.fontSize": 17,
-    "editor.fontFamily": "'Share Tech Mono','Monaspace Krypton', monospace",
-    "editor.lineHeight": 1.3,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Cascadia Mono', monospace",
     "editor.fontWeight": "100",
     "editor.renderWhitespace": "all",
     "vim.normalModeKeyBindings": [
@@ -31,58 +23,8 @@
         }
     ],
     "vim.enableNeovim": true,
-    "window.nativeTabs": true,
-    "window.nativeFullScreen": false,
-    "workbench.editor.showTabs": "multiple",
-    "editor.cursorSurroundingLines": 2,
-    "editor.tokenColorCustomizations": {
-        "comments": "#246E83",
-        "keywords": "#EB3DAC",
-        "functions": "#EB3DAC",
-        "variables": "#FFFFFF",
-        "strings": "#D288F5",
-        "numbers": "#D288F5",
-        "textMateRules": [
-            {
-                "scope": [
-                    "comment",
-                    "comment.line",
-                    "comment.block"
-                ],
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": [
-                    "meta.object-literal.key"
-                ],
-                "settings": {
-                    "foreground": "#64FFFF"
-                }
-            },
-            {
-                "scope": [
-                    "punctuation.definition.string",
-                    "string.quoted",
-                    "string.template",
-                    "keyword",
-                    "keyword.control.import"
-                ],
-                "settings": {
-                    "foreground": "#775ABB"
-                }
-            },
-            {
-                "scope": [
-                    "constant.numeric"
-                ],
-                "settings": {
-                    "foreground": "#D288F5"
-                }
-            }
-        ]
-    },
+
+
     "workbench.colorCustomizations": {
         "terminal.background": "#241541",
         "terminal.foreground": "#64FFFF",
@@ -127,90 +69,5 @@
         "scrollbarSlider.background": "#170A2F",
         "editorLineNumber.foreground": "#775ABB"
     },
-    "emmet.triggerExpansionOnTab": true,
-    "files.associations": {
-        ".env.*": "env"
-    },
-    "files.trimTrailingWhitespace": true,
-    // "terminal.integrated.fontSize": 14,
-    // "terminal.integrated.fontFamily": "'Cascadia Code', monospace",
-    // "terminal.integrated.fontSize": 16,
-    // "terminal.integrated.fontFamily": "'Share Tech Mono', 'Cascadia Code', monospace",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontFamily": "'Share Tech Mono', monospace",
-    // "terminal.integrated.lineHeight": 1.2,
-    "terminal.integrated.fontWeight": "300",
-    "terminal.integrated.fontWeightBold": "600",
-    "workbench.startupEditor": "none",
-    "terminal.integrated.tabs.location": "left",
-    "terminal.integrated.inheritEnv": true,
-    "terminal.integrated.gpuAcceleration": "off",
-    "terminal.integrated.localEchoEnabled": "off",
-    "terminal.external.osxExec": "iTerm.app",
-    // in windows, ctrl+e and ctrl+p kept opening the file search.
-    // this ensures that they can be used in terminal instead
-    "terminal.integrated.commandsToSkipShell": [
-        "-workbench.action.quickOpen",
-        "-workbench.action.terminal.focusFindWidget"
-    ],
-    "editor.wordWrap": "off",
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": [
-        "#775ABB",
-        "#FFFFFF"
-    ],
-    "vim.statusBarColors.insert": [
-        "#F9C80E",
-        "#000000"
-    ],
-    "vim.statusBarColors.visual": "#EB3DAC",
-    "vim.statusBarColors.visualline": "#EB3DAC",
-    "vim.statusBarColors.visualblock": "#EB3DAC",
-    "vim.statusBarColors.replace": "#D288F5",
-    "vim.statusBarColors.commandlineinprogress": [
-        "#000000",
-        "#FFFFFF"
-    ],
-    "vim.statusBarColors.searchinprogressmode": [
-        "#000000",
-        "#FFFFFF"
-    ],
-    "vim.statusBarColors.easymotionmode": [
-        "#000000",
-        "#FFFFFF"
-    ],
-    "vim.statusBarColors.easymotioninputmode": [
-        "#000000",
-        "#FFFFFF"
-    ],
-    "vim.statusBarColors.surroundinputmode": [
-        "#000000",
-        "#FFFFFF"
-    ],
-    "vim.neovimPath": "/opt/homebrew/bin/nvim",
-    "editor.minimap.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Tokyo Hack",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "editor.detectIndentation": false,
-    "workbench.editor.enablePreview": false,
-    "editor.stickyScroll.enabled": false,
-    // "remote.extensionKind": {
-    //     "kencocaceo.customvscodeuicss": [
-    //         "ui"
-    //     ]
-    // },
-    // dont forget to run shift-command-p 'customvscodeuicss: Reload Configuration'
-    // click yes
-    // note, this currently makes it compain my installation is corrupt
-    "customvscodeuicss.css": "body { counter-reset: tab; } .tabs-container .tab { counter-increment: tab; } .tabs-container .tab .monaco-icon-label:before{ padding-right: 3px; } .tabs-container .tab:before { display: inline-block; content: counter(tab)''; font-size: 12px; min-width: 14px; height: 14px; background: #fff; color: #000; text-align: center; line-height: 14px; margin-top: 10px; margin-left: -5px; font-family: Impact; box-shadow: 1px 1px 1px #000; padding: 0 3px; box-sizing: border-box; }",
-    "update.mode": "manual",
-    "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never",
-    "cursor.cpp.disabledLanguages": [],
-    "window.title": "${rootName}${separator}${dirty}${activeEditorShort}${separator}${profileName}${separator}${appName}",
-    "window.menuBarVisibility": "toggle"
+
 }

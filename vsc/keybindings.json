@@ -1,232 +1,45 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+\\",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                // commands to run in sequence
-            "editor.cpp.disableenabled",
-            "editor.action.enableCppGlobally",
-            ]
-        }
-    },
-    {
-        "key": "ctrl+[",
-        "command": "editor.cancelOperation",
-        "when": "cancellableOperation"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "inlineChat.close",
-        "when": "inlineChatHasProvider && inlineChatVisible"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "inlineChat.close",
-        "when": "inlineChatHasProvider && inlineChatVisible"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "editor.action.inlineEdit.reject",
-        "when": "inlineEditVisible && !editorReadonly"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "editor.action.cancelGPT4WithCmdDelete",
-        "when": "hadGPT4InlineCompletionRunning"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "editor.action.inlineSuggest.hide",
-    },
-    {
-        "key": "ctrl+[",
-        "command": "closeFindWidget",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "extension.vim_ctrl+[",
-        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "hideSuggestWidget",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+[",
-        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                // commands to run in sequence
-            "editor.cpp.disableenabled",
-            "editor.action.enableCppGlobally",
-            "extension.vim_ctrl+["
-            ]
-        }
-    },
-    {
-        "key": "ctrl+w w",
-        "command": "workbench.action.quickSwitchWindow"
-    },
+    // Move down to terminal from editor OR file explorer
     {
         "key": "ctrl+w j",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "!terminalFocus"
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus || filesExplorerFocus"
     },
+    // If ALREADY in terminal: expand / maximize the terminal panel
     {
         "key": "ctrl+w j",
-        // "command": "workbench.action.terminal.toggleTerminal",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
     },
-    {
-        "key": "ctrl+w h",
-        "command": "workbench.view.explorer",
-        "when": "viewContainer.workbench.view.explorer.enabled"
-    },
+    // If in terminal: focus back up to active editor
     {
         "key": "ctrl+w k",
-        "command": "workbench.action.togglePanel",
+        "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
+    // If in editor: hide/close the terminal panel
     {
         "key": "ctrl+w k",
         "command": "workbench.action.closePanel",
-        "when": "!terminalFocus"
+        "when": "editorTextFocus"
     },
+    // Move focus to File Explorer (left sidebar)
     {
-        "key": "ctrl+w l",
-        "command": "workbench.action.focusFirstEditorGroup",
+        "key": "ctrl+w h",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorTextFocus || terminalFocus"
     },
+    // Hide left sidebar if in editor or terminal
     {
         "key": "ctrl+w l",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "editorFocus"
+        "when": "editorTextFocus || terminalFocus"
     },
+    // Move focus from File Explorer back to editor
     {
-        "key": "ctrl+w w",
-        "command": "workbench.action.quickSwitchWindow"
-    },
-    {
-        "key": "\\ c space",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "\\ \\",
-        "command": "type",
-        "args": {
-            "text": "\\"
-        },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "when": "editorTextFocus",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                // commands to run in sequence
-            "scrollLeft",
-            "scrollLeft",
-            "scrollLeft",
-            ]
-        }
-    },
-    {
-        "key": "ctrl+l",
-        "when": "editorTextFocus",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                // commands to run in sequence
-            "scrollRight",
-            "scrollRight",
-            "scrollRight",
-            ]
-        }
-    },
-    { //change default cursor ctrl+k to alt+k (Windows only)
-        "key": "alt+k",
-        "command": "aipopup.action.modal.generate",
-        "when": "!terminalFocus && isWindows"
-    },
-    { //change default cursor ctrl+l to alt+l
-        "key": "alt+l",
-        "command": "aichat.newchataction",
-        "when": "!terminalFocus && isWindows"
-    },
-    { //change default cursor ctrl+k to alt+k (in terminal)
-        "key": "alt+k",
-        "command": "cursorai.action.generateInTerminal",
-        "when": "terminalFocus && isWindows"
-    },
-    { // this unbinds ctrl+k in windows, don't need to unbind ctrl+l
-      // it already belongs to vim bindings
-        "key": "ctrl+k",
-        "command": "!cursorai.action.generateInTerminal",
-        "when": "isWindows"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "!aichat.newchataction",
-        "when": "terminalFocus && isWindows"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen && isWindows"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpen",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "!workbench.action.quickOpen",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpenNavigateNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenNavigatePrevious",
-        "when": "inQuickOpen"
+        "key": "ctrl+w l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus"
     }
-    ,{
-        "key": "ctrl+f",
-        "command": "!workbench.action.terminal.focusFindWidget",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "!workbench.action.terminal.focusFindWidget",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "-editor.action.clipboardPasteAction"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "-editor.action.clipboardCopyAction"
-    },
-    {
-        "key": "ctrl+x",
-        "command": "-editor.action.clipboardCutAction"
-    },
-    {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
-    }
-
-
 ]
