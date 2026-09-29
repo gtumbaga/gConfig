@@ -12,6 +12,11 @@
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
     },
+    {
+        "key": "ctrl+w j",
+        "command": "workbench.action.terminal.focus",
+        "when": "!editorTextFocus && !terminalFocus && !sideBarVisible"
+    },
     // If in terminal: focus back up to active editor
     {
         "key": "ctrl+w k",
@@ -28,18 +33,32 @@
     {
         "key": "ctrl+w h",
         "command": "workbench.files.action.focusFilesExplorer",
-        "when": "editorTextFocus || terminalFocus"
+        "when": "(editorTextFocus || terminalFocus) && !sideBarVisible"
+    },
+    {
+        "key": "ctrl+w h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus && !terminalFocus && !sideBarVisible"
     },
     // Hide left sidebar if in editor or terminal
     {
         "key": "ctrl+w l",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "editorTextFocus || terminalFocus"
+        "when": "(editorTextFocus || terminalFocus) && sideBarVisible"
     },
     // Move focus from File Explorer back to editor
     {
         "key": "ctrl+w l",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+w w",
+        "command": "workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+w l",
+        "command": "workbench.panel.chat.view.copilot.focus",
+        "when": "(editorTextFocus || terminalFocus) && !sideBarVisible"
     }
 ]

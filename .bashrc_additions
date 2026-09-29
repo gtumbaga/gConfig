@@ -563,10 +563,10 @@ alias dc-build='docker-compose build --no-cache && yes | docker image prune'
 alias dc-up='docker-compose up --force-recreate'
 
 #ollama stuff
-export OLLAMA_HOST="0.0.0.0"
 export OLLAMA_FLASH_ATTENTION=1
 export OLLAMA_KV_CACHE_TYPE=q8_0
-export OLLAMA_CONTEXT_LENGTH=65536
+#export OLLAMA_CONTEXT_LENGTH=65536
+export OLLAMA_CONTEXT_LENGTH=32768
 #export OLLAMA_CONTEXT_LENGTH=16384
 
 #set tab autocomplete to ingore case

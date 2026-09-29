@@ -69,5 +69,6 @@
         "scrollbarSlider.background": "#170A2F",
         "editorLineNumber.foreground": "#775ABB"
     },
+    "chat.viewSessions.orientation": "stacked",
 
 }
