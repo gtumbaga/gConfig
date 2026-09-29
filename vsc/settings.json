@@ -1,5 +1,6 @@
 {
     "terminal.integrated.sendKeybindingsToShell": true,
+    "editor.lineNumbers": "relative",
     "editor.fontSize": 15,
     "editor.fontFamily": "'Cascadia Mono', monospace",
     "editor.fontWeight": "100",
