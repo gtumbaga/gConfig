@@ -4,6 +4,12 @@
     "editor.fontFamily": "'Cascadia Mono', monospace",
     "editor.fontWeight": "100",
     "editor.renderWhitespace": "all",
+    "accessibility.signals.taskCompleted": {
+        "sound": "auto"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "auto"
+    },
     "vim.normalModeKeyBindings": [
         {
             "before": [
@@ -23,8 +29,9 @@
         }
     ],
     "vim.enableNeovim": true,
-
-
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": 100,
+    "terminal.integrated.fontFamily": "'Cascadia Mono', monospace",
     "workbench.colorCustomizations": {
         "terminal.background": "#241541",
         "terminal.foreground": "#64FFFF",
@@ -70,5 +77,4 @@
         "editorLineNumber.foreground": "#775ABB"
     },
     "chat.viewSessions.orientation": "stacked",
-
 }
