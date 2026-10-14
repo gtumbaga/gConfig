@@ -1,5 +1,5 @@
 {
-    "editor.cursorSurroundingLines": 4,
+    "editor.cursorSurroundingLines": 3,
     "terminal.integrated.sendKeybindingsToShell": true,
     "editor.lineNumbers": "relative",
     "editor.fontSize": 15,
