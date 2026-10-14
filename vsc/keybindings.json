@@ -59,7 +59,38 @@
     {
         "key": "ctrl+w l",
         // "command": "claude-dev.SidebarProvider.focus",
-        "command": "cline.focusChatInput",
+        // "command": "cline.focusChatInput",
+        "command": "workbench.action.focusAuxiliaryBar",
         "when": "(editorTextFocus || terminalFocus) && !sideBarFocus"
+    },
+    // Horizontal page scroll. editorScroll has no horizontal "page" unit,
+    // only columns, so value is an approximate viewport width.
+    {
+        "key": "ctrl+h",
+        "command": "editorScroll",
+        "when": "editorTextFocus",
+        "args": {
+            "to": "left",
+            "by": "column",
+            "value": 40,
+            "revealCursor": false
+        }
+    },
+    {
+        "key": "ctrl+l",
+        "command": "editorScroll",
+        "when": "editorTextFocus",
+        "args": {
+            "to": "right",
+            "by": "column",
+            "value": 40,
+            "revealCursor": false
+        }
+    },
+    // \ space c — comment the current line, or every line in the selection
+    {
+        "key": "\\ c space",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]

@@ -1,4 +1,5 @@
 {
+    "editor.cursorSurroundingLines": 4,
     "terminal.integrated.sendKeybindingsToShell": true,
     "editor.lineNumbers": "relative",
     "editor.fontSize": 15,
@@ -78,4 +79,5 @@
         "editorLineNumber.foreground": "#775ABB"
     },
     "chat.viewSessions.orientation": "stacked",
+    "editor.wordWrap": "off",
 }
